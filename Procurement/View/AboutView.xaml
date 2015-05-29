@@ -63,7 +63,7 @@
                     <StackPanel Grid.Row="4" VerticalAlignment="Bottom">
                         <TextBlock Foreground="#FFAB9066" TextWrapping="Wrap" Text="Legal :" FontSize="11" />
                         <TextBlock />
-                        <TextBlock Foreground="#FFAB9066" TextWrapping="Wrap" Text="Path Of Exile, the Path Of Exile logo and all related artwork used in this application are Copyright © Grinding Gear Games. For further information please visit:                     http://www.pathofexile.com" FontSize="11" />
+                        <TextBlock Foreground="#FFAB9066" TextWrapping="Wrap" Text="Path Of Exile, the Path Of Exile logo and all related artwork used in this application are Copyright © Grinding Gear Games. For further information please visit:                     http://web.poe.garena.ru" FontSize="11" />
                         <TextBlock FontSize="11" />
                         <TextBlock Foreground="#FFAB9066" TextWrapping="Wrap" Text="This work is licensed under Artistic License 2.0." />
                         <TextBlock />

@@ -201,7 +201,7 @@ namespace Procurement.ViewModel
             int threadId;
             if (!int.TryParse(Settings.ShopSettings[ApplicationState.CurrentLeague].ThreadId, out threadId))
             {
-                MessageBox.Show("Invalid ThreadId, the ThreadId is the number at the end of the url of your shop, eg: the 12345 in http://www.pathofexile.com/forum/view-thread/12345", "Invalid ThreadId!", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Invalid ThreadId, the ThreadId is the number at the end of the url of your shop, eg: the 12345 in http://web.poe.garena.ru/forum/view-thread/12345", "Invalid ThreadId!", MessageBoxButton.OK, MessageBoxImage.Error);
                 return false;
             }
 

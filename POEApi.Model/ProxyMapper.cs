@@ -8,43 +8,47 @@ namespace POEApi.Model
 {
     internal class ProxyMapper
     {
-        internal const string STACKSIZE = "Stack Size";
+        
+        internal const string STACKSIZE = Lang.STACKSIZE;
         internal const string STASH = "Stash";
-        public const string QUALITY = "Quality";
+        public const string QUALITY = Lang.QUALITY;
         private static Regex qualityRx = new Regex("[+]{1}(?<quality>[0-9]{1,2}).*");
 
         #region   Orb Types  
         private static Dictionary<string, OrbType> orbMap = new Dictionary<string, OrbType>()           
         {
-            { "Chaos", OrbType.Chaos },
-            { "Divine", OrbType.Divine },
-            { "Regal", OrbType.Regal },
-            { "Augmentation", OrbType.Augmentation },
-            { "Orb of Alchemy", OrbType.Alchemy },
-            { "Alchemy Shard", OrbType.AlchemyShard },
-            { "Chromatic", OrbType.Chromatic },
-            { "Transmutation", OrbType.Transmutation },
-            { "Scouring", OrbType.Scouring },
-            { "Glassblower",OrbType.GlassblowersBauble },
-            { "Cartographer", OrbType.Chisel },
-            { "Gemcutter's Prism", OrbType.GemCutterPrism },
-            { "Alteration", OrbType.Alteration },
-            { "Chance", OrbType.Chance },
-            { "Regret", OrbType.Regret },
-            { "Exalted", OrbType.Exalted },
-            { "Armourer's Scrap", OrbType.ArmourersScrap },
-            { "Blessed", OrbType.Blessed},
-            { "Blacksmith's Whetstone", OrbType.BlacksmithsWhetstone },
-            { "Scroll Fragment", OrbType.ScrollFragment },
-            { "Jeweller's Orb", OrbType.JewelersOrb },
-            { "Scroll of Wisdom", OrbType.ScrollofWisdom },
-            { "Orb of Fusing", OrbType.Fusing },
-            { "Portal Scroll", OrbType.PortalScroll },
-            { "Albino Rhoa Feather", OrbType.AlbinaRhoaFeather},
-            { "Mirror", OrbType.Mirror },
-            { "Eternal Orb", OrbType.Eternal},
-            { "Imprint", OrbType.Imprint },
-            { "Vaal Orb", OrbType.VaalOrb }
+
+            { Lang.TransmutationShardStrValue, OrbType.TransmutationShard },
+            { Lang.AlterationShardOrbStrValue, OrbType.AlterationShard },
+            { Lang.ChaosStrValue, OrbType.Chaos },
+            { Lang.DivineStrValue, OrbType.Divine },
+            { Lang.RegalStrValue, OrbType.Regal },
+            { Lang.AugmentationStrValue, OrbType.Augmentation },
+            { Lang.AlchemyStrValue, OrbType.Alchemy },
+            { Lang.AlchemyShardStrValue, OrbType.AlchemyShard },
+            { Lang.ChromaticStrValue, OrbType.Chromatic },
+            { Lang.TransmutationStrValue, OrbType.Transmutation },
+            { Lang.ScouringStrValue, OrbType.Scouring },
+            { Lang.GlassblowersBaubleStrValue,OrbType.GlassblowersBauble },
+            { Lang.ChiselStrValue, OrbType.Chisel },
+            { Lang.GemCutterPrismStrValue, OrbType.GemCutterPrism },
+            { Lang.AlterationStrValue, OrbType.Alteration },
+            { Lang.ChanceStrValue, OrbType.Chance },
+            { Lang.RegretStrValue, OrbType.Regret },
+            { Lang.ExaltedStrValue, OrbType.Exalted },
+            { Lang.ArmourersScrapStrValue, OrbType.ArmourersScrap },
+            { Lang.BlessedStrValue, OrbType.Blessed},
+            { Lang.BlacksmithsWhetstoneStrValue, OrbType.BlacksmithsWhetstone },
+            { Lang.ScrollFragmentStrValue, OrbType.ScrollFragment },
+            { Lang.JewelersOrbStrValue, OrbType.JewelersOrb },
+            { Lang.ScrollofWisdomStrValue, OrbType.ScrollofWisdom },
+            { Lang.FusingStrValue, OrbType.Fusing },
+            { Lang.PortalScrollStrValue, OrbType.PortalScroll },
+            { Lang.AlbinaRhoaFeatherStrValue, OrbType.AlbinaRhoaFeather},
+            { Lang.MirrorStrValue, OrbType.Mirror },
+            { Lang.EternalStrValue, OrbType.Eternal},
+            { Lang.ImprintStrValue, OrbType.Imprint },
+            { Lang.VaalOrbStrValue, OrbType.VaalOrb }
         };
         #endregion
 

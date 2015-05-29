@@ -31,6 +31,8 @@
         AlbinaRhoaFeather,
         AlchemyShard,
         Mirror,
+        TransmutationShard,
+        AlterationShard,
         VaalOrb
     }
 }

@@ -50,6 +50,7 @@
     <Compile Include="ExcessiveRequestException.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="ForumThreadException.cs" />
+    <Compile Include="Lang.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="LogonFailedException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

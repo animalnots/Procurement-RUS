@@ -74,7 +74,7 @@ namespace POEApi.Model
             {
                 this.Properties = item.Properties.Select(p => new Property(p)).ToList();
 
-                if (this.Properties.Any(p => p.Name == "Quality"))
+                if (this.Properties.Any(p => p.Name == Lang.QualityStrValue))
                 {
                     this.IsQuality = true;
                     this.Quality = ProxyMapper.GetQuality(item.Properties);

@@ -12,13 +12,13 @@ namespace POEApi.Model
                 if (item.frameType == 4)
                     return new Gem(item);
 
-                if (item.DescrText != null && item.DescrText.ToLower() == "right click this item then left click a location on the ground to create the object.")
+                if (item.DescrText != null && item.DescrText.ToLower() == Lang.DecorationItemDescStrValue.ToLower())
                     return new Decoration(item);
 
                 if (item.frameType == 5)
                     return new Currency(item);
 
-                if (item.TypeLine.Contains("Map") && item.DescrText != null && item.DescrText.Contains("Travel to this Map"))
+                if (item.TypeLine.Contains(Lang.MapStrValue) && item.DescrText != null && item.DescrText.Contains(Lang.MapDescStrValue))
                     return new Map(item);
 
                 return new Gear(item);

@@ -1,18 +1,18 @@
-﻿Welcome to my shop! (Last Updated {LastUpdated}),
+﻿Добро пожаловать! (Последнее обновление {LastUpdated}),
 
-Please message me here or ingame if something catches your eye. My IGN is {IGN}.
-
-[spoiler="          Uniques          "]
+Пожалуйста, свяжитесь со мной здесь или в игре если вас что-нибудь заинтересовало. Мой ник в игре {IGN}.
+ 
+[spoiler="          Уникальные вещи          "]
 {Uniques}
 [/spoiler]
-[spoiler="          5-Links          "]
+[spoiler="          5-Связ          "]
 {5Link}
 [/spoiler]
-[spoiler="          6-Links          "]
+[spoiler="          6-Связ          "]
 {6Link}
 [/spoiler]
-[spoiler="          Maps          "]
-[spoiler="          Vaal Fragments          "]
+[spoiler="          Карты          "]
+[spoiler="          Фрагменты ваал          "]
 {VaalFragments}
 {VaalUberFragments}
 [/spoiler]
@@ -23,116 +23,116 @@ Please message me here or ingame if something catches your eye. My IGN is {IGN}.
 {70Maps}{71Maps}{72Maps}{73Maps}{74Maps}{75Maps}{76Maps}{77Maps}{78Maps}
 [/spoiler]
 [/spoiler]
-[spoiler="          Gems          "]
-[spoiler="          Quality Gems          "]
-[spoiler="          Quality Gems 1-5      "]
+[spoiler="          Камни навыков          "]
+[spoiler="          Качественные Камни навыков          "]
+[spoiler="          Качественные Камни навыков 1-5      "]
 {Quality1Gems}{Quality2Gems}{Quality3Gems}{Quality4Gems}{Quality5Gems}
 [/spoiler]
-[spoiler="          Quality Gems 5-10     "]
+[spoiler="          Качественные Камни навыков 5-10     "]
 {Quality6Gems}{Quality7Gems}{Quality8Gems}{Quality9Gems}{Quality10Gems}
 [/spoiler]
-[spoiler="          Quality Gems 10-15    "]
+[spoiler="          Качественные Камни навыков 10-15    "]
 {Quality11Gems}{Quality12Gems}{Quality13Gems}{Quality14Gems}{Quality15Gems}
 [/spoiler]
-[spoiler="          Quality Gems 15-20    "]
+[spoiler="          Качественные Камни навыков 15-20    "]
 {Quality16Gems}{Quality17Gems}{Quality18Gems}{Quality19Gems}{Quality20Gems}
 [/spoiler]
 [/spoiler]
-[spoiler="          Drop Only Gems          "]
+[spoiler="          Камни, доступные только при выпадении           "]
 {DropOnlyGems}
 [/spoiler]
-[spoiler="          Popular Gems          "]
+[spoiler="          Популярные Камни навыков          "]
 {PopularGems}
 [/spoiler]
-[spoiler="          Aura Gems          "]
-{AuraGems}
+[spoiler="          Камни аур          "]
+{АураGems}
 [/spoiler]
-[spoiler="          Curse Gems          "]
-{CurseGems}
+[spoiler="          Камни проклятий          "]
+{ПроклятьеGems}
 [/spoiler]
-[spoiler="          Support Gems          "]
-{SupportGems}
+[spoiler="          Камни поддержки          "]
+{ПоддержкаGems}
 [/spoiler]
-[spoiler="          Leveled Gems          "]
+[spoiler="          Камни с опытом          "]
 {Level2Gems}{Level3Gems}{Level4Gems}{Level5Gems}{Level6Gems}{Level7Gems}{Level8Gems}{Level9Gems}{Level10Gems}{Level11Gems}{Level12Gems}{Level13Gems}{Level14Gems}{Level15Gems}{Level16Gems}{Level17Gems}{Level18Gems}{Level19Gems}{Level20Gems}
 [/spoiler]
-[spoiler="          Vaal Gems          "]
-{VaalGems}
+[spoiler="          Камни ваал          "]
+{ВаалGems}
 [/spoiler]
 [/spoiler]
-[spoiler="          Dual Res Gear          "]
+[spoiler="          2-ух сопротивлений Экипировка          "]
 {DualRes}
 [/spoiler]
-[spoiler="          Tri Res Gear          "]
+[spoiler="          3-х сопротивлений Экипировка         "]
 {TripRes}
 [/spoiler]
-[spoiler="          IIR/IIQ Gear          "]
+[spoiler="          УРП/УКП Экипировка          "]
 {MagicFind}
 [/spoiler]
-[spoiler="          Weapons and Armor          "]
-[spoiler="          Armor                                 "]
-[spoiler="          Helms          "]
+[spoiler="          Оружие и Броня          "]
+[spoiler="          Броня                                 "]
+[spoiler="          Шлемы          "]
 {RareHelmet}
 [/spoiler]
-[spoiler="          Amulets          "]
+[spoiler="          Амулеты          "]
 {RareAmulet}
 [/spoiler]
-[spoiler="          Chest Armor          "]
+[spoiler="          Нагрудные доспехи          "]
 {RareChest}
 [/spoiler]
-[spoiler="          Rings          "]
+[spoiler="          Кольца          "]
 {RareRing}
 [/spoiler]
-[spoiler="          Belts          "]
+[spoiler="          Пояса          "]
 {RareBelt}
 [/spoiler]
-[spoiler="          Boots          "]
+[spoiler="          Ботинки          "]
 {RareBoots}
 [/spoiler]
-[spoiler="          Gloves          "]
+[spoiler="          Перчатки          "]
 {RareGloves}
 [/spoiler]
 [/spoiler]
-[spoiler="          Shields          "]
+[spoiler="          Щиты          "]
 {RareShield}
 [/spoiler]
-[spoiler="          Swords, Axes & Maces          "]
+[spoiler="          Мечи, Топоры & Булавы          "]
 {RareSword}
 {RareAxe}
 {RareMace}
 [/spoiler]
-[spoiler="          Daggers          "]
+[spoiler="          Кинжалы          "]
 {RareDagger}
 [/spoiler]
-[spoiler="          Claws          "]
+[spoiler="          Когти          "]
 {RareClaw}
 [/spoiler]
-[spoiler="          Bows  & Quivers          "]
+[spoiler="          Луки  & Колчаны          "]
 {RareBow}
 {RareQuiver}
 [/spoiler]
-[spoiler="          Wands, Sceptres & Staves          "]
+[spoiler="          Жезлы, Скипетры & Посохи          "]
 {RareWand}
 {RareSceptre}
 {RareStaff}
 [/spoiler]
 [/spoiler]
-[spoiler="          Flasks          "]
-[spoiler="          Normal          "]
+[spoiler="          Флаконы          "]
+[spoiler="          Обычные          "]
 {NormalFlask}
 [/spoiler]
-[spoiler="          Magic          "]
+[spoiler="          Магические          "]
 {MagicFlask}
 [/spoiler]
-[spoiler="          Unique          "]
+[spoiler="          Уникальные          "]
 {UniqueFlask} 
 [/spoiler]
 [/spoiler]
-[spoiler="          Currency          "]
+[spoiler="          Валюта          "]
 {Currency} 
 [/spoiler]
 
-Thanks for visiting!
+Спасибо за просмотр!
 
 [url=https://github.com/Stickymaddness/Procurement/][img]http://i.imgur.com/ZHBMImo.png[/img][/url]
 

@@ -63,6 +63,7 @@
     <Compile Include="Item.cs" />
     <Compile Include="ItemFactory.cs" />
     <Compile Include="JSONProxy\Stash.cs" />
+    <Compile Include="Lang.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="OrbType.cs" />
     <Compile Include="Events\POEEventArgs.cs" />

@@ -16,7 +16,7 @@ namespace Procurement.ViewModel.ForumExportVisitors
             tokens.AddRange(from cat1 in Enum.GetNames(typeof(GemCategory))
                             from cat2 in Enum.GetNames(typeof(GemCategory))
                             select new KeyValuePair<string, IFilter>(string.Concat("{", cat1, cat2, "Gems}"), new AndFilter(new GemCategoryFilter(cat1), new GemCategoryFilter(cat2))));
-
+            
             tokens.AddRange(from cat1 in Enum.GetNames(typeof(GemCategory))
                             select new KeyValuePair<string, IFilter>(string.Concat("{", cat1, "Gems}"), new GemCategoryFilter(cat1)));
             

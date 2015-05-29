@@ -62,12 +62,12 @@ namespace POEApi.Model
         public RingRunner()
             : base(GearType.Ring, Settings.GearBaseTypes[GearType.Ring])
         {
-            incompatibleTypes = new List<string>() { "Ringmail" };
+            incompatibleTypes = new List<string>() { Lang.RingmailStrValue };
         }
 
         public override bool IsCompatibleType(Gear item)
         {
-            if (item.TypeLine.Contains("Ring") && !incompatibleTypes.Any(t => item.TypeLine.Contains(t)))
+            if (item.TypeLine.Contains(Lang.RingStrValue) && !incompatibleTypes.Any(t => item.TypeLine.Contains(t)))
                 return true;
 
             return false;
@@ -79,7 +79,7 @@ namespace POEApi.Model
         public AmuletRunner()
             : base(GearType.Amulet, Settings.GearBaseTypes[GearType.Amulet])
         {
-            generalTypes.Add("Amulet");
+            generalTypes.Add(Lang.AmuletStrValue);
         }
     }
 
@@ -88,9 +88,16 @@ namespace POEApi.Model
         public HelmetRunner()
             : base(GearType.Helmet, Settings.GearBaseTypes[GearType.Helmet])
         {
-            generalTypes.AddRange(new List<string>() { "Helmet", "Circlet", "Cap", "Mask", "Chain Coif", "Casque", "Hood", "Ringmail Coif", "Chainmail Coif", "Ring Coif", "Crown", "Burgonet", "Bascinet", "Pelt" });
+            generalTypes.AddRange(new List<string>() { Lang.HelmetStrValue, Lang.CircletStrValue, Lang.CapStrValue, Lang.MaskStrValue, Lang.ChainCoifStrValue,
+                Lang.CasqueStrValue, Lang.HoodStrValue, Lang.RingmailCoifStrValue, Lang.ChainmailCoifStrValue, Lang.RingCoifStrValue, Lang.CrownStrValue, Lang.BurgonetStrValue, Lang.BascinetStrValue, Lang.PeltStrValue });
         }
     }
+
+    
+
+    
+
+
 
     public class ChestRunner : GearTypeRunnerBase
     {
@@ -104,8 +111,8 @@ namespace POEApi.Model
         public BeltRunner()
             : base(GearType.Belt, Settings.GearBaseTypes[GearType.Belt])
         {
-            generalTypes.Add("Belt");
-            generalTypes.Add("Sash");
+            generalTypes.Add(Lang.BeltStrValue);
+            generalTypes.Add(Lang.SashStrValue);
         }
     }
 
@@ -114,7 +121,7 @@ namespace POEApi.Model
         public FlaskRunner()
             : base(GearType.Flask, Settings.GearBaseTypes[GearType.Flask])
         {
-            generalTypes.Add("Flask");
+            generalTypes.Add(Lang.FlaskStrValue);
         }
     }
 
@@ -123,7 +130,7 @@ namespace POEApi.Model
         public MapRunner()
             : base(GearType.Map, Settings.GearBaseTypes[GearType.Map])
         {
-            generalTypes.Add("Map");
+            generalTypes.Add(Lang.MapStrValue);
         }
     }
 
@@ -132,9 +139,9 @@ namespace POEApi.Model
         public GloveRunner()
             : base(GearType.Gloves, Settings.GearBaseTypes[GearType.Gloves])
         {
-            generalTypes.Add("Glove");
-            generalTypes.Add("Mitts");
-            generalTypes.Add("Gauntlets");
+            //generalTypes.Add("Glove"); mitts = glove = gauntlets in russian "Перчатки"
+            generalTypes.Add(Lang.MittsStrValue);
+            //generalTypes.Add("Gauntlets");
         }
     }
 
@@ -143,10 +150,10 @@ namespace POEApi.Model
         public BootRunner()
             : base(GearType.Boots, Settings.GearBaseTypes[GearType.Boots])
         {
-            generalTypes.Add("Greaves");
-            generalTypes.Add("Slippers");
-            generalTypes.Add("Boots");
-            generalTypes.Add("Shoes");
+            generalTypes.Add(Lang.GreavesStrValue);
+            generalTypes.Add(Lang.SlippersStrValue);
+            generalTypes.Add(Lang.BootsStrValue);
+            generalTypes.Add(Lang.ShoesStrValue);
         }
     }
 
@@ -155,7 +162,8 @@ namespace POEApi.Model
         public AxeRunner()
             : base(GearType.Axe, Settings.GearBaseTypes[GearType.Axe])
         {
-            generalTypes.AddRange(new List<string>() { "Axe", "Chopper", "Splitter", "Labrys", "Tomahawk", "Hatchet", "Poleaxe", "Woodsplitter", "Cleaver" });
+            //add new type for 1h/2h chopper
+            generalTypes.AddRange(new List<string>() { Lang.AxeStrValue, Lang.Chopper1hStrValue, Lang.Chopper2hStrValue, Lang.SplitterStrValue, Lang.LabrysStrValue, Lang.TomahawkStrValue, Lang.HatchetStrValue, Lang.PoleaxeStrValue, Lang.WoodsplitterStrValue, Lang.CleaverStrValue });
         }
     }
 
@@ -173,7 +181,7 @@ namespace POEApi.Model
         public BowRunner()
             : base(GearType.Bow, Settings.GearBaseTypes[GearType.Bow])
         {
-            generalTypes.Add("Bow");
+            generalTypes.Add(Lang.BowStrValue);
         }
     }
 

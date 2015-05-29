@@ -23,28 +23,27 @@
     <Orb type="VaalOrb" OrbAmount="1" ChaosAmount="1" />    "
   </Ratios>
   <PopularGems>
-    <Gem name="Cast when Damage Taken" />
-    <Gem name="Cast On Critical Strike" />
-    <Gem name="Blood Magic" />
-    <Gem name="Item Quantity" />
-    <Gem name="Life Gain on Hit" />
-    <Gem name="Life Leech" />
-    <Gem name="Multistrike" />
-    <Gem name="Reduced Mana" />
-    <Gem name="Spell Totem" />
-    <Gem name="Chain" />
-    <Gem name="Faster Attacks" />
-    <Gem name="Greater Multiple Projectiles" />
-    <Gem name="Lesser Multiple Projectiles" />
-    <Gem name="Added Chaos Damage" />
-    <Gem name="Item Rarity" />
-    <Gem name="Concentrated Effect" />
-    <Gem name="Elemental Hit" />
-    <Gem name="Elemental Proliferation" />
-    <Gem name="Elemental Weakness" />
-    <Gem name="Multistrike" />
-    <Gem name="Temporal Chains" />
-    <Gem name="Faster Casting" />
+    <Gem name="Произнесение заклинаний при получении урона" />
+    <Gem name="Произнесение заклинаний при критическом ударе" />
+    <Gem name="Магия крови" />
+    <Gem name="Количество предметов" />
+    <Gem name="Здоровье за удар" />
+    <Gem name="Вытягивание жизни" />
+    <Gem name="Град ударов" />
+    <Gem name="Меньший расход маны" />
+    <Gem name="Колдующий тотем" />
+    <Gem name="Цепь" />
+    <Gem name="Ускорение атак" />
+    <Gem name="Много дополнительных снарядов" />
+    <Gem name="Дополнительные снаряды" />
+    <Gem name="Дополнительный урон хаосом" />
+    <Gem name="Редкость предметов" />
+    <Gem name="Средоточение" />
+    <Gem name="Удар стихий" />
+    <Gem name="Разгул стихий" />
+    <Gem name="Уязвимость к стихиям" />
+    <Gem name="Путы времени" />
+    <Gem name="Ускоренное произнесение заклинаний" />
   </PopularGems>
   <UserSettings>
     <Setting name="AccountLogin" value="" />
