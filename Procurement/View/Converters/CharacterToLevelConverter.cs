@@ -12,7 +12,7 @@ namespace Procurement.View
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
             Character c = value as Character;
-            return string.Format("Level {0} {1}", c.Level, c.Class);
+            return string.Format(Lang.LevelStrValue + " {0} {1}", c.Level, c.Class);
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)

@@ -27,20 +27,20 @@
                     <Grid.RowDefinitions>
                         <RowDefinition />
                         <RowDefinition Height="15" />
-                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="200"/>
                         <RowDefinition Height="100"/>
                         <RowDefinition Height="320"/>
                     </Grid.RowDefinitions>
                     
                     <Label x:Name="Version" Grid.Row="0" Foreground="#FFAB9066" FontSize="18" FontWeight="UltraBold"/>
                     <StackPanel Grid.Row="2" >
-                        <TextBlock Foreground="#FFAB9066" TextWrapping="Wrap" FontSize="14" Text="This open source software is provided free of charge!" />
+                        <TextBlock Foreground="#FFAB9066" TextWrapping="Wrap" FontSize="14" Text="Procurement распространяется с открытым исходным кодом абсолютно бесплатно!" />
                         <TextBlock />
-                        <TextBlock Foreground="#FFAB9066" TextWrapping="Wrap" FontSize="14" Text="For the latest updates, bug reports or feature requests, please visit : https://github.com/Stickymaddness/Procurement" />
+                        <TextBlock Foreground="#FFAB9066" TextWrapping="Wrap" FontSize="14" Text="Для последних обновлений, сообщении о найденных багах или своих предложениях посетите: https://github.com/Stickymaddness/Procurement или https://github.com/animalnots/Procurement-RUS (данная версия), также https://github.com/medvedttn/Procurement (попробуйте!)" />
                     </StackPanel>
                     
                     <StackPanel Grid.Row="3">
-                        <TextBlock Foreground="#FFAB9066" TextWrapping="Wrap" FontSize="14" Text="If you'd like to buy me a beer, you can do so here:" />
+                        <TextBlock Foreground="#FFAB9066" TextWrapping="Wrap" FontSize="14" Text="If you'd like to buy me a beer, you can do so here:" Margin="0,0,-0.4,0" />
 
                         <Button Grid.Column="3" Grid.Row="1"  Name="DonateButton" HorizontalAlignment="Left" Click="DonateButton_Click" Height="47" Width="147" Margin="0,15,0,0">
                             <Image>

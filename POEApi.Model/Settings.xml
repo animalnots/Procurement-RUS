@@ -69,18 +69,19 @@
     <Setting name="Password" value="" />
     <Setting name="Domain" value="" />
   </ProxySettings>
+
   <ShopSettings>
-    <Shop League="Standard" ThreadId="" ThreadTitle="" />
-    <Shop League="Hardcore" ThreadId="" ThreadTitle="" />
-    <Shop League="Bloodlines" ThreadId="" ThreadTitle="" />
-    <Shop League="Torment" ThreadId="" ThreadTitle="" />
+    <Shop League="Стандарт" ThreadId="" ThreadTitle="" />
+    <Shop League="Одна жизнь" ThreadId="" ThreadTitle="" />
+    <Shop League="Мучение/Родословные" ThreadId="" ThreadTitle="" />
+    <Shop League="Мучение/Родословные одна жизнь" ThreadId="" ThreadTitle="" />
   </ShopSettings>
   <Lists>
     <List name="MyLeagues">
-      <Item value="Standard" />
-      <Item value="Hardcore" />
-      <Item value="Torment" />
-      <Item value="Bloodlines" />
+      <Item value="Стандарт" />
+      <Item value="Одна жизнь" />
+      <Item value="Мучение/Родословные" />
+      <Item value="Мучение/Родословные одна жизнь" />
     </List>
     <List name="MyTabs">
       <!--If you only want Procurement to download specific tabs list them here, eg :-->

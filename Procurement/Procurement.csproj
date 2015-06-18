@@ -138,6 +138,7 @@
     <Compile Include="Controls\SetBuyoutView.xaml.cs">
       <DependentUpon>SetBuyoutView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Lang.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>

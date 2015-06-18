@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Globalization;
+using System.Windows;
 using System.Text;
 using System;
 using POEApi.Infrastructure;
@@ -9,6 +10,7 @@ namespace Procurement
     {
         public App()
         {
+            System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("ru-RU");
             Application.Current.DispatcherUnhandledException += new System.Windows.Threading.DispatcherUnhandledExceptionEventHandler(Current_DispatcherUnhandledException);
         }
 

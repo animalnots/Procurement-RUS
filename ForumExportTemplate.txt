@@ -1,4 +1,4 @@
-﻿Добро пожаловать! (Последнее обновление {LastUpdated}),
+Добро пожаловать! (Последнее обновление {LastUpdated}),
 
 Пожалуйста, свяжитесь со мной здесь или в игре если вас что-нибудь заинтересовало. Мой ник в игре {IGN}.
  
@@ -134,5 +134,5 @@
 
 Спасибо за просмотр!
 
-[url=https://github.com/animalnots/Procurement-RUS][img]http://i.imgur.com/ZHBMImo.png[/img][/url]
+[url=https://github.com/Stickymaddness/Procurement/][img]http://i.imgur.com/ZHBMImo.png[/img][/url]
 

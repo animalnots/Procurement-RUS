@@ -27,7 +27,6 @@ namespace Procurement.ViewModel
         public delegate void LoginCompleted();
         private bool formChanged = false;
         private bool useSession;
-
         public event PropertyChangedEventHandler PropertyChanged;
 
         private CharacterTabInjector characterInjector;
@@ -82,8 +81,8 @@ namespace Procurement.ViewModel
             if (this.view == null)
                 return;
 
-            this.view.lblEmail.Content = useSession ? "Alias" : "Email";
-            this.view.lblPassword.Content = useSession ? "Session ID" : "Password";
+            this.view.lblEmail.Content = useSession ? Lang.AliasStrValue : "Email";
+            this.view.lblPassword.Content = useSession ? "Session ID" : Lang.PasswordStrValue;
         }
 
         public LoginWindowViewModel(UserControl view)
@@ -110,7 +109,7 @@ namespace Procurement.ViewModel
             ApplicationState.InitializeFont(Properties.Resources.fontin_regular_webfont);
             ApplicationState.InitializeFont(Properties.Resources.fontin_smallcaps_webfont);
 
-            statusController.DisplayMessage(ApplicationState.Version + " Initialized.\r");
+            statusController.DisplayMessage(ApplicationState.Version + " " + Lang.InitializedStrValue + ".\r");
 
             VersionChecker.CheckForUpdates();
         }
@@ -126,14 +125,14 @@ namespace Procurement.ViewModel
 
             if (string.IsNullOrEmpty(Email))
             {
-                MessageBox.Show(string.Format("{0} is required!", useSession ? "Alias" : "Email"), "Error logging in", MessageBoxButton.OK, MessageBoxImage.Stop);
+                MessageBox.Show(string.Format("{0} is required!", useSession ? Lang.AliasStrValue : "Email"), Lang.ErrorLoggingInStrValue, MessageBoxButton.OK, MessageBoxImage.Stop);
                 toggleControls();
                 return;
             }
 
             if (string.IsNullOrEmpty(AccountName))
             {
-                MessageBox.Show("Account name is required!", "Error logging in", MessageBoxButton.OK, MessageBoxImage.Stop);
+                MessageBox.Show(Lang.ErrorAccRequiredStrValue, Lang.ErrorLoggingInStrValue, MessageBoxButton.OK, MessageBoxImage.Stop);
                 toggleControls();
                 return;
             }
@@ -156,11 +155,11 @@ namespace Procurement.ViewModel
                 if (!offline)
                 {
                     ApplicationState.Model.ForceRefresh();
-                    statusController.DisplayMessage("Loading characters...");
+                    statusController.DisplayMessage(Lang.LoadingCharsStrValue);
                 }
                 else
                 {
-                    statusController.DisplayMessage("Loading Procurement in offline mode...");
+                    statusController.DisplayMessage(Lang.LoadingProcurInOffModeStrValue);
                 }
 
                 List<Character> chars;
@@ -172,7 +171,7 @@ namespace Procurement.ViewModel
                 {
                     Logger.Log(wex);
                     statusController.NotOK();
-                    throw new Exception("Failed to load characters", wex.InnerException);
+                    throw new Exception(Lang.ErrorFailedtoLoadCharsStrValue, wex.InnerException);
                 }
                 statusController.Ok();
 
@@ -186,7 +185,7 @@ namespace Procurement.ViewModel
 
                 if (!offline)
                 {
-                    statusController.DisplayMessage("\nDone!");
+                    statusController.DisplayMessage("\n"+Lang.DoneStrValue);
                     PoeTradeOnlineHelper.Instance.Start();
                 }
 
@@ -208,7 +207,7 @@ namespace Procurement.ViewModel
 
             foreach (var character in chars)
             {
-                if (character.League == "Void")
+                if (character.League.Contains("Void"))
                     continue;
 
                 if (downloadOnlyMyLeagues && !Settings.Lists["MyLeagues"].Contains(character.League))
@@ -222,7 +221,7 @@ namespace Procurement.ViewModel
             }
 
             if (downloadOnlyMyLeagues && ApplicationState.Characters.Count == 0)
-                throw new Exception("No characters found in the leagues specified. Check spelling or try setting DownloadOnlyMyLeagues to false in settings.");
+                throw new Exception(Lang.NoCharsInSelLeagStrValue);
 
 
             characterInjector.Inject();
@@ -282,7 +281,7 @@ namespace Procurement.ViewModel
             bool success;
 
             if (!offline)
-                statusController.DisplayMessage((string.Format("Loading {0}'s inventory...", character.Name)));
+                statusController.DisplayMessage((string.Format(Lang.LoadingStrValue +" " +Lang.InventoryStrValue +" "+Lang.HeroStrValue+" {0}...", character.Name)));
 
             List<Item> inventory;
             try
@@ -315,23 +314,23 @@ namespace Procurement.ViewModel
 
         void model_StashLoading(POEModel sender, StashLoadedEventArgs e)
         {
-            update("Loading " + ApplicationState.CurrentLeague + " Stash Tab " + (e.StashID + 1) + "...", e);
+            update(Lang.LoadingStrValue + " " + ApplicationState.CurrentLeague + " " + Lang.StashStrValue + " " + (e.StashID + 1) + "...", e);
         }
 
         void model_ImageLoading(POEModel sender, ImageLoadedEventArgs e)
         {
-            update("Loading Image For " + e.URL, e);
+            update(Lang.LoadingImgForStrValue+" " + e.URL, e);
         }
 
         void model_Authenticating(POEModel sender, AuthenticateEventArgs e)
         {
-            update("Authenticating " + e.Email, e);
+            update(Lang.AuthorizationStrValue+" " + e.Email, e);
         }
 
         void model_Throttled(object sender, ThottledEventArgs e)
         {
             if (e.WaitTime.TotalSeconds > 4)
-                update(string.Format("GGG Server request limit hit, throttling activated. Please wait {0} seconds", e.WaitTime.Seconds), new POEEventArgs(POEEventState.BeforeEvent));
+                update(string.Format(Lang.GGGRequestLimitStrValue, e.WaitTime.Seconds), new POEEventArgs(POEEventState.BeforeEvent));
         }
 
         private void update(string message, POEEventArgs e)

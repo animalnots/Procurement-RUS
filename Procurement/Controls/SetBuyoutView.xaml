@@ -22,9 +22,9 @@
             <ColumnDefinition Width="100" />
             <ColumnDefinition Width="120" />
         </Grid.ColumnDefinitions>
-        
+
         <!--Buyouts-->
-        <CheckBox Content="Buyout" Grid.Row="0" Foreground="#FFAB9066" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding BuyoutInfo.Enabled, Mode=TwoWay}"/>
+        <CheckBox Content="Выкуп" Grid.Row="0" Foreground="#FFAB9066" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding BuyoutInfo.Enabled, Mode=TwoWay}"/>
         <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="0">
             <TextBox  x:Name="BuyoutValue" Height="25" Width="50" IsEnabled="{Binding BuyoutInfo.Enabled, Mode=TwoWay}" Text="{Binding BuyoutInfo.Value}"/>
             <Button Content="+"  Height="25" Width="20" Command="{Binding Path=BuyoutInfo.IncreaseValue}" IsEnabled="{Binding BuyoutInfo.Enabled, Mode=TwoWay}"/>
@@ -33,16 +33,16 @@
         <ComboBox Grid.Column="2" Grid.Row="0" Height="25" x:Name="OrbType" IsEnabled="{Binding BuyoutInfo.Enabled, Mode=TwoWay}" ItemsSource="{Binding OrbTypes}" SelectedItem="{Binding BuyoutInfo.Orb}" />
 
         <!--Current Offer-->
-        <CheckBox Content="Offer" Grid.Row="1" Foreground="#FFAB9066" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding OfferInfo.Enabled, Mode=TwoWay}"/>
+        <CheckBox Content="Актуал." Grid.Row="1" Foreground="#FFAB9066" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding OfferInfo.Enabled, Mode=TwoWay}"/>
         <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1">
             <TextBox  x:Name="CurrentOfferValue" Height="25" Width="50" IsEnabled="{Binding OfferInfo.Enabled, Mode=TwoWay}" Text="{Binding OfferInfo.Value}"/>
             <Button Content="+"  Height="25" Width="20" Command="{Binding Path=OfferInfo.IncreaseValue}" IsEnabled="{Binding OfferInfo.Enabled, Mode=TwoWay}" />
             <Button Content="-"  Height="25" Width="20" Command="{Binding Path=OfferInfo.DecreaseValue}" IsEnabled="{Binding OfferInfo.Enabled, Mode=TwoWay}"/>
         </StackPanel>
         <ComboBox Grid.Column="2" Grid.Row="1" Height="25" IsEnabled="{Binding OfferInfo.Enabled, Mode=TwoWay}" ItemsSource="{Binding OrbTypes}" SelectedItem="{Binding OfferInfo.Orb}"/>
-        
+
         <!--Price-->
-        <CheckBox Content="Price" Grid.Row="2" Foreground="#FFAB9066" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding PriceInfo.Enabled, Mode=TwoWay}"/>
+        <CheckBox Content="Цена" Grid.Row="2" Foreground="#FFAB9066" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding PriceInfo.Enabled, Mode=TwoWay}"/>
         <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="2">
             <TextBox  x:Name="PriceValue" Height="25" Width="50" IsEnabled="{Binding PriceInfo.Enabled, Mode=TwoWay}" Text="{Binding PriceInfo.Value}"/>
             <Button Content="+"  Height="25" Width="20" Command="{Binding Path=PriceInfo.IncreaseValue}" IsEnabled="{Binding PriceInfo.Enabled, Mode=TwoWay}"/>
@@ -51,18 +51,18 @@
         <ComboBox Grid.Column="2" Grid.Row="2" Height="25" IsEnabled="{Binding PriceInfo.Enabled, Mode=TwoWay}" ItemsSource="{Binding OrbTypes}" SelectedItem="{Binding PriceInfo.Orb}" />
 
 
-        <TextBlock Grid.Row="3" Foreground="#FFAB9066" Text="Notes:" />
+        <TextBlock Grid.Row="3" Foreground="#FFAB9066" Text="Примечание:" />
         <TextBox x:Name="Notes" Grid.Row="4" Grid.ColumnSpan="3" Text="{Binding Notes}" VerticalScrollBarVisibility="Auto" KeyDown="TextBox_KeyDown"/>
-        
+
         <Grid Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="160" />
-                <ColumnDefinition Width="10" />
-                <ColumnDefinition Width="160" />
+                <ColumnDefinition Width="148.8" />
+                <ColumnDefinition Width="11.2" />
+                <ColumnDefinition Width="169.6" />
             </Grid.ColumnDefinitions>
 
-            <Button Content="Save" Grid.Column="0" Height="25" Width="150" Click="Save_Clicked"/>
-            <Button Content="Save Image" Grid.Column="2" Height="25" Width="150" Click="SaveImage_Click" HorizontalAlignment="Left" />
-        </Grid>        
+            <Button Content="Сохранить" Grid.Column="0" Width="145" Click="Save_Clicked" Margin="5,8,0,7.8" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
+            <Button Content="Сохранить как Изоб." Grid.Column="1" Width="145" Click="SaveImage_Click" HorizontalAlignment="Left" Margin="5.2,8,0,7.8" Grid.ColumnSpan="2" />
+        </Grid>
     </Grid>
 </UserControl>

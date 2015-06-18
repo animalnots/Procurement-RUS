@@ -42,13 +42,13 @@
     </UserControl.Resources>
     <Grid x:Name="ViewContent" Width="990">
         <TabControl>
-            <TabItem Header="Forum Export" Style="{StaticResource NonImages}">
+            <TabItem Header="Экспорт на Форум" Style="{StaticResource NonImages}">
                 <poe:ForumExport />
             </TabItem>
-            <TabItem Header="Forum Template" Style="{StaticResource NonImages}">
+            <TabItem Header="Шаблон Темы на Форуме" Style="{StaticResource NonImages}">
                 <poe:ForumTemplate />
             </TabItem>
-            <TabItem Header="Trade Settings" Style="{StaticResource NonImages}">
+            <TabItem Header="Настройки Торговли" Style="{StaticResource NonImages}">
                 <poe:BuyoutSettings />
             </TabItem>
         </TabControl>

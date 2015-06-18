@@ -25,7 +25,7 @@ namespace Procurement.ViewModel
         {
             int id = -1;
             if (int.TryParse(Name, out id))
-                Name = "Tab " + Name;
+                Name = Lang.TabStrValue+" " + Name;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

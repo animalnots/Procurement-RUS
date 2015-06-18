@@ -227,7 +227,7 @@
                                FontFamily="../Resources/#Fontin SmallCaps"
                                Foreground="#960003"
                                Padding="10 0 10 5"
-                               Text="Corrupted"
+                               Text="Осквернено"
                                TextAlignment="Center"
                                TextWrapping="Wrap"
                                Visibility="{Binding IsCorrupted,

@@ -157,9 +157,9 @@ namespace Procurement.ViewModel
             Settings.ShopSettings[ApplicationState.CurrentLeague].ThreadTitle = this.threadTitle;
 
             if (Settings.SaveShopSettings())
-                MessageBox.Show("Shop settings saved", "Settings saved", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show(Lang.ShopSettingsSavedStrValue, Lang.SettingsSavedStrValue, MessageBoxButton.OK, MessageBoxImage.Information);
             else
-                MessageBox.Show("Unable to save shop settings, error logged to debuginfo.log", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(Lang.ErrorSavingShopSettingsStrValue, Lang.ErrorStrValue, MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
         private DelegateCommand saveCommand;
@@ -184,8 +184,8 @@ namespace Procurement.ViewModel
             }
             catch (Exception)
             {
-                string msg = "Unable to load {0} setting.\n\nIt is either missing from settings.xml or incorrectly configured. The default setting for {0} has been loaded, but it is strongly advised that you fix your settings.xml or replace it with a default one.";
-                MessageBox.Show(string.Format(msg, key), "Unable to load setting", MessageBoxButton.OK, MessageBoxImage.Warning);
+                string msg = Lang.ErrorLoadingSettingDetaliedStrValue;
+                MessageBox.Show(string.Format(msg, key), Lang.ErrorLoadingSettingStrValue, MessageBoxButton.OK, MessageBoxImage.Warning);
             }
 
             if (key == EMBED_BUYOUTS)

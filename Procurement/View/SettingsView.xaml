@@ -34,15 +34,15 @@
                         <RowDefinition />
                         <RowDefinition />
                     </Grid.RowDefinitions>
-                    <Label Grid.Row="0" Grid.Column="0"  Grid.ColumnSpan="2" Content="User Settings" Foreground="#FFAB9066" FontSize="14" FontWeight="Bold"/>
+                    <Label Grid.Row="0" Grid.Column="0"  Grid.ColumnSpan="2" Content="Настройки Пользователя" Foreground="#FFAB9066" FontSize="14" FontWeight="Bold"/>
 
-                    <Label Grid.Row="1" Grid.Column="0"  Grid.ColumnSpan="2" Content="Favourite League" Foreground="#FFAB9066" />
+                    <Label Grid.Row="1" Grid.Column="0"  Grid.ColumnSpan="2" Content="Любимая Лига" Foreground="#FFAB9066" />
                     <ComboBox Grid.Row="1" Grid.Column="1" Foreground="#FFAB9066" SelectedItem="{Binding CurrentLeague}" ItemsSource="{Binding Leagues}" Width="250" Height="20" HorizontalAlignment="Left"/>
 
-                    <Label Grid.Row="2" Grid.Column="0"  Grid.ColumnSpan="2" Content="Favourite Character" Foreground="#FFAB9066" />
+                    <Label Grid.Row="2" Grid.Column="0"  Grid.ColumnSpan="2" Content="Любимый Герой" Foreground="#FFAB9066" />
                     <ComboBox Grid.Row="2" Grid.Column="1" Foreground="#FFAB9066" SelectedItem="{Binding CurrentCharacter}" ItemsSource="{Binding Characters}" Width="250" Height="20" HorizontalAlignment="Left"/>
 
-                    <Label Grid.Row="3" Grid.Column="0"  Grid.ColumnSpan="2" Content="Compact Mode" Foreground="#FFAB9066" />
+                    <Label Grid.Row="3" Grid.Column="0"  Grid.ColumnSpan="2" Content="Компактный режим" Foreground="#FFAB9066" />
                     <CheckBox Grid.Row="3" Grid.Column="1" Foreground="#FFAB9066" IsChecked="{Binding CompactMode}" HorizontalAlignment="Left" Margin="0,2,0,0" />
 
                     <Button Grid.Column="3" Grid.Row="1"  Name="AboutButton" Width="85" Height="28" HorizontalAlignment="Left" Click="AboutButton_Click">
@@ -79,14 +79,14 @@
                             <ColumnDefinition />
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Content="Currency Ratios" Foreground="#FFAB9066" FontSize="14" FontWeight="Bold"/>
+                        <Label Grid.Column="0" Content="Курс Валют" Foreground="#FFAB9066" FontSize="14" FontWeight="Bold"/>
                     </Grid>
 
                     <DataGrid Grid.Row="1" Name="CurrencyGrid" Background="Black" ItemsSource="{Binding CurrencyRatios}" SelectionMode="Single" AutoGenerateColumns="False" RowEditEnding="CurrencyGrid_RowEditEnding" Width="460" HorizontalAlignment="Left" Margin="5,0,0,0" BorderThickness="0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Hidden">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Name" Binding="{Binding OrbType}" IsReadOnly="True" Width="150" Foreground="#FFAB9066"/>
-                            <DataGridTextColumn Header="OrbAmount" Binding="{Binding OrbAmount, Mode=TwoWay, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False" Width="150" Foreground="#FFAB9066"  />
-                            <DataGridTextColumn Header="ChaosAmount" Binding="{Binding ChaosAmount, Mode=TwoWay, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False" Width="150" Foreground="#FFAB9066"/>
+                            <DataGridTextColumn Header="Название" Binding="{Binding OrbType}" IsReadOnly="True" Width="150" Foreground="#FFAB9066"/>
+                            <DataGridTextColumn Header="Количество валюты" Binding="{Binding OrbAmount, Mode=TwoWay, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False" Width="150" Foreground="#FFAB9066"  />
+                            <DataGridTextColumn Header="Эквивалент в хаосах" Binding="{Binding ChaosAmount, Mode=TwoWay, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False" Width="150" Foreground="#FFAB9066"/>
                         </DataGrid.Columns>
                     </DataGrid>
 
@@ -96,7 +96,7 @@
                             <ColumnDefinition />
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Content="Characters and Leagues" Foreground="#FFAB9066" FontSize="14" FontWeight="Bold" Margin="-8,0,0,0"/>
+                        <Label Grid.Column="0" Content="Герои и Лиги" Foreground="#FFAB9066" FontSize="14" FontWeight="Bold" Margin="-8,0,0,0"/>
                     </Grid>
 
                     <Grid Grid.Row="1" Grid.Column="1">
@@ -111,8 +111,8 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
-                        <CheckBox Grid.Row="0" Grid.Column="0" IsChecked="{Binding DownloadOnlyMyCharacters, Mode=TwoWay, ValidatesOnExceptions=True,UpdateSourceTrigger=PropertyChanged}" Content="Download Only Selected Characters" Foreground="#FFAB9066"/>
-                        <CheckBox Grid.Row="0" Grid.Column="1" IsChecked="{Binding DownloadOnlyMyLeagues, Mode=TwoWay, ValidatesOnExceptions=True,UpdateSourceTrigger=PropertyChanged}" Content="Download Only Selected Leagues" Foreground="#FFAB9066"/>
+                        <CheckBox Grid.Row="0" Grid.Column="0" IsChecked="{Binding DownloadOnlyMyCharacters, Mode=TwoWay, ValidatesOnExceptions=True,UpdateSourceTrigger=PropertyChanged}" Content="Скачивать Только Выбранных Героев" Foreground="#FFAB9066"/>
+                        <CheckBox Grid.Row="0" Grid.Column="1" IsChecked="{Binding DownloadOnlyMyLeagues, Mode=TwoWay, ValidatesOnExceptions=True,UpdateSourceTrigger=PropertyChanged}" Content="Скачивать Только Выбранные Лиги" Foreground="#FFAB9066"/>
 
                         <TreeView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"  Background="Black" ItemsSource="{Binding AllCharactersByLeague}" SelectedValuePath="Value" BorderBrush="#FF76591B" Width="442" Margin="-50,0,0,0">
                             <TreeView.ItemTemplate>
@@ -148,7 +148,7 @@
                             </TreeView.ItemTemplate>
                         </TreeView>
 
-                        <Label Grid.Row="2" Grid.Column="0" Content="Exclude tabs from Recipe results" Foreground="#FFAB9066" FontSize="14" FontWeight="Bold" Margin="-8,0,0,0"/>
+                        <Label Grid.Row="2" Grid.Column="0" Content="Исключить секции из результатов Рецептов" Foreground="#FFAB9066" FontSize="14" FontWeight="Bold" Margin="-8,0,0,0"/>
 
                         <Border Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"  Background="Black" BorderBrush="#FF76591B" BorderThickness="1" Width="442" Margin="-50,0,0,0">
                         <ScrollViewer HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto" BorderBrush="#FF76591B" >

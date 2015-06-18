@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 
 namespace POEApi.Model
@@ -20,6 +21,7 @@ namespace POEApi.Model
         protected List<string> generalTypes;
         protected List<string> compatibleTypes;
         protected List<string> incompatibleTypes;
+        protected CultureInfo culture = System.Threading.Thread.CurrentThread.CurrentCulture;
 
         public GearTypeRunnerBase(GearType gearType, IEnumerable<string> compatibleTypes)
             : base(gearType)
@@ -67,7 +69,9 @@ namespace POEApi.Model
 
         public override bool IsCompatibleType(Gear item)
         {
-            if (item.TypeLine.Contains(Lang.RingStrValue) && !incompatibleTypes.Any(t => item.TypeLine.Contains(t)))
+            //System.Threading.Thread.CurrentThread.CurrentCulture.
+            // if (item.TypeLine.Contains(Lang.RingStrValue) && !incompatibleTypes.Any(t => item.TypeLine.Contains(t)))
+            if (culture.CompareInfo.IndexOf(item.TypeLine, Lang.RingStrValue, CompareOptions.IgnoreCase) >= 0 && !incompatibleTypes.Any(t => item.TypeLine.Contains(t)))
                 return true;
 
             return false;
