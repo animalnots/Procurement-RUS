@@ -57,7 +57,7 @@ namespace Procurement
         }
         public static string LoadingProcurInOffModeStrValue
         {
-            get { return "Загрузка procurement в автономном режиме..."; }
+            get { return "Загрузка Прокьюремента в автономном режиме..."; }
         }
         public static string ErrorFailedtoLoadCharsStrValue
         {

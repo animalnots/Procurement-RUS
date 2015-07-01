@@ -10,7 +10,7 @@ namespace Procurement.Utility
 {
     internal class VersionChecker
     {
-        private const string VERSION_URL = @"https://raw.githubusercontent.com/Stickymaddness/Procurement/master/latest-release.txt";
+        private const string VERSION_URL = @"https://raw.githubusercontent.com/animalnots/Procurement-RUS/master/latest-release.txt";
         public static void CheckForUpdates()
         {
 #if DEBUG
@@ -28,7 +28,7 @@ namespace Procurement.Utility
             }
             catch (KeyNotFoundException kex)
             {
-                MessageBox.Show("Unable to check for updates as the CheckForUpdates setting is missing from your settings file.", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Невозможно проверить обновления поскольку настройка CheckForUpdates не найдена в файле настроек.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             catch (Exception ex)
             {
@@ -45,10 +45,10 @@ namespace Procurement.Utility
 
                 updateInfo[0] = updateInfo[0].Replace("Procurement ", "");
                 Version currentVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
-                //Version latestVersion = new Version(updateInfo[0]);
-                Version latestVersion = currentVersion;
+                Version latestVersion = new Version(updateInfo[0]);
+                //Version latestVersion = currentVersion;
 
-                if (currentVersion >= latestVersion || MessageBox.Show("A new version of Procurement is available! Would you like to download now? (Opens in browser)", "Update Available", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.No)
+                if (currentVersion >= latestVersion || MessageBox.Show("Доступна новая версия Прокьюремента! Скачать новую версию? (Откроется в браузере)", "Доступно обновление", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.No)
                     return;
 
                 Process.Start(updateInfo[1]);
@@ -62,7 +62,7 @@ namespace Procurement.Utility
         private static void handleException(Exception ex)
         {
             Logger.Log(ex.ToString());
-            MessageBox.Show("Error checking for updates, details logged to DebugInfo.log", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            MessageBox.Show("Ошибка при проверке обновлений, детали в DebugInfo.log", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
         }
     }
 }

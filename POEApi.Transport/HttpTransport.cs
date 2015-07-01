@@ -22,17 +22,17 @@ namespace POEApi.Transport
         private enum HttpMethod { GET, POST }
 
         private const string loginURL = @"https://web.poe.garena.ru/login";
-        private const string characterURL = @"http://web.poe.garena.ru/character-window/get-characters";
-        private const string stashURL = @"http://web.poe.garena.ru/character-window/get-stash-items?league={0}&tabs=1&tabIndex={1}";
-        private const string inventoryURL = @"http://web.poe.garena.ru/character-window/get-items?character={0}&accountName={1}";
+        private const string characterURL = @"https://web.poe.garena.ru/character-window/get-characters";
+        private const string stashURL = @"https://web.poe.garena.ru/character-window/get-stash-items?league={0}&tabs=1&tabIndex={1}";
+        private const string inventoryURL = @"https://web.poe.garena.ru/character-window/get-items?character={0}&accountName={1}";
         private const string hashRegEx = "name=\\\"hash\\\" value=\\\"(?<hash>[a-zA-Z0-9]{1,})\\\"";
 
         private const string updateThreadHashEx = "name=\\\"forum_thread\\\" value=\\\"(?<hash>[a-zA-Z0-9]{1,})\\\"";
         private const string bumpThreadHashEx = "name=\\\"forum_post\\\" value=\\\"(?<hash>[a-zA-Z0-9]{1,})\\\"";
         private const string titleRegex = @"\<title\b[^>]*\>\s*(?<Title>[\s\S]*?)\</title\>";
 
-        private const string updateShopURL = @"http://web.poe.garena.ru/forum/edit-thread/{0}";
-        private const string bumpShopURL = @"http://web.poe.garena.ru/forum/post-reply/{0}";
+        private const string updateShopURL = @"https://web.poe.garena.ru/forum/edit-thread/{0}";
+        private const string bumpShopURL = @"https://web.poe.garena.ru/forum/post-reply/{0}";
 
         public event ThottledEventHandler Throttled;
 
@@ -207,7 +207,7 @@ namespace POEApi.Transport
 
                 StringBuilder data = new StringBuilder();
                 data.Append("forum_post=" + threadHash);
-                data.Append("&content=" + Uri.EscapeDataString("[url=https://github.com/Stickymaddness/Procurement/]Bumped with Procurement![/url]"));
+                data.Append("&content=" + Uri.EscapeDataString("[url=https://github.com/animalnots/Procurement-RUS/releases/]Поднята Прокьюрементом![/url]"));
                 data.Append("&post_submit=" + Uri.EscapeDataString("Submit"));
 
                 var response = postToForum(data.ToString(), string.Format(bumpShopURL, threadID));

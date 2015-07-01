@@ -20,7 +20,7 @@
                         <RowDefinition />
                     </Grid.RowDefinitions>
                     <Image Grid.Row="0" Source="/Procurement;component/Images/Sir%20Marauder%20bw.jpg" Width="504" Height="483"/>
-                    <Label Grid.Row="1" Content="Created By :" Foreground="#FFAB9066" FontSize="12" FontWeight="Bold"/>
+                    <Label Grid.Row="1" Content="Автор :" Foreground="#FFAB9066" FontSize="12" FontWeight="Bold"/>
                     <Label Grid.Row="1" Content="                      Stickymaddness             " Foreground="#FFAB9066" FontSize="22" FontWeight="DemiBold" HorizontalAlignment="Center" Margin="60,19,60,6" Grid.RowSpan="2" />
                 </Grid>
                 <Grid Grid.Column="2" VerticalAlignment="Top" Margin="30,0,6,0">
@@ -34,9 +34,9 @@
                     
                     <Label x:Name="Version" Grid.Row="0" Foreground="#FFAB9066" FontSize="18" FontWeight="UltraBold"/>
                     <StackPanel Grid.Row="2" >
-                        <TextBlock Foreground="#FFAB9066" TextWrapping="Wrap" FontSize="14" Text="Procurement распространяется с открытым исходным кодом абсолютно бесплатно!" />
+                        <TextBlock Foreground="#FFAB9066" TextWrapping="Wrap" FontSize="14" Text="Прокьюремент распространяется с открытым исходным кодом абсолютно бесплатно!" />
                         <TextBlock />
-                        <TextBlock Foreground="#FFAB9066" TextWrapping="Wrap" FontSize="14" Text="Для последних обновлений, сообщении о найденных багах или своих предложениях посетите: https://github.com/Stickymaddness/Procurement или https://github.com/animalnots/Procurement-RUS (данная версия), также https://github.com/medvedttn/Procurement (попробуйте!)" />
+                        <TextBlock Foreground="#FFAB9066" TextWrapping="Wrap" FontSize="14" Text="Для последних обновлений, сообщении о найденных багах или своих предложениях посетите: https://github.com/animalnots/Procurement-RUS (данная версия), также https://github.com/medvedttn/Procurement (попробуйте!)" />
                     </StackPanel>
                     
                     <StackPanel Grid.Row="3">
@@ -63,7 +63,7 @@
                     <StackPanel Grid.Row="4" VerticalAlignment="Bottom">
                         <TextBlock Foreground="#FFAB9066" TextWrapping="Wrap" Text="Legal :" FontSize="11" />
                         <TextBlock />
-                        <TextBlock Foreground="#FFAB9066" TextWrapping="Wrap" Text="Path Of Exile, the Path Of Exile logo and all related artwork used in this application are Copyright © Grinding Gear Games. For further information please visit:                     http://web.poe.garena.ru" FontSize="11" />
+                        <TextBlock Foreground="#FFAB9066" TextWrapping="Wrap" Text="Path Of Exile, the Path Of Exile logo and all related artwork used in this application are Copyright © Grinding Gear Games. For further information please visit:                     https://web.poe.garena.ru" FontSize="11" />
                         <TextBlock FontSize="11" />
                         <TextBlock Foreground="#FFAB9066" TextWrapping="Wrap" Text="This work is licensed under Artistic License 2.0." />
                         <TextBlock />

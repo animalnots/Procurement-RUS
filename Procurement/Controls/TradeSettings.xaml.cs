@@ -14,7 +14,7 @@ namespace Procurement.Controls
 
         private void Hyperlink_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            Process.Start("http://web.poe.garena.ru/private-messages/compose/to/poexyzis");
+            Process.Start("https://web.poe.garena.ru/private-messages/compose/to/poexyzis");
         }
     }
 }
