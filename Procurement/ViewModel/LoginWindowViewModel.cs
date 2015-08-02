@@ -125,16 +125,32 @@ namespace Procurement.ViewModel
 
             if (string.IsNullOrEmpty(Email))
             {
-                MessageBox.Show(string.Format("{0} is required!", useSession ? Lang.AliasStrValue : "Email"), Lang.ErrorLoggingInStrValue, MessageBoxButton.OK, MessageBoxImage.Stop);
-                toggleControls();
-                return;
+                if (useSession)
+                {
+                    Email = "Pofig";
+                }
+                else
+                {
+                    MessageBox.Show(string.Format("{0} is required!", useSession ? Lang.AliasStrValue : "Email"),
+                        Lang.ErrorLoggingInStrValue, MessageBoxButton.OK, MessageBoxImage.Stop);
+                    toggleControls();
+                    return;
+                }
             }
 
             if (string.IsNullOrEmpty(AccountName))
             {
-                MessageBox.Show(Lang.ErrorAccRequiredStrValue, Lang.ErrorLoggingInStrValue, MessageBoxButton.OK, MessageBoxImage.Stop);
-                toggleControls();
-                return;
+                if (useSession)
+                {
+                    AccountName = "Plevati";
+                }
+                else
+                {
+                    MessageBox.Show(Lang.ErrorAccRequiredStrValue, Lang.ErrorLoggingInStrValue, MessageBoxButton.OK,
+                        MessageBoxImage.Stop);
+                    toggleControls();
+                    return;
+                }
             }
 
             if (!offline)
@@ -147,7 +163,7 @@ namespace Procurement.ViewModel
             Task.Factory.StartNew(() =>
             {
                 SecureString password = formChanged ? this.view.txtPassword.SecurePassword : Settings.UserSettings["AccountPassword"].Decrypt();
-                ApplicationState.Model.Authenticate(Email, password, offline, useSession);
+                ApplicationState.Model.Authenticate(Email, password, offline, useSession, ref accountName);
 
                 if (formChanged)
                     saveSettings(password);
@@ -215,7 +231,6 @@ namespace Procurement.ViewModel
 
                 foreach (var item in LoadStashItems(character))
                     yield return item;
-
                 foreach (var item in LoadCharacterInventoryItems(character, offline).Where(i => i.InventoryId != "MainInventory"))
                     yield return item;
             }

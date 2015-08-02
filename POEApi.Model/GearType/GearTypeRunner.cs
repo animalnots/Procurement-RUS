@@ -35,12 +35,12 @@ namespace POEApi.Model
         {
             // First, check the general types, to see if there is an easy match.
             foreach (var type in generalTypes)
-                if (item.TypeLine.Contains(type))
+                if (item.TypeLine.ToLower().Contains(type.ToLower()))
                     return true;
 
             // Second, check all known types.
             foreach (var type in compatibleTypes)
-                if (item.TypeLine.Contains(type))
+                if (item.TypeLine.ToLower().Contains(type.ToLower()))
                     return true;
 
             return false;
@@ -48,11 +48,11 @@ namespace POEApi.Model
 
         public override string GetBaseType(Gear item)
         {
-            if (incompatibleTypes != null && incompatibleTypes.Any(t => item.TypeLine.Contains(t)))
+            if (incompatibleTypes != null && incompatibleTypes.Any(t => item.TypeLine.ToLower().Contains(t.ToLower())))
                 return null;
 
             foreach (var type in compatibleTypes)
-                if (item.TypeLine.Contains(type))
+                if (item.TypeLine.ToLower().Contains(type.ToLower()))
                     return type;
 
             return null;
@@ -135,6 +135,23 @@ namespace POEApi.Model
             : base(GearType.Map, Settings.GearBaseTypes[GearType.Map])
         {
             generalTypes.Add(Lang.MapStrValue);
+        }
+    }
+
+    public class DivinationCardRunner : GearTypeRunnerBase
+    {
+        public DivinationCardRunner()
+            : base(GearType.DivinationCard, Settings.GearBaseTypes[GearType.DivinationCard])
+        {
+        }
+    }
+
+    public class JewelRunner : GearTypeRunnerBase
+    {
+        public JewelRunner()
+            : base(GearType.Jewel, new List<string>())
+        {
+            generalTypes.Add(Lang.JewelStrValue);
         }
     }
 

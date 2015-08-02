@@ -30,6 +30,7 @@ namespace POEApi.Transport
         private const string updateThreadHashEx = "name=\\\"forum_thread\\\" value=\\\"(?<hash>[a-zA-Z0-9]{1,})\\\"";
         private const string bumpThreadHashEx = "name=\\\"forum_post\\\" value=\\\"(?<hash>[a-zA-Z0-9]{1,})\\\"";
         private const string titleRegex = @"\<title\b[^>]*\>\s*(?<Title>[\s\S]*?)\</title\>";
+        private const string accountRegex = "accountName\\\":\\\"(?<accname>[a-zA-Z0-9_\\-\\.]{1,})\\\"";
 
         private const string updateShopURL = @"https://web.poe.garena.ru/forum/edit-thread/{0}";
         private const string bumpShopURL = @"https://web.poe.garena.ru/forum/post-reply/{0}";
@@ -58,7 +59,7 @@ namespace POEApi.Transport
                 Throttled(this, e);
         }
 
-        public bool Authenticate(string email, SecureString password, bool useSessionID)
+        public bool Authenticate(string email, SecureString password, bool useSessionID, ref String accname)
         {
             if (useSessionID)
             {
@@ -66,8 +67,17 @@ namespace POEApi.Transport
                 HttpWebRequest confirmAuth = getHttpRequest(HttpMethod.GET, loginURL);
                 HttpWebResponse confirmAuthResponse = (HttpWebResponse)confirmAuth.GetResponse();
 
+
+
+                string loginResponseSESSION = Encoding.Default.GetString(getMemoryStreamFromResponse(confirmAuthResponse).ToArray());
+                string accValue = Regex.Match(loginResponseSESSION, accountRegex).Groups["accname"].Value;
+             
                 if (confirmAuthResponse.ResponseUri.ToString() == loginURL)
                     throw new LogonFailedException();
+                   if (accValue != "")
+                   {
+                       accname = accValue;
+                   }
                 return true;
             }
 
@@ -75,7 +85,6 @@ namespace POEApi.Transport
             HttpWebResponse hashResponse = (HttpWebResponse)getHash.GetResponse();
             string loginResponse = Encoding.Default.GetString(getMemoryStreamFromResponse(hashResponse).ToArray());
             string hashValue = Regex.Match(loginResponse, hashRegEx).Groups["hash"].Value;
-
             HttpWebRequest request = getHttpRequest(HttpMethod.POST, loginURL);
             request.AllowAutoRedirect = false;
 
@@ -173,7 +182,6 @@ namespace POEApi.Transport
             StreamReader reader = new StreamReader(response.GetResponseStream());
             byte[] buffer = reader.ReadAllBytes();
             RequestThrottle.Instance.Complete();
-
             return new MemoryStream(buffer);
         }
 

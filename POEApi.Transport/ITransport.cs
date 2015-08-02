@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Security;
 using POEApi.Infrastructure.Events;
 
@@ -6,7 +7,7 @@ namespace POEApi.Transport
 {
     public interface ITransport
     {
-        bool Authenticate(string email, SecureString password, bool useSessionID);
+        bool Authenticate(string email, SecureString password, bool useSessionID, ref String accname);
         Stream GetStash(int index, string league);
         Stream GetStash(int index, string league, bool refresh);
         Stream GetImage(string url);

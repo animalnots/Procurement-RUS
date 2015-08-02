@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using POEApi.Infrastructure;
 using System.Security;
 using POEApi.Infrastructure.Events;
@@ -30,9 +31,9 @@ namespace POEApi.Transport
                 Throttled(sender, e);
         }
 
-        public bool Authenticate(string email, SecureString password, bool useSessionID)
+        public bool Authenticate(string email, SecureString password, bool useSessionID, ref String accname)
         {
-            return innerTranport.Authenticate(email, password, useSessionID);
+            return innerTranport.Authenticate(email, password, useSessionID, ref accname);
         }
 
         public Stream GetStash(int index, string league, bool refresh)

@@ -73,15 +73,15 @@
   <ShopSettings>
     <Shop League="Стандарт" ThreadId="" ThreadTitle="" />
     <Shop League="Одна жизнь" ThreadId="" ThreadTitle="" />
-    <Shop League="Мучение/Родословные" ThreadId="" ThreadTitle="" />
-    <Shop League="Мучение/Родословные одна жизнь" ThreadId="" ThreadTitle="" />
+    <Shop League="Отряды" ThreadId="" ThreadTitle="" />
+    <Shop League="Буря" ThreadId="" ThreadTitle="" />
   </ShopSettings>
   <Lists>
     <List name="MyLeagues">
       <Item value="Стандарт" />
       <Item value="Одна жизнь" />
-      <Item value="Мучение/Родословные" />
-      <Item value="Мучение/Родословные одна жизнь" />
+      <Item value="Отряды" />
+      <Item value="Буря" />
     </List>
     <List name="MyTabs">
       <!--If you only want Procurement to download specific tabs list them here, eg :-->

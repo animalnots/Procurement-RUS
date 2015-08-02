@@ -171,6 +171,13 @@ namespace POEApi.Model
             get { return "Лук"; }
         }
 
+        public static string JewelStrValue
+        {
+            get { return "Самоцвет"; }
+        }
+
+
+
 
 
         //GearTypeRunner.cs end
@@ -204,7 +211,7 @@ namespace POEApi.Model
         }
         public static string ArmourersScrapStrValue
         {
-            get { return "Деталь Доспеха"; }
+            get { return "Деталь доспеха"; }
         }
         public static string MirrorStrValue
         {

@@ -23,13 +23,13 @@
             </Grid.RowDefinitions>
 
             <Label Grid.Row="0" Content="Настройки выкупа" Foreground="#FFAB9066" FontSize="14" FontWeight="Bold" Margin="0, 10, 0, 0"/>
-            
+
             <CheckBox Grid.Row="1" Foreground="#FFAB9066" IsChecked="{Binding EmbedBuyouts}" Content="Внедренные Выкупы{}" HorizontalAlignment="Left" Margin="0,2,0,0" />
 
             <CheckBox Grid.Row="2" Foreground="#FFAB9066" IsChecked="{Binding BuyoutItemsOnlyVisibleInBuyoutsTag}" Content="Отдельно выделять в теме товары с выкупом" HorizontalAlignment="Left" Margin="0,2,0,0" />
 
             <CheckBox Grid.Row="3" Foreground="#FFAB9066" IsChecked="{Binding OnlyDisplayBuyouts}" Content="Показывать только товары с выкупом" HorizontalAlignment="Left" Margin="0,2,0,0" />
-    
+
             <Grid Grid.Row="4">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="150"/>
@@ -53,7 +53,7 @@
 
             <Label Grid.Row="7" Foreground="#FFAB9066" FontSize="12" Margin="0, 0, 0, 0">
                 <TextBlock>
-                    Enter your personal poe.trade URL and Procurement will automatically refresh your online status for you as long as it remains open. Online mode only.<LineBreak/>You can get your URL by sending a PM to 'poexyzis' on the game forums. (<Hyperlink Click="Hyperlink_Click">https://web.poe.garena.ru/private-messages/compose/to/poexyzis</Hyperlink>)
+                    Введите вашу ссылку для контроля сетевого статуса и Прокьюремент будет автоматически продлевать его пока открыта игра.<LineBreak/> Можно получить ссылку написав игроку 'poep.ru' на форуме игры. (<Hyperlink Click="Hyperlink_Click">https://web.poe.garena.ru/private-messages/compose/to/poep.ru</Hyperlink>)
                 </TextBlock>
             </Label>
             <Grid Grid.Row="8">
@@ -62,14 +62,14 @@
                     <ColumnDefinition Width="800"/>
                 </Grid.ColumnDefinitions>
 
-                <Label Grid.Column="0" Content="Poe.trade URL" Foreground="#FFAB9066" FontSize="12" />
+                <Label Grid.Column="0" Content="poep.ru ссылка" Foreground="#FFAB9066" FontSize="12" />
                 <TextBox Height="22" Width="720" Grid.Column="1" Text="{Binding PoeTradeRefreshUrl}" IsEnabled="{Binding LoggedIn}" HorizontalAlignment="Left" />
             </Grid>
-            
-            <CheckBox Grid.Row="9" Foreground="#FFAB9066" IsChecked="{Binding PoeTradeRefreshEnabled}" IsEnabled="{Binding LoggedIn}" Content="Enable automatic poe.trade online refresh" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,2,0,0" />
 
-            <Button Grid.Row="10" Content="Save Poe.Trade Settings" Style="{Binding}" IsEnabled="{Binding LoggedIn}" Height="22" Width="145" HorizontalAlignment="Left" Margin="10,0,0,0" Command="{Binding SaveRefreshCommand}" VerticalAlignment="Bottom"/>
-            
+            <CheckBox Grid.Row="9" Foreground="#FFAB9066" IsChecked="{Binding PoeTradeRefreshEnabled}" IsEnabled="{Binding LoggedIn}" Content="Включить автоматическое продление статуса poep.ru" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,2,0,0" />
+
+            <Button Grid.Row="10" Content="Сохранить настройки poep.ru" Style="{Binding}" IsEnabled="{Binding LoggedIn}" Height="22" Width="200" HorizontalAlignment="Left" Margin="10,0,0,139" Command="{Binding SaveRefreshCommand}" VerticalAlignment="Bottom" Grid.RowSpan="2"/>
+
         </Grid>
     </Border>
 </UserControl>

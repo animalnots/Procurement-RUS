@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace POEApi.Model
 {
@@ -59,8 +60,8 @@ namespace POEApi.Model
             this.H = item.H;
             this.IconURL = getIconUrl(item.Icon);
             this.League = item.League;
-            this.Name = item.Name;
-            this.TypeLine = item.TypeLine;
+            this.Name = humanizeName(item.Name);
+            this.TypeLine = humanizeName(item.TypeLine);
             this.DescrText = item.DescrText;
             this.X = item.X;
             this.Y = item.Y;
@@ -90,6 +91,46 @@ namespace POEApi.Model
             this.Character = string.Empty;
         }
 
+        private string humanizeName(string s)
+        {
+            string[] sa = Regex.Split(s, "set:");
+
+            if (sa.Length > 1)
+            {
+                string thename = "";
+                var genders = new List<string>();
+                int p1 = (sa[sa.Length - 1].LastIndexOf('}') != -1) ? (sa[sa.Length - 1].LastIndexOf('}')) : 0;
+                int p2 = (sa[sa.Length - 1].LastIndexOf('>') != -1) ? (sa[sa.Length - 1].LastIndexOf('>')) : 0;
+                string rest = sa[sa.Length - 1].Substring(((p1 > p2) ? p1 : p2) + 1);
+                int i;
+                for (int z = 1; z < sa.Length; z++)
+                {
+                    string gender = sa[z];
+                    i = 0;
+                    string tmp = "";
+                    while (gender[i] != '>')
+                    {
+                        tmp = tmp + gender[i]; i++;
+                    }
+                    genders.Add(tmp);
+                }
+
+                foreach (string g in genders)
+                {
+                    if (sa[sa.Length - 1].IndexOf(":" + g + ">", System.StringComparison.InvariantCultureIgnoreCase) != -1)
+                    {
+                        thename = thename + sa[sa.Length - 1].Substring(
+                        sa[sa.Length - 1].IndexOf('{', sa[sa.Length - 1].IndexOf(":" + g + ">", System.StringComparison.InvariantCultureIgnoreCase)) + 1,
+                                sa[sa.Length - 1].IndexOf('}', sa[sa.Length - 1].IndexOf(":" + g + ">", System.StringComparison.InvariantCultureIgnoreCase)) -
+                                sa[sa.Length - 1].IndexOf('{', sa[sa.Length - 1].IndexOf(":" + g + ">", System.StringComparison.InvariantCultureIgnoreCase)) - 1
+                            );
+                    }
+                }
+                return thename + rest;
+            }
+            else return s;
+        }
+
         private string getIconUrl(string url)
         {
             Uri uri;
@@ -98,6 +139,7 @@ namespace POEApi.Model
 
             return "http://webcdn.pathofexile.com" + url;
         }
+
 
         protected abstract int getConcreteHash();
 

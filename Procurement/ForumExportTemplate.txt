@@ -1,7 +1,12 @@
 ﻿Добро пожаловать! (Последнее обновление {LastUpdated}),
 
 Пожалуйста, свяжитесь со мной здесь или в игре если вас что-нибудь заинтересовало. Мой ник в игре {IGN}.
- 
+[spoiler="          Гадальные карты          "]
+{DivinationCard}
+[/spoiler]
+[spoiler="          Самоцветы          "]
+{NormalJewel}{MagicJewel}{RareJewel}{UniqueJewel}
+[/spoiler]
 [spoiler="          Уникальные вещи          "]
 {Uniques}
 [/spoiler]

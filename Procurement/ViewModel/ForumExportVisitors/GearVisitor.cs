@@ -17,6 +17,13 @@ namespace Procurement.ViewModel.ForumExportVisitors
 
             tokens = tokensSource.ToDictionary(i => i.Key, i => i.Value);
             tokens.Add("{NormalGear}", new NormalRarity());
+
+            //Shitty temp hack
+            tokens.Remove("{NormalDivinationCard}");
+            tokens.Remove("{MagicDivinationCard}");
+            tokens.Remove("{RareDivinationCard}");
+            tokens.Remove("{UniqueDivinationCard}");
+            tokens.Add("{DivinationCard}", new GearTypeFilter(GearType.DivinationCard, string.Empty));
         }
         public override string Visit(IEnumerable<Item> items, string current)
         {
