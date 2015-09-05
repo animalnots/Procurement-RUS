@@ -15,8 +15,8 @@ namespace Procurement.ViewModel.Recipes
         
         protected override IEnumerable<Gear> getCandidateItems(IEnumerable<Item> items)
         {
-            return items.OfType<Gear>().Where(a => a.GearType == GearType.Boots || a.GearType == GearType.Chest
-                || a.GearType == GearType.Gloves || a.GearType == GearType.Helmet || a.GearType == GearType.Shield)
+            return items.OfType<Gear>().Where(a => a.GearType == GearType.Boots || a.GearType == GearType.BodyArmours
+                || a.GearType == GearType.Gloves || a.GearType == GearType.Helmets || a.GearType == GearType.Shields)
                 .Where(a => a.IsQuality);
         }
 

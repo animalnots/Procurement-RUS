@@ -6,7 +6,7 @@ namespace Procurement.ViewModel.Filters.ForumExport
     public class LifeFilter : ExplicitModBase
     {
         public LifeFilter()
-            : base("to maximum Life")
+            : base(Lang.toMaximumLife)
         { }
 
         public override bool CanFormCategory

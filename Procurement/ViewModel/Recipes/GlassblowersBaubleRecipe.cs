@@ -15,7 +15,7 @@ namespace Procurement.ViewModel.Recipes
 
         protected override IEnumerable<Gear> getCandidateItems(IEnumerable<Item> items)
         {
-            return items.OfType<Gear>().Where(a => a.GearType == GearType.Flask).Where(a => a.IsQuality);
+            return items.OfType<Gear>().Where(a => (a.GearType == GearType.CriticalUtilityFlasks || a.GearType == GearType.HybridFlasks || a.GearType == GearType.LifeFlasks || a.GearType == GearType.ManaFlasks || a.GearType == GearType.UtilityFlasks)).Where(a => a.IsQuality);
         }
 
         protected override string getMissingCombinationText(decimal requiredQuality, decimal qualityFound)

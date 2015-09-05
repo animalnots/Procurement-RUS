@@ -2,6 +2,7 @@
 using Procurement.ViewModel.Filters;
 using System.Collections.Generic;
 using System.Linq;
+using Procurement.ViewModel.Filters.ForumExport;
 
 namespace Procurement.ViewModel.ForumExportVisitors
 {
@@ -12,8 +13,9 @@ namespace Procurement.ViewModel.ForumExportVisitors
         public TypeLineVisitor()
         {
             tokens = new Dictionary<string, IFilter>();
-            tokens.Add("{VaalFragments}", new VaalFragmentFilter());
-            tokens.Add("{VaalUberFragments}", new VaalUberFragmentFilter());
+            //tokens.Add("{VaalFragments}", new VaalFragmentFilter());
+            //tokens.Add("{VaalUberFragments}", new VaalUberFragmentFilter());
+            //tokens.Add("{MapFragments}", new MapFragmentsFilter());
         }
 
         public override string Visit(IEnumerable<Item> items, string current)

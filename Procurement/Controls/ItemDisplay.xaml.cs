@@ -72,6 +72,8 @@ namespace Procurement.Controls
             Item item = vm.Item;
 
             MenuItem setBuyout = new MenuItem();
+            setBuyout.StaysOpenOnClick = true;
+
             string pricingInfo = string.Empty;
 
             if (Settings.Buyouts.ContainsKey(item.UniqueIDHash))

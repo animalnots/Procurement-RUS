@@ -127,7 +127,7 @@ namespace Procurement.ViewModel
             {
                 if (useSession)
                 {
-                    Email = "Pofig";
+                    Email = "chucknorris";
                 }
                 else
                 {
@@ -142,7 +142,7 @@ namespace Procurement.ViewModel
             {
                 if (useSession)
                 {
-                    AccountName = "Plevati";
+                    AccountName = "superhero";
                 }
                 else
                 {
@@ -329,7 +329,7 @@ namespace Procurement.ViewModel
 
         void model_StashLoading(POEModel sender, StashLoadedEventArgs e)
         {
-            update(Lang.LoadingStrValue + " " + ApplicationState.CurrentLeague + " " + Lang.StashStrValue + " " + (e.StashID + 1) + "...", e);
+            update(Lang.LeagueStrValue + " " + ApplicationState.CurrentLeague + ": " + Lang.LoadingStrValue + " " + Lang.StashStrValue + " " + (e.StashID + 1) + "...", e);
         }
 
         void model_ImageLoading(POEModel sender, ImageLoadedEventArgs e)

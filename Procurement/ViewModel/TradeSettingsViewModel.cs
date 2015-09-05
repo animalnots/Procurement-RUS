@@ -12,6 +12,7 @@ namespace Procurement.ViewModel
         private const string EMBED_BUYOUTS = "EmbedBuyouts";
         private const string BUYOUT_TAG_ONLY = "BuyoutItemsOnlyVisibleInBuyoutsTag";
         private const string ONLY_DISPLAY_BUYOUTS = "OnlyDisplayBuyouts";
+        private const string TRANSLATE_CURRENCY = "TranslateCurrency";
         private const string POE_TRADE_REFRESH = "PoeTradeRefreshEnabled";
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -64,6 +65,20 @@ namespace Procurement.ViewModel
                     PropertyChanged(this, new PropertyChangedEventArgs(ONLY_DISPLAY_BUYOUTS));
 
                 Settings.UserSettings[ONLY_DISPLAY_BUYOUTS] = Convert.ToString(value);
+                Settings.Save();
+            }
+        }
+        private bool translateCurrency;
+        public bool TranslateCurrency
+        {
+            get { return translateCurrency; }
+            set
+            {
+                translateCurrency = value;
+                if (PropertyChanged != null)
+                    PropertyChanged(this, new PropertyChangedEventArgs(TRANSLATE_CURRENCY));
+
+                Settings.UserSettings[TRANSLATE_CURRENCY] = Convert.ToString(value);
                 Settings.Save();
             }
         }
@@ -125,6 +140,7 @@ namespace Procurement.ViewModel
             this.embedBuyouts = getSetting(EMBED_BUYOUTS);
             this.buyoutItemsOnlyVisibleInBuyoutsTag = getSetting(BUYOUT_TAG_ONLY);
             this.onlyDisplayBuyouts = getSetting(ONLY_DISPLAY_BUYOUTS);
+            this.translateCurrency = getSetting(TRANSLATE_CURRENCY);
             this.poeTradeRefreshEnabled = getSetting(POE_TRADE_REFRESH);
 
             saveCommand = new DelegateCommand(saveShopSettings);

@@ -76,6 +76,10 @@ namespace Procurement
         {
             get { return "Загрузка"; }
         }
+        public static string LeagueStrValue
+        {
+            get { return "Лига"; }
+        }
         public static string InventoryStrValue
         {
             get { return "инвентаря"; }
@@ -87,7 +91,7 @@ namespace Procurement
         public static string StashStrValue
         {
             //Stash Tab
-            get { return "Секция Хранилища"; }
+            get { return "Секции Хранилища"; }
         }
         public static string LoadingImgForStrValue
         {
@@ -138,5 +142,74 @@ namespace Procurement
             get { return "Уровень"; }
         }
         //CharacterToLevelConverter.cs END
+
+
+
+        //ForumExport Stuff
+
+        //"to all Elemental Resistances"
+        public static string toAllElementalResistances
+        {
+            get { return "к сопротивлению всем стихиям"; }
+        }
+        /*
+            dropOnly.Add(Lang.Empower);
+            dropOnly.Add(Lang.Enhance);
+            dropOnly.Add(Lang.Enlighten);
+            dropOnly.Add(Lang.Portal);
+            dropOnly.Add(Lang.Detonate_Mines);
+         * Added Chaos Damage
+         */
+
+        public static string Empower
+        {
+            get { return "Усилитель"; }
+        }
+        public static string Enhance
+        {
+            get { return "Улучшитель"; }
+        }
+        public static string Enlighten
+        {
+            get { return "Наставник"; }
+        }
+        public static string Portal
+        {
+            get { return "Портал"; }
+        }
+        public static string DetonateMines
+        {
+            get { return "Подрыв мин"; }
+        }
+        public static string AddedChaosDamage
+        {
+            get { return "Урон хаосом"; }
+        }
+        public static string curse
+        {
+            get { return "проклятье"; }
+        }
+        public static string aura
+        {
+            get { return "аура"; }
+        }
+        //INCREASED QUANTITY
+        public static string IncreasedQuantity
+        {
+            get { return "увеличение количества"; }
+        }
+        public static string IncreasedRarity
+        {
+            get { return "повышение редкости"; }
+        }
+        //"to maximum Life"
+        public static string toMaximumLife
+        {
+            get { return "к максимуму здоровья"; }
+        }
+        public static string movementSpeed
+        {
+            get { return "повышение скорости передвижения"; }
+        }
     }
 }

@@ -5,98 +5,98 @@ namespace Procurement.ViewModel.Filters.ForumExport
     class RingFilter : GearTypeFilter
     {
         public RingFilter()
-            : base(GearType.Ring, "Rings")
+            : base(new GearType[] { GearType.Rings }, "Rings")
         { }
     }
 
     class AmuletFilter : GearTypeFilter
     {
         public AmuletFilter()
-            : base(GearType.Amulet, "Amulets")
+            : base(new GearType[] { GearType.Amulets}, "Amulets")
         { }
     }
 
     class HelmetFilter : GearTypeFilter
     {
         public HelmetFilter()
-            : base(GearType.Helmet, "Helmets")
+            : base(new GearType[] { GearType.Helmets}, "Helmets")
         { }
     }
 
     class ChestFilter : GearTypeFilter
     {
         public ChestFilter()
-            : base(GearType.Chest, "BodyArmor")
+            : base(new GearType[] { GearType.BodyArmours}, "BodyArmor")
         { }
     }
 
     class GlovesFilter : GearTypeFilter
     {
         public GlovesFilter()
-            : base(GearType.Gloves, "Gloves")
+            : base(new GearType[] { GearType.Gloves}, "Gloves")
         { }
     }
 
     class BootFilter : GearTypeFilter
     {
         public BootFilter()
-            : base(GearType.Boots, "Boots")
+            : base(new GearType[] { GearType.Boots}, "Boots")
         { }
     }
 
     class BeltFilter : GearTypeFilter
     {
         public BeltFilter()
-            : base(GearType.Belt, "Belts")
+            : base(new GearType[] { GearType.Belts}, "Belts")
         { }
     }
 
     class AxeFilter : GearTypeFilter
     {
         public AxeFilter()
-            : base(GearType.Axe, "Axes")
+            : base(new GearType[] { GearType.OneHandAxes, GearType.TwoHandAxes }, "Axes")
         { }
     }
 
     class ClawFilter : GearTypeFilter
     {
         public ClawFilter()
-            : base(GearType.Claw, "Claws")
+            : base(new GearType[] { GearType.Claws}, "Claws")
         { }
     }
 
     class BowFilter : GearTypeFilter
     {
         public BowFilter()
-            : base(GearType.Bow, "Bows")
+            : base(new GearType[] { GearType.Bows}, "Bows")
         { }
     }
 
     class DaggerFilter : GearTypeFilter
     {
         public DaggerFilter()
-            : base(GearType.Dagger, "Daggers")
+            : base(new GearType[] { GearType.Daggers}, "Daggers")
         { }
     }
 
     class MaceFilter : GearTypeFilter
     {
         public MaceFilter()
-            : base(GearType.Mace, "Maces")
+            : base(new GearType[] { GearType.OneHandMaces, GearType.TwoHandMaces }, "Maces")
         { }
     }
 
     class QuiverFilter : GearTypeFilter
     {
         public QuiverFilter()
-            : base(GearType.Quiver, "Quivers")
+            : base(new GearType[] { GearType.Quivers}, "Quivers")
         { }
     }
 
     class SceptreFilter : GearTypeFilter
     {
         public SceptreFilter()
-            : base(GearType.Sceptre, "Sceptres")
+            : base(new GearType[] { GearType.Sceptres}, "Sceptres")
         { }
     }
 
@@ -104,42 +104,42 @@ namespace Procurement.ViewModel.Filters.ForumExport
     class StaffFilter : GearTypeFilter
     {
         public StaffFilter()
-            : base(GearType.Staff, "Staves")
+            : base(new GearType[] { GearType.Staves}, "Staves")
         { }
     }
 
     class SwordFilter : GearTypeFilter
     {
         public SwordFilter()
-            : base(GearType.Sword, "Swords")
+            : base(new GearType[] { GearType.OneHandSwords, GearType.ThrustingOneHandSwords, GearType.TwoHandSwords }, "Swords")
         { }
     }
 
     class ShieldFilter : GearTypeFilter
     {
         public ShieldFilter()
-            : base(GearType.Shield, "Shields")
+            : base(new GearType[] { GearType.Shields}, "Shields")
         { }
     }
 
     class WandFilter : GearTypeFilter
     {
         public WandFilter()
-            : base(GearType.Wand, "Wands")
+            : base(new GearType[] { GearType.Wands}, "Wands")
         { }
     }
 
     class FlaskFilter : GearTypeFilter
     {
         public FlaskFilter()
-            : base(GearType.Flask, "Flasks")
+            : base(new GearType[] { GearType.CriticalUtilityFlasks, GearType.LifeFlasks, GearType.ManaFlasks, GearType.HybridFlasks, GearType.UtilityFlasks }, "Flasks")
         { }
     }
 
     class DivinationCardFilter : GearTypeFilter
     {
         public DivinationCardFilter()
-            : base(GearType.DivinationCard, "Divination Cards")
+            : base(new GearType[] { GearType.DivinationCard}, "Divination Cards")
         {
 
         }
@@ -148,7 +148,15 @@ namespace Procurement.ViewModel.Filters.ForumExport
     class JewelFilter : GearTypeFilter
     {
         public JewelFilter()
-            : base(GearType.Jewel, "Jewels")
+            : base(new GearType[] { GearType.Jewel }, "Jewels")
+        {
+
+        }
+    }
+    class MapFragmentsFilter : GearTypeFilter
+    {
+        public MapFragmentsFilter()
+            : base(new GearType[] { GearType.MapFragments }, "Map Fragments")
         {
 
         }

@@ -31,6 +31,23 @@ namespace POEApi.Infrastructure
             addItem("Divine Orb", "divine");
             addItem("Exalted Orb", "exa");
             addItem("Vaal Orb", "vaal");
+
+            addItem("Сфера хаоса", "хаос");
+            addItem("Сфера ваал", "ваал");
+            addItem("Сфера возвышения", "возв");
+            addItem("Божественная сфера", "бож");
+            addItem("Сфера соединения", "соед");
+            addItem("Сфера алхимии", "алх");
+            addItem("Сфера перемен", "перем");
+            addItem("Призма камнерезчика", "призм");
+            addItem("Сфера удачи", "удач");
+            addItem("Резец картографа", "резцов");
+            addItem("Сфера очищения", "очищ");
+            addItem("Сфера раскаяния", "раск");
+            addItem("Сфера царей", "царей");
+            addItem("Сфера златокузнеца", "злат");
+            addItem("Цветная сфера", "цвет");
+            addItem("Благодатная сфера", "благ");
         }
 
         private static void addItem(string currency, string abbreviation)

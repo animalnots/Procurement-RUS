@@ -554,18 +554,6 @@
     <Resource Include="Images\inventory.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\buttons\btn_about.png" />
-    <Resource Include="Images\buttons\btn_contacts.png" />
-    <Resource Include="Images\buttons\btn_inventory.png" />
-    <Resource Include="Images\buttons\btn_selected_about.png" />
-    <Resource Include="Images\buttons\btn_selected_contacts.png" />
-    <Resource Include="Images\buttons\btn_selected_settings.png" />
-    <Resource Include="Images\buttons\btn_selected_trading.png" />
-    <Resource Include="Images\buttons\btn_select_inventory.png" />
-    <Resource Include="Images\buttons\btn_select_stash.png" />
-    <Resource Include="Images\buttons\btn_settings.png" />
-    <Resource Include="Images\buttons\btn_stash.png" />
-    <Resource Include="Images\buttons\btn_trading.png" />
     <Resource Include="Images\Sockets\blue.png" />
     <Resource Include="Images\Sockets\green.png" />
     <Resource Include="Images\Sockets\link-horizontal.png" />
@@ -580,12 +568,6 @@
     <Resource Include="Images\Sockets\blue-socketed.png" />
     <Resource Include="Images\Sockets\green-socketed.png" />
     <Resource Include="Images\Sockets\red-socketed.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\buttons\btn_login.png" />
-    <Resource Include="Images\buttons\btn_login_hover.png" />
-    <Resource Include="Images\buttons\btn_offline.png" />
-    <Resource Include="Images\buttons\btn_offline_hover.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Avatars\templar.png" />
@@ -618,10 +600,6 @@
     <Resource Include="Images\equiped.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\buttons\btn_exit.png" />
-    <Resource Include="Images\buttons\btn_selected_exit.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\Avatars\duelist.png" />
   </ItemGroup>
   <ItemGroup>
@@ -650,26 +628,14 @@
     <Resource Include="Images\ItemHover\ItemHeaderUniqueRight.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\buttons\btn_close.png" />
-    <Resource Include="Images\buttons\btn_close_hover.png" />
-    <Resource Include="Images\buttons\btn_min.png" />
-    <Resource Include="Images\buttons\btn_min_hover.png" />
-    <Resource Include="Images\buttons\btn_recipes.png" />
-    <Resource Include="Images\buttons\btn_recipes_hover.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\footer.png" />
-    <Resource Include="Images\header.png" />
+    <Resource Include="Images\header_old.png" />
     <Resource Include="Images\main.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ForumExportTemplate.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <Resource Include="Images\buttons\donate-hover.png" />
-    <Resource Include="Images\buttons\donate.png" />
-    <Resource Include="Images\buttons\about-button-hover.png" />
-    <Resource Include="Images\buttons\about-button.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Sockets\white-socketed.png" />
@@ -688,6 +654,43 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Sockets\white-socketed-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\header.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\buttons\about-button-hover.png" />
+    <Resource Include="Images\buttons\about-button.png" />
+    <Resource Include="Images\buttons\btn_about.png" />
+    <Resource Include="Images\buttons\btn_close.png" />
+    <Resource Include="Images\buttons\btn_close_hover.png" />
+    <Resource Include="Images\buttons\btn_contacts.png" />
+    <Resource Include="Images\buttons\btn_exit.png" />
+    <Resource Include="Images\buttons\btn_inventory.png" />
+    <Resource Include="Images\buttons\btn_min.png" />
+    <Resource Include="Images\buttons\btn_min_hover.png" />
+    <Resource Include="Images\buttons\btn_recipes.png" />
+    <Resource Include="Images\buttons\btn_recipes_hover.png" />
+    <Resource Include="Images\buttons\btn_selected_about.png" />
+    <Resource Include="Images\buttons\btn_selected_contacts.png" />
+    <Resource Include="Images\buttons\btn_selected_exit.png" />
+    <Resource Include="Images\buttons\btn_selected_settings.png" />
+    <Resource Include="Images\buttons\btn_selected_trading.png" />
+    <Resource Include="Images\buttons\btn_select_inventory.png" />
+    <Resource Include="Images\buttons\btn_select_stash.png" />
+    <Resource Include="Images\buttons\btn_settings.png" />
+    <Resource Include="Images\buttons\btn_stash.png" />
+    <Resource Include="Images\buttons\btn_trading.png" />
+    <Resource Include="Images\buttons\donate-hover.png" />
+    <Resource Include="Images\buttons\donate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\buttons\btn_offline.png" />
+    <Resource Include="Images\buttons\btn_offline_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\buttons\btn_login.png" />
+    <Resource Include="Images\buttons\btn_login_hover.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

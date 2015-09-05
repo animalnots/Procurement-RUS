@@ -13,6 +13,7 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="60"/>
             <RowDefinition Height="40"/>
@@ -49,12 +50,21 @@
             <Button Content="-"  Height="25" Width="20" Command="{Binding Path=PriceInfo.DecreaseValue}" IsEnabled="{Binding PriceInfo.Enabled, Mode=TwoWay}"/>
         </StackPanel>
         <ComboBox Grid.Column="2" Grid.Row="2" Height="25" IsEnabled="{Binding PriceInfo.Enabled, Mode=TwoWay}" ItemsSource="{Binding OrbTypes}" SelectedItem="{Binding PriceInfo.Orb}" />
+        <!--Bargain-->
+        <CheckBox Content="Торг" Grid.Row="3" Foreground="#FFAB9066" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center" IsChecked="{Binding BargainInfo.Enabled, Mode=TwoWay}"/>
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="3">
+            <TextBox  x:Name="BargainValue" Height="25" Width="50" IsEnabled="{Binding BargainInfo.Enabled, Mode=TwoWay}" Text="{Binding BargainInfo.Value}"/>
+            <Button Content="+"  Height="25" Width="20" Command="{Binding Path=BargainInfo.IncreaseValue}" IsEnabled="{Binding BargainInfo.Enabled, Mode=TwoWay}"/>
+            <Button Content="-"  Height="25" Width="20" Command="{Binding Path=BargainInfo.DecreaseValue}" IsEnabled="{Binding BargainInfo.Enabled, Mode=TwoWay}"/>
+        </StackPanel>
+        <ComboBox Grid.Column="2" Grid.Row="3" Height="25" IsEnabled="{Binding BargainInfo.Enabled, Mode=TwoWay}" ItemsSource="{Binding OrbTypes}" SelectedItem="{Binding BargainInfo.Orb}" />
 
 
-        <TextBlock Grid.Row="3" Foreground="#FFAB9066" Text="Примечание:" />
-        <TextBox x:Name="Notes" Grid.Row="4" Grid.ColumnSpan="3" Text="{Binding Notes}" VerticalScrollBarVisibility="Auto" KeyDown="TextBox_KeyDown"/>
 
-        <Grid Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3">
+        <TextBlock Grid.Row="4" Foreground="#FFAB9066" Text="Примечание:" />
+        <TextBox x:Name="Notes" Grid.Row="5" Grid.ColumnSpan="3" Text="{Binding Notes}" VerticalScrollBarVisibility="Auto" KeyDown="TextBox_KeyDown"/>
+
+        <Grid Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="148.8" />
                 <ColumnDefinition Width="11.2" />

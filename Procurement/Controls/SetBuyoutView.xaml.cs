@@ -14,6 +14,7 @@ namespace Procurement.Controls
         {
             InitializeComponent();
             this.DataContext = new SetBuyoutViewModel();
+            //this.DataContext.OrbTypes = 
         }
 
         public event PricingInfoHandler Update;
@@ -24,7 +25,7 @@ namespace Procurement.Controls
         public void Save_Clicked(object sender, System.Windows.RoutedEventArgs e)
         {
             var vm = (this.DataContext as SetBuyoutViewModel);
-            Update(new ItemTradeInfo(vm.BuyoutInfo.GetSaveText(), vm.PriceInfo.GetSaveText(), vm.OfferInfo.GetSaveText(), vm.Notes));
+            Update(new ItemTradeInfo(vm.BuyoutInfo.GetSaveText(), vm.PriceInfo.GetSaveText(), vm.OfferInfo.GetSaveText(), vm.BargainInfo.GetSaveText(), vm.Notes));
         }
         private void RemoveBuyout_Click(object sender, RoutedEventArgs e)
         {

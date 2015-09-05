@@ -17,15 +17,17 @@
 {6Link}
 [/spoiler]
 [spoiler="          Карты          "]
-[spoiler="          Фрагменты ваал          "]
-{VaalFragments}
-{VaalUberFragments}
+[spoiler="          Фрагменты карт          "]
+{MapFragments}
 [/spoiler]
 [spoiler="          66-69          "]
 {66Maps}{67Maps}{68Maps}{69Maps}
 [/spoiler]
 [spoiler="          70-78          "]
 {70Maps}{71Maps}{72Maps}{73Maps}{74Maps}{75Maps}{76Maps}{77Maps}{78Maps}
+[/spoiler]
+[spoiler="          79-82          "]
+{79Maps}{80Maps}{81Maps}{82Maps}
 [/spoiler]
 [/spoiler]
 [spoiler="          Камни навыков          "]
@@ -71,25 +73,25 @@
 [spoiler="          3-х сопротивлений Экипировка         "]
 {TripRes}
 [/spoiler]
-[spoiler="          УРП/УКП Экипировка          "]
+[spoiler="          Увеличение редкости/кол-ва предметов          "]
 {MagicFind}
 [/spoiler]
 [spoiler="          Оружие и Броня          "]
 [spoiler="          Броня                                 "]
 [spoiler="          Шлемы          "]
-{RareHelmet}
+{RareHelmets}
 [/spoiler]
 [spoiler="          Амулеты          "]
-{RareAmulet}
+{RareAmulets}
 [/spoiler]
 [spoiler="          Нагрудные доспехи          "]
-{RareChest}
+{RareBodyArmours}
 [/spoiler]
 [spoiler="          Кольца          "]
-{RareRing}
+{RareRings}
 [/spoiler]
 [spoiler="          Пояса          "]
-{RareBelt}
+{RareBelts}
 [/spoiler]
 [spoiler="          Ботинки          "]
 {RareBoots}
@@ -99,45 +101,59 @@
 [/spoiler]
 [/spoiler]
 [spoiler="          Щиты          "]
-{RareShield}
+{RareShields}
 [/spoiler]
 [spoiler="          Мечи, Топоры & Булавы          "]
-{RareSword}
-{RareAxe}
-{RareMace}
+{RareOneHandSwords}{RareTwoHandSwords}{RareThrustingOneHandSwords}
+{RareOneHandAxes}{RareTwoHandAxes}
+{RareOneHandMaces}{RareTwoHandMaces}
 [/spoiler]
 [spoiler="          Кинжалы          "]
-{RareDagger}
+{RareDaggers}
 [/spoiler]
 [spoiler="          Когти          "]
-{RareClaw}
+{RareClaws}
 [/spoiler]
 [spoiler="          Луки  & Колчаны          "]
-{RareBow}
-{RareQuiver}
+{RareBows}
+{RareQuivers}
 [/spoiler]
 [spoiler="          Жезлы, Скипетры & Посохи          "]
-{RareWand}
-{RareSceptre}
-{RareStaff}
+{RareWands}
+{RareSceptres}
+{RareStaves}
 [/spoiler]
 [/spoiler]
 [spoiler="          Флаконы          "]
 [spoiler="          Обычные          "]
-{NormalFlask}
+{NormalLifeFlasks}
+{NormalManaFlasks}
+{NormalHybridFlasks}
+{NormalUtilityFlasks}
+{NormalCriticalUtilityFlasks}
 [/spoiler]
 [spoiler="          Магические          "]
-{MagicFlask}
+{MagicLifeFlasks}
+{MagicManaFlasks}
+{MagicHybridFlasks}
+{MagicUtilityFlasks}
+{MagicCriticalUtilityFlasks}
 [/spoiler]
 [spoiler="          Уникальные          "]
-{UniqueFlask} 
+{UniqueLifeFlasks} 
+{UniqueManaFlasks} 
+{UniqueHybridFlasks} 
+{UniqueUtilityFlasks} 
+{UniqueCriticalUtilityFlasks} 
 [/spoiler]
 [/spoiler]
 [spoiler="          Валюта          "]
 {Currency} 
 [/spoiler]
-
+[spoiler="          Удочки          "]
+{NormalFishingRods}{MagicFishingRods}{RareFishingRods}{UniqueFishingRods}
+[/spoiler]
 Спасибо за просмотр!
 
-[url=https://github.com/animalnots/Procurement-RUS][img]http://i.imgur.com/ZHBMImo.png[/img][/url]
+[url=https://github.com/animalnots/Procurement-RUS/releases][img]http://i.imgur.com/9c8HdP3.png[/img][/url]
 

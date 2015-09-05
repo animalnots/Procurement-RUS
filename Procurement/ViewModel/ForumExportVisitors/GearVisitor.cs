@@ -13,7 +13,7 @@ namespace Procurement.ViewModel.ForumExportVisitors
         {
             var tokensSource = from rarity in Enum.GetNames(typeof(Rarity))
                                from gearType in Enum.GetNames(typeof(GearType))
-                               select new KeyValuePair<string, IFilter>(string.Concat("{", rarity, gearType, "}"), new AndFilter(new RarityFilter(getEnum<Rarity>(rarity)), new GearTypeFilter(getEnum<GearType>(gearType), string.Empty)));
+                               select new KeyValuePair<string, IFilter>(string.Concat("{", rarity, gearType, "}"), new AndFilter(new RarityFilter(getEnum<Rarity>(rarity)), new GearTypeFilter(new GearType[] {getEnum<GearType>(gearType)}, string.Empty)));
 
             tokens = tokensSource.ToDictionary(i => i.Key, i => i.Value);
             tokens.Add("{NormalGear}", new NormalRarity());
@@ -23,7 +23,15 @@ namespace Procurement.ViewModel.ForumExportVisitors
             tokens.Remove("{MagicDivinationCard}");
             tokens.Remove("{RareDivinationCard}");
             tokens.Remove("{UniqueDivinationCard}");
-            tokens.Add("{DivinationCard}", new GearTypeFilter(GearType.DivinationCard, string.Empty));
+            tokens.Add("{DivinationCard}", new GearTypeFilter(new GearType[] { GearType.DivinationCard }, string.Empty));
+            //Not Shitty temp hack
+            tokens.Remove("{NormalMapFragments}");
+            tokens.Remove("{MagicMapFragments}");
+            tokens.Remove("{RareMapFragments}");
+            tokens.Remove("{UniqueMapFragments}");
+            tokens.Add("{MapFragments}", new GearTypeFilter(new GearType[] { GearType.MapFragments }, string.Empty));
+
+            
         }
         public override string Visit(IEnumerable<Item> items, string current)
         {

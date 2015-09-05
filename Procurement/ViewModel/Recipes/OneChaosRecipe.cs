@@ -69,9 +69,9 @@ namespace Procurement.ViewModel.Recipes
                                                             .GroupBy(g => g.GearType)
                                                             .ToDictionary(g => g.Key.ToString(), g => g.ToList());
 
-            mergeKeys(buckets, "One Handed", g => g.Properties.Any(pr => pr.Name.Contains("One Handed")), GearType.Axe, GearType.Bow, GearType.Claw, GearType.Dagger, GearType.Mace, GearType.Sceptre, GearType.Staff, GearType.Sword, GearType.Wand);
-            mergeKeys(buckets, "Two Handed", g => g.Properties.Any(pr => pr.Name.Contains("Two Handed")), GearType.Axe, GearType.Bow, GearType.Claw, GearType.Dagger, GearType.Mace, GearType.Sceptre, GearType.Staff, GearType.Sword, GearType.Wand);
-            removeKeys(buckets, GearType.Axe, GearType.Bow, GearType.Claw, GearType.Dagger, GearType.Mace, GearType.Sceptre, GearType.Staff, GearType.Sword, GearType.Wand);
+            mergeKeys(buckets, "One Handed", g => g.Properties.Any(pr => pr.Name.Contains("One Handed")), GearType.OneHandAxes, GearType.TwoHandAxes, GearType.Bows, GearType.Claws, GearType.Daggers, GearType.OneHandMaces, GearType.TwoHandMaces, GearType.Sceptres, GearType.Staves, GearType.OneHandSwords, GearType.ThrustingOneHandSwords, GearType.TwoHandSwords, GearType.Wands);
+            mergeKeys(buckets, "Two Handed", g => g.Properties.Any(pr => pr.Name.Contains("Two Handed")), GearType.OneHandAxes, GearType.TwoHandAxes, GearType.Bows, GearType.Claws, GearType.Daggers, GearType.OneHandMaces, GearType.TwoHandMaces, GearType.Sceptres, GearType.Staves, GearType.OneHandSwords, GearType.ThrustingOneHandSwords, GearType.TwoHandSwords, GearType.Wands);
+            removeKeys(buckets, GearType.OneHandAxes, GearType.TwoHandAxes, GearType.Bows, GearType.Claws, GearType.Daggers, GearType.OneHandMaces, GearType.TwoHandMaces, GearType.Sceptres, GearType.Staves, GearType.OneHandSwords, GearType.ThrustingOneHandSwords, GearType.TwoHandSwords, GearType.Wands);
 
             RecipeResult result = getNextResult(buckets);
             while (result.IsMatch)
@@ -88,19 +88,19 @@ namespace Procurement.ViewModel.Recipes
 
             MatchedSet set = new MatchedSet();
 
-            set.Amulet = pullValue(buckets, GearType.Amulet.ToString());
-            set.Armour = pullValue(buckets, GearType.Chest.ToString());
-            set.Belt = pullValue(buckets, GearType.Belt.ToString());
+            set.Amulet = pullValue(buckets, GearType.Amulets.ToString());
+            set.Armour = pullValue(buckets, GearType.BodyArmours.ToString());
+            set.Belt = pullValue(buckets, GearType.Belts.ToString());
             set.Boots = pullValue(buckets, GearType.Boots.ToString());
             set.Gloves = pullValue(buckets, GearType.Gloves.ToString());
-            set.Helm = pullValue(buckets, GearType.Helmet.ToString());
-            set.RingLeft = pullValue(buckets, GearType.Ring.ToString());
-            set.RingRight = pullValue(buckets, GearType.Ring.ToString());
+            set.Helm = pullValue(buckets, GearType.Helmets.ToString());
+            set.RingLeft = pullValue(buckets, GearType.Rings.ToString());
+            set.RingRight = pullValue(buckets, GearType.Rings.ToString());
 
-            if (buckets["One Handed"].Count > 0 && buckets.ContainsKey(GearType.Shield.ToString()) && buckets[GearType.Shield.ToString()].Count > 0)
+            if (buckets["One Handed"].Count > 0 && buckets.ContainsKey(GearType.Shields.ToString()) && buckets[GearType.Shields.ToString()].Count > 0)
             {
                 set.Weapon = pullValue(buckets, "One Handed");
-                set.Offhand = pullValue(buckets, GearType.Shield.ToString());
+                set.Offhand = pullValue(buckets, GearType.Shields.ToString());
             }
             else if (buckets["One Handed"].Count > 1)
             {

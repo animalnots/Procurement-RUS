@@ -53,12 +53,14 @@
     <Setting name="FavoriteLeague" value="" />
     <Setting name="FavoriteCharacter" value="" />
     <Setting name="CompactMode" value="false" />
+    <Setting name="MinimalMode" value="false" />
     <Setting name="DownloadOnlyMyLeagues" value="false" />
     <Setting name="DownloadOnlyMyCharacters" value="false" />
     <Setting name="CurrencyDistributionMetric" value="Chaos" />
     <Setting name="EmbedBuyouts" value="True" />
     <Setting name="BuyoutItemsOnlyVisibleInBuyoutsTag" value="False" />
     <Setting name="OnlyDisplayBuyouts" value="false" />
+    <Setting name="TranslateCurrency" value="true" />
     <Setting name="CheckForUpdates" value="True" />
     <Setting name="PoeTradeRefreshEnabled" value="false" />
     <Setting name="PoeTradeRefreshUrl" value="" />

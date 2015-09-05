@@ -11,22 +11,28 @@ namespace Procurement.ViewModel.Filters
             get { return FilterGroup.GearTypes; }
         }
 
-        private GearType gearType;
-        public GearTypeFilter(GearType gearType, string keyword)
+        private GearType[] gearTypes;
+        public GearTypeFilter(GearType[] gearTypes, string keyword)
         {
-            this.gearType = gearType;
+            this.gearTypes = gearTypes;
             this.Keyword = keyword;
         }
 
         public string Keyword { get; set; }
-        public string Help { get { return "Returns All " + gearType.ToString() + " gear"; } }
+        public string Help { get { return "Returns All " + gearTypes.ToString() + " gear"; } }
 
         public bool Applicable(Item item)
         {
             Gear gear = item as Gear;
-            if (gear != null)
-                return gear.GearType == gearType;
-
+            if (gear != null) {
+                foreach (var gearType in gearTypes)
+                {
+                    if (gear.GearType == gearType)
+                    {
+                        return true;
+                    }
+                }
+            }
             return false;
         }
 

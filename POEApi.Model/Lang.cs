@@ -8,6 +8,10 @@ namespace POEApi.Model
     internal class Lang
     {
         //GearTypeRunner.cs
+        public static string DospehGladiatoraStrValue
+        {
+            get { return "Доспех гладиатора"; }
+        }
         public static string RingStrValue
         {
             get { return "Кольцо"; }

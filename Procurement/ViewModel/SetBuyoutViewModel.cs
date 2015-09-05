@@ -7,7 +7,7 @@ namespace Procurement.ViewModel
     public class SetBuyoutViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        
+        /*
         private static List<string> orbTypes = new List<string>()
         {
             "Chaos Orb",
@@ -27,6 +27,27 @@ namespace Procurement.ViewModel
             "Chromatic Orb",
             "Blessed Orb"
         };
+        */
+        private static List<string> orbTypes = new List<string>()
+        {
+            "Сфера хаоса",
+            "Сфера ваал",
+            "Сфера возвышения",
+            "Божественная сфера",
+            "Сфера соединения",
+            "Сфера алхимии",
+            "Сфера перемен",
+            "Призма камнерезчика",
+            "Сфера удачи",
+            "Резец картографа",
+            "Сфера очищения",
+            "Сфера раскаяния",
+            "Сфера царей",
+            "Сфера златокузнеца",
+            "Цветная сфера",
+            "Благодатная сфера"
+        };
+
         public List<string> OrbTypes
         {
             get { return orbTypes; }
@@ -49,6 +70,12 @@ namespace Procurement.ViewModel
             get { return priceInfo; }
             set { priceInfo = value; }
         }
+        private PricingInfo bargainInfo;
+        public PricingInfo BargainInfo
+        {
+            get { return bargainInfo; }
+            set { bargainInfo = value; }
+        }
 
         private string notes;
         public string Notes
@@ -63,6 +90,7 @@ namespace Procurement.ViewModel
             buyoutInfo = new PricingInfo();
             offerInfo = new PricingInfo();
             priceInfo = new PricingInfo();
+            bargainInfo = new PricingInfo();
             Notes = string.Empty;
         }
 
@@ -71,6 +99,7 @@ namespace Procurement.ViewModel
             buyoutInfo.Update(info.Buyout);
             offerInfo.Update(info.CurrentOffer);
             priceInfo.Update(info.Price);
+            bargainInfo.Update(info.Bargain);
             Notes = info.Notes;
         }        
     }

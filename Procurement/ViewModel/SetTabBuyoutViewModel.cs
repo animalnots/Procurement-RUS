@@ -6,7 +6,7 @@ namespace Procurement.ViewModel
     public class SetTabBuyoutViewModel
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        
+        /*
         private static List<string> orbTypes = new List<string>()
         {
             "Chaos Orb",
@@ -25,6 +25,25 @@ namespace Procurement.ViewModel
             "Jeweller's Orb",
             "Chromatic Orb",
             "Blessed Orb"
+        };*/
+        private static List<string> orbTypes = new List<string>()
+        {
+            "Сфера хаоса",
+            "Сфера ваал",
+            "Сфера возвышения",
+            "Божественная сфера",
+            "Сфера соединения",
+            "Сфера алхимии",
+            "Сфера перемен",
+            "Призма камнерезчика",
+            "Сфера удачи",
+            "Резец картографа",
+            "Сфера очищения",
+            "Сфера раскаяния",
+            "Сфера царей",
+            "Сфера златокузнеца",
+            "Цветная сфера",
+            "Благодатная сфера"
         };
         public List<string> OrbTypes
         {

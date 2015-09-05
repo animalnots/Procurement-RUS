@@ -19,11 +19,19 @@ namespace Procurement.ViewModel.Filters
         {
             //From http://en.pathofexilewiki.com/wiki/Drop_Only_Gems
             dropOnly = new List<string>();
+            /*
+            dropOnly.Add("Empower");
             dropOnly.Add("Empower");
             dropOnly.Add("Portal");
             dropOnly.Add("Reduced Duration");
             dropOnly.Add("Slower Projectiles");
-            dropOnly.Add("Enhance");
+            dropOnly.Add("Enhance");*/
+
+            dropOnly.Add(Lang.Empower);
+            dropOnly.Add(Lang.Enhance);
+            dropOnly.Add(Lang.Enlighten);
+            dropOnly.Add(Lang.Portal);
+            dropOnly.Add(Lang.DetonateMines);
         }
 
         public bool CanFormCategory

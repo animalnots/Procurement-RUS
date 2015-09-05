@@ -3,7 +3,7 @@
     internal class AuraGemsFilter : GemCategoryFilter
     {
         public AuraGemsFilter()
-            : base("aura")
+            : base(Lang.aura)
         { }
 
         public override string Keyword

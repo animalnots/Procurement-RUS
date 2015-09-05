@@ -3,7 +3,7 @@
     class CurseGemFilter : GemCategoryFilter
     {
         public CurseGemFilter()
-            : base("curse")
+            : base(Lang.curse)
         { }
 
 

@@ -23,6 +23,10 @@ namespace Procurement.ViewModel.ForumExportVisitors
         {
             get { return Settings.UserSettings.GetEntry("OnlyDisplayBuyouts").ToLower() == "true"; }
         }
+        protected virtual bool translateCurrency
+        {
+            get { return Settings.UserSettings.GetEntry("TranslateCurrency").ToLower() == "true"; }
+        }
 
         public abstract string Visit(IEnumerable<Item> items, string current);
 
@@ -61,7 +65,7 @@ namespace Procurement.ViewModel.ForumExportVisitors
 
             var buyoutItem = Settings.Buyouts[item.UniqueIDHash];
 
-            return !string.IsNullOrEmpty(buyoutItem.Buyout) || !string.IsNullOrEmpty(buyoutItem.Price) || !string.IsNullOrEmpty(buyoutItem.CurrentOffer);
+            return !string.IsNullOrEmpty(buyoutItem.Buyout) || !string.IsNullOrEmpty(buyoutItem.Price) || !string.IsNullOrEmpty(buyoutItem.CurrentOffer) || !string.IsNullOrEmpty(buyoutItem.Bargain);
         }
 
         private string getBuyoutString<T>(T item, string tabName) where T : Item
@@ -83,19 +87,22 @@ namespace Procurement.ViewModel.ForumExportVisitors
         private string appendAdditionalInfo(Item item, string tabName)
         {
             if (!Settings.Buyouts.ContainsKey(item.UniqueIDHash))
-                return string.Format("\n~b/o {0}\n", Settings.TabsBuyouts[tabName]);
+                return string.Format("\n~"+(translateCurrency? "вык" : "b/o")+" {0}\n", Settings.TabsBuyouts[tabName]);
 
             var buyoutInfo = Settings.Buyouts[item.UniqueIDHash];
             StringBuilder sb = new StringBuilder();
 
             if (buyoutInfo.Buyout != string.Empty)
-                sb.Append(string.Format("\n~b/o {0}", buyoutInfo.Buyout));
+                sb.Append(string.Format("\n~" + (translateCurrency ? "вык" : "b/o") + " {0}", buyoutInfo.Buyout));
 
             if (buyoutInfo.CurrentOffer != string.Empty)
-                sb.Append(string.Format("\n~c/o {0}", buyoutInfo.CurrentOffer));
+                sb.Append(string.Format("\n~" + (translateCurrency ? "акт" : "c/o") + " {0}", buyoutInfo.CurrentOffer));
+
+            if (buyoutInfo.Bargain != string.Empty)
+                sb.Append(string.Format("\n~" + (translateCurrency ? "торг" : "bargain") + " {0}", buyoutInfo.Bargain));
 
             if (buyoutInfo.Price != string.Empty)
-                sb.Append(string.Format("\n~price {0}", buyoutInfo.Price));
+                sb.Append(string.Format("\n~" + (translateCurrency ? "цена" : "price") + " {0}", buyoutInfo.Price));
 
             sb.Append("\n");
 
