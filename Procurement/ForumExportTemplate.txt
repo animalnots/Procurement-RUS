@@ -126,25 +126,13 @@
 [/spoiler]
 [spoiler="          Флаконы          "]
 [spoiler="          Обычные          "]
-{NormalLifeFlasks}
-{NormalManaFlasks}
-{NormalHybridFlasks}
-{NormalUtilityFlasks}
-{NormalCriticalUtilityFlasks}
+{NormalLifeFlasks}{NormalManaFlasks}{NormalHybridFlasks}{NormalUtilityFlasks}{NormalCriticalUtilityFlasks}
 [/spoiler]
 [spoiler="          Магические          "]
-{MagicLifeFlasks}
-{MagicManaFlasks}
-{MagicHybridFlasks}
-{MagicUtilityFlasks}
-{MagicCriticalUtilityFlasks}
+{MagicLifeFlasks}{MagicManaFlasks}{MagicHybridFlasks}{MagicUtilityFlasks}{MagicCriticalUtilityFlasks}
 [/spoiler]
 [spoiler="          Уникальные          "]
-{UniqueLifeFlasks} 
-{UniqueManaFlasks} 
-{UniqueHybridFlasks} 
-{UniqueUtilityFlasks} 
-{UniqueCriticalUtilityFlasks} 
+{UniqueLifeFlasks}{UniqueManaFlasks}{UniqueHybridFlasks}{UniqueUtilityFlasks}{UniqueCriticalUtilityFlasks} 
 [/spoiler]
 [/spoiler]
 [spoiler="          Валюта          "]

@@ -9,6 +9,7 @@ namespace Procurement.ViewModel.ForumExportVisitors
 {
     internal class GemVisitor : VisitorBase
     {
+        //TODO MELEE GEMS CAT SUPPORT
         private Dictionary<string, IFilter> tokens;
         public GemVisitor()
         {

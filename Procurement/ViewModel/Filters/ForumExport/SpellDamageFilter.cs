@@ -8,7 +8,7 @@ namespace Procurement.ViewModel.Filters.ForumExport
     public class SpellDamageFilter : ExplicitModBase
     {
         public SpellDamageFilter()
-            : base("increased Spell Damage")
+            : base(Lang.increasedSpellDamage)
         { }
 
         public override bool CanFormCategory

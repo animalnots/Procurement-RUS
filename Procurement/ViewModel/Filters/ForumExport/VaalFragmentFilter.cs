@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Procurement.ViewModel.Filters
 {
+    //NOT USING, using MapFragments in GearVisitor.cs instead
     public class VaalFragmentFilter : TypeLineFilter
     {
         public VaalFragmentFilter()

@@ -211,5 +211,136 @@ namespace Procurement
         {
             get { return "повышение скорости передвижения"; }
         }
+        public static string Accuracy
+        {
+            get { return "к меткости"; }
+        }
+
+        public static string IncreasedAttackSpeed
+        {
+            get { return "повышение скорости атаки"; }
+        }
+        public static string IncreasedCastSpeed
+        {
+            get { return "повышение скорости сотворения чар"; }
+        }
+        public static string toChaosResistance
+        {
+            get { return "к сопротивлению хаосу"; }
+        }
+        public static string toColdResistance
+        {
+            get { return "к сопротивлению холоду"; }
+        }
+        public static string toFireandColdResistances
+        {
+            get { return "к сопротивлению огню и холоду"; }
+        }
+        public static string toColdandLightningResistances
+        {
+            get { return "к сопротивлению холоду и молнии"; }
+        }
+        public static string toFireResistance
+        {
+            get { return "к сопротивлению огню"; }
+        }
+        public static string toFireandLightningResistances
+        {
+            get { return "к сопротивлению огню и молнии"; }
+        }
+        public static string toLightningResistance
+        {
+            get { return "к сопротивлению молнии"; }
+        }
+        public static string AddsColdDamage //"Adds \\d+\\-\\d+ Cold Damage"
+        {
+            get { return "Добавляет \\d+\\-\\d+ к урону от холода"; }
+        }
+        public static string AddsFireDamage //Adds \\d+\\-\\d+ Fire Damage
+        {
+            get { return "Добавляет \\d+\\-\\d+ к урону от огня"; }
+        }
+        public static string AddsLightningDamage //"Adds \\d+\\-\\d+ Lightning Damage"
+        {
+            get { return "Добавляет \\d+\\-\\d+ к урону от молнии"; }
+        }
+        //Gem filters
+        public static string gemCold
+        {
+            get { return "Холод"; }
+        }
+        public static string gemFire
+        {
+            get { return "Огонь"; }
+        }
+        public static string gemLightning
+        {
+            get { return "Молния"; }
+        }
+        public static string gemBow
+        {
+            get { return "Лук"; }
+        }
+        public static string gemMelee
+        {
+            get { return "ближний бой"; }
+        }
+        public static string gemSupport
+        {
+            get { return "Поддержка"; }
+        }
+        public static string IncreasedColdDamage
+        {
+            get { return "увеличение урона от холода"; }
+        }
+        public static string IncreasedFireDamage
+        {
+            get { return "увеличение урона от огня"; }
+        }
+        public static string IncreasedLightningDamage
+        {
+            get { return "увеличение урона от молнии"; }
+        }
+        public static string increasedPhysicalDamage
+        {
+            get { return "увеличение физического урона"; }
+        }
+        public static string LeechedAsLife
+        {
+            get { return "похищается в виде здоровья"; }
+        }
+
+        public static string LifeRegeneratedpersecond
+        {
+            get { return "здоровья регенерирует в секунду"; }
+        }
+        public static string LeechedasMana
+        {
+            get { return "похищается в виде маны"; }
+        }
+        public static string increasedManaRegenerationRate
+        {
+            get { return "повышение скорости регенерации маны"; }
+        }
+        public static string Handed//"Handed"
+        {
+            get { return "ручные"; }
+        }
+        public static string One
+        {
+            get { return "Одно"; }
+        }
+        public static string Two
+        {
+            get { return "Дву"; }
+        }
+        public static string AddsPhysicalDamage
+        {
+            get { return "Добавляет \\d+\\-\\d+ физического урона"; }
+        }
+        public static string increasedSpellDamage
+        {
+            get { return "увеличение урона чар"; }
+        }
     }
 }

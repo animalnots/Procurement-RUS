@@ -9,7 +9,7 @@ namespace Procurement.ViewModel.Filters
     public class IncreasedPhysicalDamageFilter : ExplicitModBase
     {
         public IncreasedPhysicalDamageFilter()
-            : base("increased Physical Damage")
+            : base(Lang.increasedPhysicalDamage)
         { }
 
         public override bool CanFormCategory

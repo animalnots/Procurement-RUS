@@ -8,7 +8,7 @@
         }
 
         public ManaLeech()
-            : base("Mana leech", "Items with mana leech", "Leeched as mana")
+            : base("Mana leech", "Items with mana leech", Lang.LeechedasMana)
         { }
     }
 }

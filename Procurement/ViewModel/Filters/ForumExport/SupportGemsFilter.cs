@@ -33,7 +33,7 @@ namespace Procurement.ViewModel.Filters.ForumExport
             if (gem == null)
                 return false;
 
-            return item.Properties[0].Name.Contains("Support");
+            return item.Properties[0].Name.Contains(Lang.gemSupport);
         }
     }
 }

@@ -19,15 +19,21 @@ namespace POEApi.Model
     public class GearTypeRunnerBase : GearTypeRunner
     {
         protected List<string> generalTypes;
-        protected List<string> compatibleTypes;
+        protected List<string>[] compatibleTypesarr;
         protected List<string> incompatibleTypes;
         protected CultureInfo culture = System.Threading.Thread.CurrentThread.CurrentCulture;
 
-        public GearTypeRunnerBase(GearType[] gearTypes, IEnumerable<string> compatibleTypes)
+        public GearTypeRunnerBase(GearType[] gearTypes, IEnumerable<string>[] compatibleTypesarr)
             : base(gearTypes)
         {
             this.generalTypes = new List<string>();
-            this.compatibleTypes = compatibleTypes.ToList();
+            var i = 0;
+            this.compatibleTypesarr = new List<string>[compatibleTypesarr.Length];
+            foreach (var enumerable in compatibleTypesarr)
+            {
+                this.compatibleTypesarr[i]= enumerable.ToList();
+                i++;
+            }
             this.incompatibleTypes = new List<string>();
         }
 
@@ -39,9 +45,12 @@ namespace POEApi.Model
                     return true;
 
             // Second, check all known types.
-            foreach (var type in compatibleTypes)
-                if (item.TypeLine.ToLower().Contains(type.ToLower()))
-                    return true;
+            foreach (var list in compatibleTypesarr)
+            {
+                foreach (var type in list)
+                    if (item.TypeLine.ToLower().Contains(type.ToLower()))
+                        return true;
+            }
 
             return false;
         }
@@ -50,11 +59,13 @@ namespace POEApi.Model
         {
             if (incompatibleTypes != null && incompatibleTypes.Any(t => item.TypeLine.ToLower().Contains(t.ToLower())))
                 return null;
-
-            foreach (var type in compatibleTypes)
-                if (item.TypeLine.ToLower().Contains(type.ToLower()))
-                    return type;
-
+            
+            foreach (var list in compatibleTypesarr)
+            {
+                foreach (var type in list)
+                    if (item.TypeLine.ToLower().Contains(type.ToLower()))
+                        return type;
+            }
             return null;
         }
     }
@@ -62,7 +73,7 @@ namespace POEApi.Model
     public class RingRunner : GearTypeRunnerBase
     {
         public RingRunner()
-            : base(new GearType[] {GearType.Rings}, Settings.GearBaseTypes[GearType.Rings])
+            : base(new GearType[] {GearType.Rings}, new List<string>[] {Settings.GearBaseTypes[GearType.Rings]})
         {
             incompatibleTypes = new List<string>() { Lang.RingmailStrValue };
         }
@@ -81,7 +92,7 @@ namespace POEApi.Model
     public class AmuletRunner : GearTypeRunnerBase
     {
         public AmuletRunner()
-            : base(new GearType[] {GearType.Amulets}, Settings.GearBaseTypes[GearType.Amulets])
+            : base(new GearType[] {GearType.Amulets}, new List<string>[] {Settings.GearBaseTypes[GearType.Amulets]})
         {
             generalTypes.Add(Lang.AmuletStrValue);
         }
@@ -90,7 +101,7 @@ namespace POEApi.Model
     public class HelmetRunner : GearTypeRunnerBase
     {
         public HelmetRunner()
-            : base(new GearType[] { GearType.Helmets }, Settings.GearBaseTypes[GearType.Helmets])
+            : base(new GearType[] { GearType.Helmets }, new List<string>[] {Settings.GearBaseTypes[GearType.Helmets]})
         {
             generalTypes.AddRange(new List<string>() { Lang.HelmetStrValue, Lang.CircletStrValue, Lang.CapStrValue, Lang.MaskStrValue, Lang.ChainCoifStrValue,
                 Lang.CasqueStrValue, Lang.HoodStrValue, Lang.RingmailCoifStrValue, Lang.ChainmailCoifStrValue, Lang.RingCoifStrValue, Lang.CrownStrValue, Lang.BurgonetStrValue, Lang.BascinetStrValue, Lang.PeltStrValue });
@@ -106,14 +117,14 @@ namespace POEApi.Model
     public class ChestRunner : GearTypeRunnerBase
     {
         public ChestRunner()
-            : base(new GearType[] { GearType.BodyArmours }, Settings.GearBaseTypes[GearType.BodyArmours])
+            : base(new GearType[] { GearType.BodyArmours }, new List<string>[] {Settings.GearBaseTypes[GearType.BodyArmours]})
         { }
     }
 
     public class BeltRunner : GearTypeRunnerBase
     {
         public BeltRunner()
-            : base(new GearType[] { GearType.Belts}, Settings.GearBaseTypes[GearType.Belts])
+            : base(new GearType[] { GearType.Belts}, new List<string>[] {Settings.GearBaseTypes[GearType.Belts]})
         {
             generalTypes.Add(Lang.BeltStrValue);
             generalTypes.Add(Lang.SashStrValue);
@@ -123,7 +134,7 @@ namespace POEApi.Model
     public class FlaskRunner : GearTypeRunnerBase
     {
         public FlaskRunner()
-            : base(new GearType[] { GearType.CriticalUtilityFlasks, GearType.HybridFlasks, GearType.LifeFlasks, GearType.ManaFlasks, GearType.UtilityFlasks }, Settings.GearBaseTypes[GearType.CriticalUtilityFlasks])
+            : base(new GearType[] { GearType.CriticalUtilityFlasks, GearType.HybridFlasks, GearType.LifeFlasks, GearType.ManaFlasks, GearType.UtilityFlasks }, new List<string>[] { Settings.GearBaseTypes[GearType.CriticalUtilityFlasks], Settings.GearBaseTypes[GearType.HybridFlasks], Settings.GearBaseTypes[GearType.LifeFlasks], Settings.GearBaseTypes[GearType.ManaFlasks], Settings.GearBaseTypes[GearType.UtilityFlasks] })
         {
             generalTypes.Add(Lang.FlaskStrValue);
         }
@@ -132,7 +143,7 @@ namespace POEApi.Model
     public class MapRunner : GearTypeRunnerBase
     {
         public MapRunner()
-            : base(new GearType[] { GearType.Maps}, Settings.GearBaseTypes[GearType.Maps])
+            : base(new GearType[] { GearType.Maps }, new List<string>[] { Settings.GearBaseTypes[GearType.Maps] })
         {
             generalTypes.Add(Lang.MapStrValue);
         }
@@ -141,7 +152,7 @@ namespace POEApi.Model
     public class DivinationCardRunner : GearTypeRunnerBase
     {
         public DivinationCardRunner()
-            : base(new GearType[] { GearType.DivinationCard}, Settings.GearBaseTypes[GearType.DivinationCard])
+            : base(new GearType[] { GearType.DivinationCard}, new List<string>[] {Settings.GearBaseTypes[GearType.DivinationCard]})
         {
             incompatibleTypes = new List<string>() { Lang.DospehGladiatoraStrValue }; 
         }
@@ -150,7 +161,7 @@ namespace POEApi.Model
     public class JewelRunner : GearTypeRunnerBase
     {
         public JewelRunner()
-            : base(new GearType[] { GearType.Jewel}, new List<string>())
+            : base(new GearType[] { GearType.Jewel}, new List<string>[] {new List<string>()})
         {
             generalTypes.Add(Lang.JewelStrValue);
         }
@@ -159,7 +170,7 @@ namespace POEApi.Model
     public class GloveRunner : GearTypeRunnerBase
     {
         public GloveRunner()
-            : base(new GearType[] { GearType.Gloves}, Settings.GearBaseTypes[GearType.Gloves])
+            : base(new GearType[] { GearType.Gloves}, new List<string>[] {Settings.GearBaseTypes[GearType.Gloves]})
         {
             //generalTypes.Add("Glove"); mitts = glove = gauntlets in russian "Перчатки"
             generalTypes.Add(Lang.MittsStrValue);
@@ -170,7 +181,7 @@ namespace POEApi.Model
     public class BootRunner : GearTypeRunnerBase
     {
         public BootRunner()
-            : base(new GearType[] { GearType.Boots}, Settings.GearBaseTypes[GearType.Boots])
+            : base(new GearType[] { GearType.Boots}, new List<string>[] {Settings.GearBaseTypes[GearType.Boots]})
         {
             generalTypes.Add(Lang.GreavesStrValue);
             generalTypes.Add(Lang.SlippersStrValue);
@@ -182,7 +193,7 @@ namespace POEApi.Model
     public class AxeRunner : GearTypeRunnerBase
     {
         public AxeRunner()
-            : base(new GearType[] { GearType.OneHandAxes, GearType.TwoHandAxes }, Settings.GearBaseTypes[GearType.OneHandAxes])
+            : base(new GearType[] { GearType.OneHandAxes, GearType.TwoHandAxes }, new List<string>[] { Settings.GearBaseTypes[GearType.OneHandAxes], Settings.GearBaseTypes[GearType.TwoHandAxes] })
         {
             //add new type for 1h/2h chopper
             generalTypes.AddRange(new List<string>() { Lang.AxeStrValue, Lang.Chopper1hStrValue, Lang.Chopper2hStrValue, Lang.SplitterStrValue, Lang.LabrysStrValue, Lang.TomahawkStrValue, Lang.HatchetStrValue, Lang.PoleaxeStrValue, Lang.WoodsplitterStrValue, Lang.CleaverStrValue });
@@ -192,7 +203,7 @@ namespace POEApi.Model
     public class ClawRunner : GearTypeRunnerBase
     {
         public ClawRunner()
-            : base(new GearType[] {GearType.Claws}, Settings.GearBaseTypes[GearType.Claws])
+            : base(new GearType[] {GearType.Claws}, new List<string>[] {Settings.GearBaseTypes[GearType.Claws]})
         {
             generalTypes.AddRange(new List<string>() { "Fist", "Awl", "Paw", "Blinder", "Ripper", "Stabber", "Claw", "Gouger" });
         }
@@ -201,7 +212,7 @@ namespace POEApi.Model
     public class BowRunner : GearTypeRunnerBase
     {
         public BowRunner()
-            : base(new GearType[] {GearType.Bows}, Settings.GearBaseTypes[GearType.Bows])
+            : base(new GearType[] {GearType.Bows}, new List<string>[] {Settings.GearBaseTypes[GearType.Bows]})
         {
             generalTypes.Add(Lang.BowStrValue);
         }
@@ -210,7 +221,7 @@ namespace POEApi.Model
     public class DaggerRunner : GearTypeRunnerBase
     {
         public DaggerRunner()
-            : base(new GearType[] {GearType.Daggers}, Settings.GearBaseTypes[GearType.Daggers])
+            : base(new GearType[] {GearType.Daggers}, new List<string>[] {Settings.GearBaseTypes[GearType.Daggers]})
         {
             generalTypes.AddRange(new List<string>() { "Dagger", "Shank", "Knife", "Stiletto", "Skean", "Poignard", "Ambusher", "Boot Blade", "Kris" });
         }
@@ -219,7 +230,7 @@ namespace POEApi.Model
     public class MaceRunner : GearTypeRunnerBase
     {
         public MaceRunner()
-            : base(new GearType[] {GearType.OneHandMaces,GearType.TwoHandMaces}, Settings.GearBaseTypes[GearType.OneHandMaces])
+            : base(new GearType[] { GearType.OneHandMaces, GearType.TwoHandMaces }, new List<string>[] { Settings.GearBaseTypes[GearType.OneHandMaces], Settings.GearBaseTypes[GearType.TwoHandMaces] })
         {
             generalTypes.AddRange(new List<string>() { "Club", "Tenderizer", "Mace", "Hammer", "Maul", "Mallet", "Breaker", "Gavel", "Pernarch", "Steelhead", "Piledriver", "Bladed Mace" });
         }
@@ -228,7 +239,7 @@ namespace POEApi.Model
     public class QuiverRunner : GearTypeRunnerBase
     {
         public QuiverRunner()
-            : base(new GearType[] {GearType.Quivers}, Settings.GearBaseTypes[GearType.Quivers])
+            : base(new GearType[] {GearType.Quivers}, new List<string>[] {Settings.GearBaseTypes[GearType.Quivers]})
         {
             generalTypes.Add("Quiver");
         }
@@ -237,7 +248,7 @@ namespace POEApi.Model
     public class SceptreRunner : GearTypeRunnerBase
     {
         public SceptreRunner()
-            : base(new GearType[] {GearType.Sceptres}, Settings.GearBaseTypes[GearType.Sceptres])
+            : base(new GearType[] {GearType.Sceptres}, new List<string>[] {Settings.GearBaseTypes[GearType.Sceptres]})
         {
             generalTypes.Add("Sceptre");
             generalTypes.Add("Fetish");
@@ -248,7 +259,7 @@ namespace POEApi.Model
     public class StaffRunner : GearTypeRunnerBase
     {
         public StaffRunner()
-            : base(new GearType[] {GearType.Staves}, Settings.GearBaseTypes[GearType.Staves])
+            : base(new GearType[] {GearType.Staves}, new List<string>[] {Settings.GearBaseTypes[GearType.Staves]})
         {
             generalTypes.Add("Staff");
             generalTypes.Add("Gnarled Branch");
@@ -260,7 +271,7 @@ namespace POEApi.Model
     public class SwordRunner : GearTypeRunnerBase
     {
         public SwordRunner()
-            : base(new GearType[] {GearType.OneHandSwords, GearType.ThrustingOneHandSwords, GearType.TwoHandSwords}, Settings.GearBaseTypes[GearType.OneHandSwords])
+            : base(new GearType[] { GearType.OneHandSwords, GearType.ThrustingOneHandSwords, GearType.TwoHandSwords }, new List<string>[] { Settings.GearBaseTypes[GearType.OneHandSwords], Settings.GearBaseTypes[GearType.TwoHandSwords], Settings.GearBaseTypes[GearType.ThrustingOneHandSwords] })
         {
             generalTypes.AddRange(new List<string>() { "Sword", "sword", "Sabre", "Dusk Blade", "Cutlass", "Baselard", "Gladius", "Variscite Blade", "Vaal Blade", "Midnight Blade", "Corroded Blade",
                    "Highland Blade", "Ezomyte Blade", "Rusted Spike", "Rapier", "Foil", "Pecoraro", "Estoc", "Twilight Blade" });
@@ -270,7 +281,7 @@ namespace POEApi.Model
     public class ShieldRunner : GearTypeRunnerBase
     {
         public ShieldRunner()
-            : base(new GearType[] {GearType.Shields}, Settings.GearBaseTypes[GearType.Shields])
+            : base(new GearType[] {GearType.Shields}, new List<string>[] {Settings.GearBaseTypes[GearType.Shields]})
         {
             generalTypes.Add("Shield");
             generalTypes.Add("Spiked Bundle");
@@ -281,7 +292,7 @@ namespace POEApi.Model
     public class WandRunner : GearTypeRunnerBase
     {
         public WandRunner()
-            : base(new GearType[] {GearType.Wands}, Settings.GearBaseTypes[GearType.Wands])
+            : base(new GearType[] {GearType.Wands}, new List<string>[] {Settings.GearBaseTypes[GearType.Wands]})
         {
             generalTypes.Add("Wand");
             generalTypes.Add("Horn");

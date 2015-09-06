@@ -1,5 +1,6 @@
 ﻿namespace Procurement.ViewModel.Filters
 {
+    //NOT USING, using MapFragments in GearVisitor.cs instead
     public class VaalUberFragmentFilter : TypeLineFilter
     {
         public VaalUberFragmentFilter()

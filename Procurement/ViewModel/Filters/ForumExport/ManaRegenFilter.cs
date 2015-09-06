@@ -3,7 +3,7 @@
     public class ManaRegenFilter : ExplicitModBase
     {
         public ManaRegenFilter()
-            : base("increased Mana Regeneration Rate")
+            : base(Lang.increasedManaRegenerationRate)
         { }
         public override bool CanFormCategory
         {

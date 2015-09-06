@@ -49,7 +49,7 @@
     <Setting name="AccountLogin" value="" />
     <Setting name="AccountPassword" value="" />
     <Setting name="AccountName" value="" />
-    <Setting name="UseSessionID" value="false" />
+    <Setting name="UseSessionID" value="true" />
     <Setting name="FavoriteLeague" value="" />
     <Setting name="FavoriteCharacter" value="" />
     <Setting name="CompactMode" value="false" />

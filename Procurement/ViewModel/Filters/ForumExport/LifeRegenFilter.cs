@@ -3,7 +3,7 @@
     public class LifeRegenFilter : ExplicitModBase
     {
         public LifeRegenFilter()
-            : base("Life Regenerated per second")
+            : base(Lang.LifeRegeneratedpersecond)
         { }
 
         public override bool CanFormCategory

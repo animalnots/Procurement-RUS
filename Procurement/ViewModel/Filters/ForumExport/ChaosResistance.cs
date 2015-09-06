@@ -8,7 +8,7 @@
         }
 
         public ChaosResistance()
-            : base("Chaos Resistance", "Chaos Resistance", "to Chaos Resistance")
+            : base("Chaos Resistance", "Chaos Resistance", Lang.toChaosResistance)
         { }
     }
 }

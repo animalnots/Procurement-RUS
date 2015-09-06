@@ -8,7 +8,7 @@
         }
 
         public ColdResistance()
-            : base("Cold Resistance", "Cold Resistance", "to Cold Resistance", "to Fire and Cold Resistances", "to Cold and Lightning Resistances")
+            : base("Cold Resistance", "Cold Resistance", Lang.toColdResistance, Lang.toFireandColdResistances, Lang.toColdandLightningResistances)
         { }
     }
 }

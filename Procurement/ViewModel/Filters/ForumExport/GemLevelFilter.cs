@@ -32,35 +32,35 @@ namespace Procurement.ViewModel.Filters.ForumExport
     internal class ColdGemLevelFilter : GemLevelFilter
     {
         public ColdGemLevelFilter()
-            : base("cold")
+            : base(Lang.gemCold)
         { }
     }
 
     internal class FireGemLevelFilter : GemLevelFilter
     {
         public FireGemLevelFilter()
-            : base("fire")
+            : base(Lang.gemFire)
         { }
     }
 
     internal class LightningGemLevelFilter : GemLevelFilter
     {
         public LightningGemLevelFilter()
-            : base("lightning")
+            : base(Lang.gemLightning)
         { }
     }
 
     internal class MeleeGemLevelFilter : GemLevelFilter
     {
         public MeleeGemLevelFilter()
-            : base("melee")
+            : base(Lang.gemMelee)
         { }
     }
 
     internal class BowGemLevelFilter : GemLevelFilter
     {
         public BowGemLevelFilter()
-            : base("bow")
+            : base(Lang.gemBow)
         { }
     }
 }
