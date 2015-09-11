@@ -1,1 +1,1 @@
-Procurement 1.9.7.1,https://github.com/animalnots/Procurement-RUS/releases/tag/1.9.7.1
+Procurement 1.9.8,https://github.com/animalnots/Procurement-RUS/releases/tag/1.9.8
