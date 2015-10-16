@@ -30,7 +30,7 @@ namespace POEApi.Transport
         private const string updateThreadHashEx = "name=\\\"forum_thread\\\" value=\\\"(?<hash>[a-zA-Z0-9]{1,})\\\"";
         private const string bumpThreadHashEx = "name=\\\"forum_post\\\" value=\\\"(?<hash>[a-zA-Z0-9]{1,})\\\"";
         private const string titleRegex = @"\<title\b[^>]*\>\s*(?<Title>[\s\S]*?)\</title\>";
-        private const string accountRegex = "accountName\\\":\\\"(?<accname>[a-zA-Z0-9_\\-\\.]{1,})\\\"";
+        private const string accountRegex = "accountName\\\":\\\"(?<accname>[\\\\АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюяa-zA-Z0-9_\\-\\.]{1,})\\\"";
 
         private const string updateShopURL = @"https://web.poe.garena.ru/forum/edit-thread/{0}";
         private const string bumpShopURL = @"https://web.poe.garena.ru/forum/post-reply/{0}";
@@ -63,15 +63,19 @@ namespace POEApi.Transport
         {
             if (useSessionID)
             {
+
+                
                 credentialCookies.Add(new System.Net.Cookie("PHPSESSID", password.UnWrap(), "/", "web.poe.garena.ru"));
                 HttpWebRequest confirmAuth = getHttpRequest(HttpMethod.GET, loginURL);
                 HttpWebResponse confirmAuthResponse = (HttpWebResponse)confirmAuth.GetResponse();
 
-
+                
 
                 string loginResponseSESSION = Encoding.Default.GetString(getMemoryStreamFromResponse(confirmAuthResponse).ToArray());
+               
                 string accValue = Regex.Match(loginResponseSESSION, accountRegex).Groups["accname"].Value;
-             
+                accValue = accValue.Replace(@"\\", @"\");
+                accValue = System.Text.RegularExpressions.Regex.Unescape(accValue);
                 if (confirmAuthResponse.ResponseUri.ToString() == loginURL)
                     throw new LogonFailedException();
                    if (accValue != "")

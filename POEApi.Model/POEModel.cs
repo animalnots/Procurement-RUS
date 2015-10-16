@@ -212,7 +212,6 @@ namespace POEApi.Model
 
                 DataContractJsonSerializer serialiser = new DataContractJsonSerializer(typeof(JSONProxy.Inventory));
                 JSONProxy.Inventory item;
-
                 using (Stream stream = transport.GetInventory(characterName, forceRefresh, accountName))
                     item = (JSONProxy.Inventory)serialiser.ReadObject(stream);
 
