@@ -19,12 +19,12 @@ namespace Procurement.ViewModel.Filters
 
         public override string Keyword
         {
-            get { return "Increased Physical Damage"; }
+            get { return Lang.increasedPhysicalDamage; }
         }
 
         public override string Help
         {
-            get { return "Items with Increased Physical Damage"; }
+            get { return Lang.increasedPhysicalDamage; }
         }
 
         public override FilterGroup Group

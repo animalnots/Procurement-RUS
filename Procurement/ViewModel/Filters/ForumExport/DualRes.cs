@@ -19,12 +19,12 @@ namespace Procurement.ViewModel.Filters
 
         public string Keyword
         {
-            get { return "Dual Resists"; }
+            get { return Lang.DualRes; }
         }
 
         public string Help
         {
-            get { return "Items with dual resists"; }
+            get { return Lang.DualRes; }
         }
 
         public bool Applicable(POEApi.Model.Item item)

@@ -53,105 +53,105 @@ namespace Procurement.ViewModel.Filters.ForumExport
     class OneRedSocket : SocketColourFilter
     {
         public OneRedSocket()
-            : base("S", 1, "At Least 1 Red Socket", "Gear with 1 or more red sockets")
+            : base("S", 1, Lang.OneRedSocket, Lang.OneRedSocket)
         { }
     }
 
     class OneGreenSocket : SocketColourFilter
     {
         public OneGreenSocket()
-            : base("D", 1, "At Least 1 Green Socket", "Gear with 1 or more green sockets")
+            : base("D", 1, Lang.OneGreenSocket, Lang.OneGreenSocket)
         { }
     }
 
     class OneBlueSocket : SocketColourFilter
     {
         public OneBlueSocket()
-            : base("I", 1, "At Least 1 Blue Socket", "Gear with 1 or more blue sockets")
+            : base("I", 1, Lang.OneBlueSocket, Lang.OneBlueSocket)
         { }
     }
 
     class TwoRedSockets : SocketColourFilter
     {
         public TwoRedSockets()
-            : base("S", 2, "At Least 2 Red Sockets", "Gear with 2 or more red sockets")
+            : base("S", 2, Lang.TwoRedSocket, Lang.TwoRedSocket)
         { }
     }
 
     class TwoGreenSockets : SocketColourFilter
     {
         public TwoGreenSockets()
-            : base("D", 2, "At Least 2 Green Sockets", "Gear with 2 or more green sockets")
+            : base("D", 2, Lang.TwoGreenSocket, Lang.TwoGreenSocket)
         { }
     }
 
     class TwoBlueSockets : SocketColourFilter
     {
         public TwoBlueSockets()
-            : base("I", 2, "At Least 2 Blue Sockets", "Gear with 2 or more blue sockets")
+            : base("I", 2, Lang.TwoBlueSocket, Lang.TwoBlueSocket)
         { }
     }
 
     class ThreeRedSockets : SocketColourFilter
     {
         public ThreeRedSockets()
-            : base("S", 3, "At Least 3 Red Sockets", "Gear with 3 or more red sockets")
+            : base("S", 3, Lang.ThreeRedSocket, Lang.ThreeRedSocket)
         { }
     }
 
     class ThreeGreenSockets : SocketColourFilter
     {
         public ThreeGreenSockets()
-            : base("D", 3, "At Least 3 Green Sockets", "Gear with 3 or more green sockets")
+            : base("D", 3, Lang.ThreeGreenSocket, Lang.ThreeGreenSocket)
         { }
     }
 
     class ThreeBlueSockets : SocketColourFilter
     {
         public ThreeBlueSockets()
-            : base("I", 3, "At Least 3 Blue Sockets", "Gear with 3 or more blue sockets")
+            : base("I", 3, Lang.ThreeBlueSocket, Lang.ThreeBlueSocket)
         { }
     }
 
     class FourRedSockets : SocketColourFilter
     {
         public FourRedSockets()
-            : base("S", 4, "At Least 4 Red Sockets", "Gear with 4 or more red sockets")
+            : base("S", 4, Lang.FourRedSocket, Lang.FourRedSocket)
         { }
     }
 
     class FourGreenSockets : SocketColourFilter
     {
         public FourGreenSockets()
-            : base("D", 4, "At Least 4 Green Sockets", "Gear with 4 or more green sockets")
+            : base("D", 4, Lang.FourGreenSocket, Lang.FourGreenSocket)
         { }
     }
 
     class FourBlueSockets : SocketColourFilter
     {
         public FourBlueSockets()
-            : base("I", 4, "At Least 4 Blue Sockets", "Gear with 4 or more blue sockets")
+            : base("I", 4, Lang.FourBlueSocket, Lang.FourBlueSocket)
         { }
     }
 
     class FiveRedSockets : SocketColourFilter
     {
         public FiveRedSockets()
-            : base("S", 5, "At Least 5 Red Sockets", "Gear with 5 or more red sockets")
+            : base("S", 5, Lang.FiveRedSocket, Lang.FiveRedSocket)
         { }
     }
 
     class FiveGreenSockets : SocketColourFilter
     {
         public FiveGreenSockets()
-            : base("D", 5, "At Least 5 Green Sockets", "Gear with 5 or more green sockets")
+            : base("D", 5, Lang.FiveGreenSocket, Lang.FiveGreenSocket)
         { }
     }
 
     class FiveBlueSockets : SocketColourFilter
     {
         public FiveBlueSockets()
-            : base("I", 5, "At Least 5 Blue Sockets", "Gear with 5 or more blue sockets")
+            : base("I", 5, Lang.FiveBlueSocket, Lang.FiveBlueSocket)
         { }
     }
 }

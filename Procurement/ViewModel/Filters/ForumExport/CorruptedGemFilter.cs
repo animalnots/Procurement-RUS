@@ -17,12 +17,12 @@ namespace Procurement.ViewModel.Filters
 
         public string Keyword
         {
-            get { return "Corrupted Gems"; }
+            get { return Lang.CorruptedGems; }
         }
 
         public string Help
         {
-            get { return "Corrupted Gems"; }
+            get { return Lang.CorruptedGems; }
         }
 
         public bool Applicable(POEApi.Model.Item item)

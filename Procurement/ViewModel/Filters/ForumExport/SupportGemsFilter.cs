@@ -19,12 +19,12 @@ namespace Procurement.ViewModel.Filters.ForumExport
 
         public string Keyword
         {
-            get { return "Support Gems"; }
+            get { return Lang.SupportGems; }
         }
 
         public string Help
         {
-            get { return "Gems that modify skill gems they are linked to"; }
+            get { return Lang.SupportGems; }
         }
 
         public bool Applicable(Item item)

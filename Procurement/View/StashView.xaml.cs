@@ -1,4 +1,5 @@
-﻿using System.Windows.Controls;
+﻿using System;
+using System.Windows.Controls;
 using Procurement.ViewModel;
 
 namespace Procurement.View
@@ -24,7 +25,7 @@ namespace Procurement.View
                 return;
 
             var cb = sender as CheckBox;
-            if (cb.Content.ToString() == "None" && cb.IsChecked.Value)
+            if (cb.Content.ToString() == "Никакой" && cb.IsChecked.Value)
             {
                 foreach (var item in VisualTreeHelper.GetVisualChildren<CheckBox>(cb.Parent))
                     item.IsChecked = false;
@@ -43,6 +44,9 @@ namespace Procurement.View
                 return;
 
             var cb = sender as TextBox;
+         
+                Console.WriteLine(cb.Text.ToLower());
+        
 
             foreach (AdvancedSearchCategory category in AdvancedSearchItemControl.ItemsSource)
             {

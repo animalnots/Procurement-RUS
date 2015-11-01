@@ -2,7 +2,7 @@
 
 Пожалуйста, свяжитесь со мной здесь или в игре если вас что-нибудь заинтересовало. Мой ник в игре {IGN}.
 [spoiler="          Гадальные карты          "]
-{DivinationCard}
+{NormalDivinationCard}{MagicDivinationCard}{RareDivinationCard}{UniqueDivinationCard}
 [/spoiler]
 [spoiler="          Самоцветы          "]
 {NormalJewel}{MagicJewel}{RareJewel}{UniqueJewel}
@@ -18,16 +18,16 @@
 [/spoiler]
 [spoiler="          Карты          "]
 [spoiler="          Фрагменты карт          "]
-{MapFragments}
+{NormalMapFragments}{MagicMapFragments}{RareMapFragments}{UniqueMapFragments}
 [/spoiler]
-[spoiler="          66-69          "]
-{66Maps}{67Maps}{68Maps}{69Maps}
+[spoiler="          1-3 (Область 66-70)          "]
+{1Maps}{2Maps}{3Maps}
 [/spoiler]
-[spoiler="          70-78          "]
-{70Maps}{71Maps}{72Maps}{73Maps}{74Maps}{75Maps}{76Maps}{77Maps}{78Maps}
+[spoiler="          4-11 (Область 71-78)          "]
+{4Maps}{5Maps}{6Maps}{7Maps}{8Maps}{9Maps}{10Maps}{11Maps}
 [/spoiler]
-[spoiler="          79-82          "]
-{79Maps}{80Maps}{81Maps}{82Maps}
+[spoiler="          12-15 (Область 79-82)          "]
+{12Maps}{13Maps}{14Maps}{15Maps}
 [/spoiler]
 [/spoiler]
 [spoiler="          Камни навыков          "]

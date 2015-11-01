@@ -25,7 +25,8 @@ namespace Procurement.Utility
                 SaveFileDialog saveDialog = new SaveFileDialog();
 
                 saveDialog.InitialDirectory = string.Format("{0}\\{1}", Environment.CurrentDirectory, SAVE_LOCATION);
-                saveDialog.FileName = string.Format("{0} - {1}.png", item.Name, DateTime.Now.ToString("dd-MM-yyyy-HH-mm-ss"));
+                //saveDialog.FileName = string.Format("{0} - {1}.png", item.Name, DateTime.Now.ToString("dd-MM-yyyy-HH-mm-ss"));
+                saveDialog.FileName = item.TypeLine;
                 saveDialog.Filter = "png files (*.png)|*.png|All files (*.*)|*.*";
                 saveDialog.FilterIndex = 2;
                 saveDialog.RestoreDirectory = true;

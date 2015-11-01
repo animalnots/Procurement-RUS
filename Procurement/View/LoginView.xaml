@@ -17,7 +17,7 @@
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="110"/>
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
@@ -30,7 +30,7 @@
                     <RowDefinition Height="10*" />
                 </Grid.RowDefinitions>
 
-                <Label x:Name="lblEmail" Content="Email" FontFamily="../Resources/#Fontin" Foreground="#FFAB9066" FontSize="14" VerticalAlignment="Top" Margin="0,12,0,0"></Label>
+                <Label x:Name="lblEmail" Content="Почта" FontFamily="../Resources/#Fontin" Foreground="#FFAB9066" FontSize="14" VerticalAlignment="Top" Margin="0,12,0,0"></Label>
                 <Label x:Name="lblPassword" Content="Пароль" FontFamily="../Resources/#Fontin" Foreground="#FFAB9066" FontSize="14" VerticalAlignment="Top" Margin="0,47,0,0" Grid.RowSpan="2"></Label>
                 <Label x:Name="lblAccountName" Content="Аккаунт" FontFamily="../Resources/#Fontin" FontSize="14" Foreground="#FFAB9066" Margin="0,12,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="2"></Label>
 
@@ -76,7 +76,7 @@
                         </Image>
                     </Button>
 
-                    <CheckBox Name="useSession" Content="Использовать SessionID" Grid.Column="2" HorizontalAlignment="Left" Margin="25,9,0,0" Height="15" VerticalAlignment="Top" IsChecked="{Binding UseSession}" Foreground="#FFAB9066" FontSize="12" FontWeight="Bold"/>
+                    <CheckBox Name="useSession" Content="Использовать Ид. Сессии" Grid.Column="2" HorizontalAlignment="Left" Margin="25,9,0,0" Height="15" VerticalAlignment="Top" IsChecked="{Binding UseSession}" Foreground="#FFAB9066" FontSize="12" FontWeight="Bold"/>
 
                 </Grid>
                 

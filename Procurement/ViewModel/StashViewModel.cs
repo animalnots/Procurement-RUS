@@ -107,7 +107,7 @@ namespace Procurement.ViewModel
 
         public string Total
         {
-            get { return "Total " + configuredOrbType.ToString() + " in Orbs : " + ApplicationState.Stash[ApplicationState.CurrentLeague].GetTotal(configuredOrbType).ToString(); }
+            get { return "Всего " + configuredOrbType.ToString() + " в сферах : " + ApplicationState.Stash[ApplicationState.CurrentLeague].GetTotal(configuredOrbType).ToString(); }
         }
 
         public Dictionary<OrbType, double> TotalDistibution
@@ -164,7 +164,7 @@ namespace Procurement.ViewModel
                 StringBuilder sb = new StringBuilder();
                 sb.AppendLine();
                 sb.AppendLine(string.Format("Error: attempted to get items for the non existant league '{0}'", ApplicationState.CurrentLeague));
-                sb.AppendLine("Current leagues are:");
+                sb.AppendLine("Текущие лиги:");
                 foreach (var item in ApplicationState.Leagues)
                     sb.AppendLine(item);
                 sb.AppendLine();

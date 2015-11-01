@@ -27,12 +27,12 @@ namespace Procurement.ViewModel.Filters.ForumExport
 
         public string Keyword
         {
-            get { return "Triple Elemental Damage"; }
+            get { return Lang.TripleElementalDamage; }
         }
 
         public string Help
         {
-            get { return "Returns items with Triple Elemental Damage"; }
+            get { return Lang.TripleElementalDamage; }
         }
 
         public bool Applicable(Item item)

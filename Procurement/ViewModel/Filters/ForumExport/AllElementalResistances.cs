@@ -8,7 +8,7 @@
         }
 
         public AllElementalResistances()
-            : base("All elemental Resistances", "All elemental Resistances", Lang.toAllElementalResistances)
+            : base(Lang.toAllElementalResistances, Lang.toAllElementalResistances, Lang.toAllElementalResistances)
         { }
     }
 }

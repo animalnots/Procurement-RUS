@@ -1,5 +1,58 @@
-﻿namespace POEApi.Model
+﻿using System.Collections.Generic;
+
+namespace POEApi.Model
 {
+    public struct GearTypeFamilies
+    {
+        public static Dictionary<GearType, string> Families = new Dictionary<GearType, string> {
+        {GearType.Unknown, "Unknown"},
+        {GearType.LifeFlasks, "Flasks"},
+        {GearType.ManaFlasks, "Flasks"},
+        {GearType.HybridFlasks, "Flasks"},
+        {GearType.Currency, "Currency"},
+        {GearType.Amulets, "Amulets"},
+        {GearType.Rings, "Rings"},
+        {GearType.Claws, "Claws"},
+        {GearType.Daggers, "Daggers"},
+        {GearType.Wands, "Wands"},
+        {GearType.OneHandSwords, "Swords"},
+        {GearType.ThrustingOneHandSwords, "Swords"},
+        {GearType.OneHandAxes, "Axes"},
+        {GearType.OneHandMaces, "Maces"},
+        {GearType.Bows, "Bows"},
+        {GearType.Staves, "Staves"},
+        {GearType.TwoHandSwords, "Swords"},
+        {GearType.TwoHandAxes, "Axes"},
+        {GearType.TwoHandMaces, "Maces"},
+        {GearType.ActiveSkillGems, "Gems"},
+        {GearType.SupportSkillGems, "Gems"},
+        {GearType.Quivers, "Quivers"},
+        {GearType.Belts, "Belts"},
+        {GearType.Gloves, "Gloves"},
+        {GearType.Boots, "Boots"},
+        {GearType.BodyArmours, "BodyArmours"},
+        {GearType.Helmets, "Helmets"},
+        {GearType.Shields, "Shields"},
+        {GearType.SmallRelics, "Relics"},
+        {GearType.MediumRelics, "Relics"},
+        {GearType.LargeRelics, "Relics"},
+        {GearType.StackableCurrency, "Currency"},
+        {GearType.QuestItems, "QuestItems"},
+        {GearType.Sceptres, "Sceptres"},
+        {GearType.UtilityFlasks, "Flasks"},
+        {GearType.CriticalUtilityFlasks, "Flasks"},
+        {GearType.Maps, "Maps"},
+        {GearType.FishingRods, "FishingRods"},
+        {GearType.MapFragments, "MapFragments"},
+        {GearType.HideoutDoodads, "HideoutDoodads"},
+        {GearType.Microtransactions, "Microtransactions"},
+        {GearType.Jewel, "Jewel"},
+        {GearType.DivinationCard, "DivinationCard"}
+    };
+
+
+
+    }
     public enum GearType
     {
         Unknown,

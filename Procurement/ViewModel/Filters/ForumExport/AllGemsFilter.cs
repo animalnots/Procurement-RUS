@@ -11,12 +11,12 @@ namespace Procurement.ViewModel.Filters.ForumExport
 
         public string Keyword
         {
-            get { return "All gems"; }
+            get { return "Все камни"; }
         }
 
         public string Help
         {
-            get { return "Any and all gems"; }
+            get { return "Любые камни навыков/поддержки"; }
         }
 
         public FilterGroup Group

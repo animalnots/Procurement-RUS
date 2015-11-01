@@ -8,7 +8,7 @@ namespace Procurement.ViewModel.Filters.ForumExport
     internal class GemLevelFilter : StatFilter
     {
         internal GemLevelFilter(string keyword)
-            : base("Increased " + keyword + " gem level", "Items that increases the level of " + keyword + " gems", "to level of " + keyword + " gems")
+            : base("к уровню размещённых камней " + keyword, "к уровню размещённых камней " + keyword, "к уровню размещённых камней " + keyword)
         { }
 
         public override FilterGroup Group
@@ -20,7 +20,7 @@ namespace Procurement.ViewModel.Filters.ForumExport
     internal class AllGemLevelFilter : StatFilter
     {
         public AllGemLevelFilter()
-            : base("Increased all gem level", "Items that increases the level of gems", "to Level of Gems in this item")
+            : base("к уровню размещённых камней", "к уровню размещённых камней", "к уровню размещённых камней")
         { }
 
         public override FilterGroup Group

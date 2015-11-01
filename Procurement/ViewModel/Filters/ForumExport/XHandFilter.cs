@@ -18,12 +18,12 @@ namespace Procurement.ViewModel.Filters.ForumExport
 
         public string Keyword
         {
-            get { return string.Concat(handed, " ", "Handed Weapon"); }
+            get { return string.Concat(handed, "", "ручное оружие"); }
         }
 
         public string Help
         {
-            get { return string.Concat("Returns all", handed, "(s)"); }
+            get { return string.Concat("Возвращает все ", handed, "ручные оружия"); }
         }
 
         public FilterGroup Group
@@ -39,8 +39,20 @@ namespace Procurement.ViewModel.Filters.ForumExport
 
             if (gear.Properties == null)
                 return false;
+            if (handed.ToLower().Contains(Lang.Two.ToLower()))
+            {
+                if (
+                    gear.Properties.Any(
+                        p => (p.Name.ToLower().Contains(string.Concat(handed, "", Lang.Handed).ToLower()))))
+                    return true;
+                else
+                    return gear.TypeLine.ToLower().Contains(Lang.Staff.ToLower()) ||
+                           gear.TypeLine.ToLower().Contains(Lang.Bow.ToLower());
 
-            return gear.Properties.Any(p => p.Name.Contains(string.Concat(handed, " ", Lang.Handed)));
+
+            }
+            else //TODO ADD SUPPORT FOR WANDS CLAWS ETC??
+                return gear.Properties.Any(p => p.Name.ToLower().Contains(string.Concat(handed, "", Lang.Handed).ToLower()));
         }
     }
 }

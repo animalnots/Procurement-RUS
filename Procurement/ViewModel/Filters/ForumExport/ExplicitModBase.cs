@@ -18,7 +18,7 @@ namespace Procurement.ViewModel.Filters.ForumExport
                 return false;
 
             foreach (var mod in item.Explicitmods)
-                if (mod.Contains(keyword))
+                if (mod.ToLower().Contains(keyword.ToLower()))
                     return true;
 
             return false;

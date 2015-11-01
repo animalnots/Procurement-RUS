@@ -8,7 +8,7 @@
         }
 
         public DamageFire()
-            : base("Adds Fire Damage", "Adds Fire Damage", Lang.AddsFireDamage)
+            : base(Lang.AddsFireDamageStr, Lang.AddsFireDamageStr, Lang.AddsFireDamage)
         { }
     }
 }

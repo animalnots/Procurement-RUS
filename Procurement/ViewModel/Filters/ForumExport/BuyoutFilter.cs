@@ -25,7 +25,7 @@ namespace Procurement.ViewModel.Filters.ForumExport
 
         public string Help
         {
-            get { return "Returns all items with matching buyout set"; }
+            get { return "Все вещи с установленным выкупом"; }
         }
 
         public FilterGroup Group

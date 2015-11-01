@@ -29,12 +29,12 @@ namespace Procurement.ViewModel.Filters
 
         public string Keyword
         {
-            get { return "Quality Gems"; }
+            get { return Lang.QualityGems; }
         }
 
         public string Help
         {
-            get { return "Quality Gems"; }
+            get { return Lang.QualityGems; }
         }
 
         public bool Applicable(POEApi.Model.Item item)

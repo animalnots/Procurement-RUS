@@ -12,12 +12,12 @@ namespace Procurement.ViewModel.Filters.ForumExport
 
         public string Keyword
         {
-            get { return "Currency"; }
+            get { return Lang.currency; }
         }
 
         public string Help
         {
-            get { return "All currency orbs"; }
+            get { return "Все сферы"; }
         }
 
         public FilterGroup Group

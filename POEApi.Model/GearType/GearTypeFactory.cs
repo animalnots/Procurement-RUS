@@ -6,6 +6,7 @@ namespace POEApi.Model
     {
         private static List<GearTypeRunner> runners = new List<GearTypeRunner>()
         {
+            { new JewelRunner() }, //Must be first
             { new HelmetRunner() },
             { new RingRunner() },
             { new AmuletRunner() },
@@ -25,8 +26,9 @@ namespace POEApi.Model
             { new SwordRunner() },
             { new WandRunner() },
             { new MapRunner() },
+            { new MapFragmentsRunner() },
             { new DivinationCardRunner() },
-            { new JewelRunner() },
+            { new FishingRodRunner() },
             { new ChestRunner() } //Must always be last!
         };
 

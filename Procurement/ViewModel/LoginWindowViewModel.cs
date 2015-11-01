@@ -80,9 +80,23 @@ namespace Procurement.ViewModel
         {
             if (this.view == null)
                 return;
+            if (useSession)
+            {
+                //this.view.lblEmail.Visibility = Visibility.Hidden;
+                this.view.lblAccountName.Visibility = Visibility.Hidden;
+                //this.view.txtLogin.Visibility = Visibility.Hidden;
+               this.view.txtAccountName.Visibility = Visibility.Hidden;
+            }
+            else
+            {
 
-            this.view.lblEmail.Content = useSession ? Lang.AliasStrValue : "Email";
-            this.view.lblPassword.Content = useSession ? "Session ID" : Lang.PasswordStrValue;
+                //this.view.lblEmail.Visibility = Visibility.Visible;
+                this.view.lblAccountName.Visibility = Visibility.Visible;
+                //this.view.txtLogin.Visibility = Visibility.Visible;
+                this.view.txtAccountName.Visibility = Visibility.Visible;
+            }
+            this.view.lblEmail.Content = useSession ? Lang.AliasStrValue : Lang.EmailStrValue;
+            this.view.lblPassword.Content = useSession ? Lang.SessionId : Lang.PasswordStrValue;
         }
 
         public LoginWindowViewModel(UserControl view)

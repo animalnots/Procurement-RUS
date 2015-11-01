@@ -8,7 +8,7 @@ namespace Procurement.ViewModel.Filters.ForumExport
     public class GlobalCritChanceFilter : ExplicitModBase
     {
         public GlobalCritChanceFilter()
-            : base("increased Global Critical Strike Chance")
+            : base(Lang.increasedGlobalCriticalStrikeChance)
         { }
 
         public override bool CanFormCategory
@@ -18,12 +18,12 @@ namespace Procurement.ViewModel.Filters.ForumExport
 
         public override string Keyword
         {
-            get { return "Global Crit Chance"; }
+            get { return Lang.increasedGlobalCriticalStrikeChance; }
         }
 
         public override string Help
         {
-            get { return "Items with increased Global Critical Strike Chance"; }
+            get { return Lang.increasedGlobalCriticalStrikeChance; }
         }
 
         public override FilterGroup Group

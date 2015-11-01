@@ -69,7 +69,7 @@ namespace Procurement.ViewModel.Recipes
                                                             .GroupBy(g => g.GearType)
                                                             .ToDictionary(g => g.Key.ToString(), g => g.ToList());
 
-            mergeKeys(buckets, "One Handed", g => g.Properties.Any(pr => pr.Name.Contains("One Handed")), GearType.OneHandAxes, GearType.TwoHandAxes, GearType.Bows, GearType.Claws, GearType.Daggers, GearType.OneHandMaces, GearType.TwoHandMaces, GearType.Sceptres, GearType.Staves, GearType.OneHandSwords, GearType.ThrustingOneHandSwords, GearType.TwoHandSwords, GearType.Wands);
+            mergeKeys(buckets, "One Handed", g => g.Properties.Any(pr => pr.Name.Contains("One Handed")), GearType.OneHandAxes, GearType.TwoHandAxes, GearType.Bows, GearType.Claws, GearType.Daggers, GearType.OneHandMaces, GearType.TwoHandMaces, GearType.Sceptres, GearType.Staves, GearType.OneHandSwords, GearType.ThrustingOneHandSwords, GearType.TwoHandSwords, GearType.Wands, GearType.FishingRods);
             mergeKeys(buckets, "Two Handed", g => g.Properties.Any(pr => pr.Name.Contains("Two Handed")), GearType.OneHandAxes, GearType.TwoHandAxes, GearType.Bows, GearType.Claws, GearType.Daggers, GearType.OneHandMaces, GearType.TwoHandMaces, GearType.Sceptres, GearType.Staves, GearType.OneHandSwords, GearType.ThrustingOneHandSwords, GearType.TwoHandSwords, GearType.Wands);
             removeKeys(buckets, GearType.OneHandAxes, GearType.TwoHandAxes, GearType.Bows, GearType.Claws, GearType.Daggers, GearType.OneHandMaces, GearType.TwoHandMaces, GearType.Sceptres, GearType.Staves, GearType.OneHandSwords, GearType.ThrustingOneHandSwords, GearType.TwoHandSwords, GearType.Wands);
 

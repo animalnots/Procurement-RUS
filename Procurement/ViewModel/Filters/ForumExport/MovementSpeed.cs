@@ -8,7 +8,7 @@
         }
 
         public MovementSpeed()
-            : base("Movement speed", "Items with movement speed", Lang.movementSpeed)
+            : base(Lang.movementSpeed, Lang.movementSpeed, Lang.movementSpeed)
         { }
     }
 }

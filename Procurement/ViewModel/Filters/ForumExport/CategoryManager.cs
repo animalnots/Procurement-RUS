@@ -11,6 +11,9 @@ namespace Procurement.ViewModel.Filters
     {
         private static Dictionary<string, IEnumerable<IFilter>> categories;
         private static List<IFilter> availableFilters;
+        private static readonly Dictionary<string, string> WrapperDictionary = new Dictionary<string, string> {
+            {"Magic rarity","Магические предметы"}, {"Unique rarity","Уникальные предметы"}, {"Rare rarity","Редкие предметы"}, {"Normal rarity","Обычные предметы"}
+        };
 
         static CategoryManager()
         {
@@ -26,7 +29,7 @@ namespace Procurement.ViewModel.Filters
             List<AdvancedSearchCategory> advancedSearchCategories = new List<AdvancedSearchCategory>();
             foreach (var category in categories)
             {
-                advancedSearchCategories.Add(new AdvancedSearchCategory(category.Key, string.Join(Environment.NewLine, category.Value.Select(filter => filter.Help))));
+                advancedSearchCategories.Add(new AdvancedSearchCategory(category.Key.Contains("rarity")? WrapperDictionary[category.Key] : category.Key, string.Join(Environment.NewLine, category.Value.Select(filter => filter.Help))));
             }
 
             return advancedSearchCategories;
@@ -34,13 +37,14 @@ namespace Procurement.ViewModel.Filters
 
         public static IEnumerable<IFilter> GetCategory(string category)
         {
+            category = WrapperDictionary.Values.Any(p=>p.Contains(category)) ? WrapperDictionary.First(p => p.Value == category).Key : category;
             return categories[category];
         }
 
         private static void initializeUserCategories()
         {
             //For Testing and Illustration
-            categories.Add("Craftables", new List<IFilter>() { new NormalRarity(), new OrFilter(new FourLink(), new FiveLink()) });
+            categories.Add("Заготовки", new List<IFilter>() { new NormalRarity(), new OrFilter(new FourLink(), new FiveLink()) });
         }
 
         public static List<IFilter> GetAvailableFilters()
@@ -51,7 +55,7 @@ namespace Procurement.ViewModel.Filters
         private static List<IFilter> getAvailableFilters()
         {
             return Assembly.GetExecutingAssembly().GetTypes()
-                                                  .Where(t => !(t.IsAbstract || t.IsInterface) && typeof(IFilter).IsAssignableFrom(t) && t.Name != typeof(OrFilter).Name)
+                                                  .Where(t => !(t.IsAbstract || t.IsInterface) && typeof(IFilter).IsAssignableFrom(t) && t.Name != typeof(OrFilter).Name && t.Name != typeof(VaalFragmentFilter).Name && t.Name != typeof(VaalUberFragmentFilter).Name)
                                                   .Where(t => t.GetConstructor(new Type[] { }) != null)
                                                   .OrderBy(t => t.Name)
                                                   .Select(t => Activator.CreateInstance(t) as IFilter)

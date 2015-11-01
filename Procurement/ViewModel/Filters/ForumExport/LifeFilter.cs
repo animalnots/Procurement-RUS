@@ -16,12 +16,12 @@ namespace Procurement.ViewModel.Filters.ForumExport
 
         public override string Keyword
         {
-            get { return "Maximum Life"; }
+            get { return Lang.toMaximumLife; }
         }
 
         public override string Help
         {
-            get { return "Items with +life"; }
+            get { return Lang.toMaximumLife; }
         }
 
         public override FilterGroup Group

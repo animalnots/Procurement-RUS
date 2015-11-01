@@ -8,7 +8,7 @@
         }
 
         public StrengthFilter()
-            : base("Increased Strength", "Strength", "Strength")
+            : base(Lang.toStrength, Lang.toStrength, Lang.toStrength)
         { }
     }
 
@@ -21,7 +21,7 @@
         }
 
         public IntelligenceFilter()
-            : base("Increased Intelligence", "Intelligence", "Intelligence")
+            : base(Lang.toIntelligence, Lang.toIntelligence, Lang.toIntelligence)
         { }
     }
 
@@ -33,7 +33,7 @@
         }
 
         public DexterityFilter()
-            : base("Increased Dexterity", "Increased Dexterity", "Dexterity")
+            : base(Lang.toDexterity, Lang.toDexterity, Lang.toDexterity)
         { }
     }
 }

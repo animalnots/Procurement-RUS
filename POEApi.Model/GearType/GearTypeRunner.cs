@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 
@@ -35,10 +36,33 @@ namespace POEApi.Model
                 i++;
             }
             this.incompatibleTypes = new List<string>();
-        }
 
+            //Magic
+            foreach (var localType in gearTypes ) //Geartype.Rings for example or could be family of flasks
+            {
+                var localTypeList = Settings.GearBaseTypes[localType];
+                foreach (KeyValuePair<GearType, List<string>> globalType in Settings.GearBaseTypes) //globalType is already a list of strings
+                {
+                    // if (globaltype contains localtype) add globalType to incompatible for localType;       
+                    foreach (var globalTypeInstance in Settings.GearBaseTypes[globalType.Key])
+                    {
+                        if (globalType.Key != localType && GearTypeFamilies.Families[globalType.Key] != GearTypeFamilies.Families[localType])
+                        {
+                            foreach (var localTypeInstance in localTypeList)
+                            {
+                                if (globalTypeInstance.ToLower().Contains(localTypeInstance.ToLower()) )
+                                    this.incompatibleTypes.Add(globalTypeInstance.ToLower());
+                            }
+                        }
+                    }
+                }
+            }
+
+
+        }
         public override bool IsCompatibleType(Gear item)
         {
+            /*
             // First, check the general types, to see if there is an easy match.
             foreach (var type in generalTypes)
                 if (item.TypeLine.ToLower().Contains(type.ToLower()))
@@ -51,20 +75,61 @@ namespace POEApi.Model
                     if (item.TypeLine.ToLower().Contains(type.ToLower()))
                         return true;
             }
+            */
+
+            //NEW VERSION
+
+            //GET BANNED TYPES
+
+
+
+
+            // check all known types.
+            foreach (var list in compatibleTypesarr)
+            {
+                foreach (var type in list) {
+                    //foreach (var incompatibleType in incompatibleTypes)
+                    //{
+                    if (item.TypeLine.ToLower().Contains(type.ToLower()) && !incompatibleTypes.Contains(item.TypeLine.ToLower()))
+                    {
+                            return true;
+                    }
+                    //}
+                       
+                }
+            }
 
             return false;
         }
 
         public override string GetBaseType(Gear item)
         {
-            if (incompatibleTypes != null && incompatibleTypes.Any(t => item.TypeLine.ToLower().Contains(t.ToLower())))
-                return null;
+            //this sht does not want to wark
+          //  if (incompatibleTypes != null && incompatibleTypes.Any(t => item.TypeLine.ToLower().Contains(t.ToLower()))) 
+           // if (incompatibleTypes != null && incompatibleTypes.Any(t => t.ToLower().Contains(item.TypeLine.ToLower())))
+             //   return null;
             
             foreach (var list in compatibleTypesarr)
             {
                 foreach (var type in list)
-                    if (item.TypeLine.ToLower().Contains(type.ToLower()))
-                        return type;
+                    if (item.TypeLine.ToLower().Contains(type.ToLower()) && !incompatibleTypes.Contains(item.TypeLine.ToLower()))
+                    {
+                        //var compatible = true;
+                        //check for compatibility
+                        /*foreach (var incompatibleType in incompatibleTypes)
+                        {
+                            if (incompatibleType.ToLower().Contains(item.TypeLine.ToLower()))
+                            { 
+                                compatible = false; 
+                                break; 
+                            }
+                        }*/
+                        //if ()
+                            return type;
+
+                        //if (compatible)
+                          //  return type;
+                    }
             }
             return null;
         }
@@ -75,18 +140,19 @@ namespace POEApi.Model
         public RingRunner()
             : base(new GearType[] {GearType.Rings}, new List<string>[] {Settings.GearBaseTypes[GearType.Rings]})
         {
-            incompatibleTypes = new List<string>() { Lang.RingmailStrValue };
+            //incompatibleTypes = new List<string>() { Lang.RingmailStrValue };
         }
-
+        /*
         public override bool IsCompatibleType(Gear item)
         {
             //System.Threading.Thread.CurrentThread.CurrentCulture.
             // if (item.TypeLine.Contains(Lang.RingStrValue) && !incompatibleTypes.Any(t => item.TypeLine.Contains(t)))
-            if (culture.CompareInfo.IndexOf(item.TypeLine, Lang.RingStrValue, CompareOptions.IgnoreCase) >= 0 && !incompatibleTypes.Any(t => item.TypeLine.Contains(t)))
+            if (culture.CompareInfo.IndexOf(item.TypeLine, Lang.RingStrValue, CompareOptions.IgnoreCase) >= 0 && !incompatibleTypes.Any(t => item.TypeLine.ToLower().Contains(t.ToLower())))
                 return true;
 
             return false;
         }
+         */
     }
 
     public class AmuletRunner : GearTypeRunnerBase
@@ -117,8 +183,11 @@ namespace POEApi.Model
     public class ChestRunner : GearTypeRunnerBase
     {
         public ChestRunner()
-            : base(new GearType[] { GearType.BodyArmours }, new List<string>[] {Settings.GearBaseTypes[GearType.BodyArmours]})
-        { }
+            : base(
+                new GearType[] {GearType.BodyArmours}, new List<string>[] {Settings.GearBaseTypes[GearType.BodyArmours]}
+                )
+        {
+        }
     }
 
     public class BeltRunner : GearTypeRunnerBase
@@ -148,20 +217,40 @@ namespace POEApi.Model
             generalTypes.Add(Lang.MapStrValue);
         }
     }
+    public class MapFragmentsRunner : GearTypeRunnerBase
+    {
+        public MapFragmentsRunner()
+            : base(new GearType[] { GearType.MapFragments }, new List<string>[] { Settings.GearBaseTypes[GearType.MapFragments] })
+        {
+           // generalTypes.Add(Lang.MapStrValue);
+        }
+    }
 
     public class DivinationCardRunner : GearTypeRunnerBase
     {
         public DivinationCardRunner()
             : base(new GearType[] { GearType.DivinationCard}, new List<string>[] {Settings.GearBaseTypes[GearType.DivinationCard]})
         {
-            incompatibleTypes = new List<string>() { Lang.DospehGladiatoraStrValue }; 
+            
+            //incompatibleTypes = new List<string>() { Lang.DospehGladiatoraStrValue }; 
         }
+        /*
+        
+        public override bool IsCompatibleType(Gear item)
+        {
+            //System.Threading.Thread.CurrentThread.CurrentCulture.
+            // if (item.TypeLine.Contains(Lang.RingStrValue) && !incompatibleTypes.Any(t => item.TypeLine.Contains(t)))
+            if (culture.CompareInfo.IndexOf(item.TypeLine, Lang.DospehGladiatoraStrValue, CompareOptions.IgnoreCase) >= 0 && !incompatibleTypes.Any(t => item.TypeLine.ToLower().Contains(t.ToLower())))
+                return true;
+
+            return false;
+        }*/
     }
 
     public class JewelRunner : GearTypeRunnerBase
     {
         public JewelRunner()
-            : base(new GearType[] { GearType.Jewel}, new List<string>[] {new List<string>()})
+            : base(new GearType[] { GearType.Jewel}, new List<string>[] {Settings.GearBaseTypes[GearType.Jewel]})
         {
             generalTypes.Add(Lang.JewelStrValue);
         }
@@ -292,10 +381,17 @@ namespace POEApi.Model
     public class WandRunner : GearTypeRunnerBase
     {
         public WandRunner()
-            : base(new GearType[] {GearType.Wands}, new List<string>[] {Settings.GearBaseTypes[GearType.Wands]})
+            : base(new GearType[] { GearType.Wands }, new List<string>[] { Settings.GearBaseTypes[GearType.Wands] })
         {
             generalTypes.Add("Wand");
             generalTypes.Add("Horn");
+        }
+    }
+    public class FishingRodRunner : GearTypeRunnerBase
+    {
+        public FishingRodRunner()
+            : base(new GearType[] { GearType.FishingRods }, new List<string>[] { Settings.GearBaseTypes[GearType.FishingRods] })
+        {
         }
     }
 }

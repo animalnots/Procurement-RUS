@@ -14,7 +14,7 @@ namespace Procurement.ViewModel.Filters.ForumExport
         }
 
         public PhysicalDamageFilter()
-            : base("Adds Physical Damage", "Adds Physical Damage", Lang.AddsPhysicalDamage)
+            : base(Lang.AddsPhysicalDamage, Lang.AddsPhysicalDamage, Lang.AddsPhysicalDamage)
         { }
     }
 }

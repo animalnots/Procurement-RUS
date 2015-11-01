@@ -18,12 +18,12 @@ namespace Procurement.ViewModel.Filters.ForumExport
 
         public override string Keyword
         {
-            get { return "Spell Damage"; }
+            get { return Lang.increasedSpellDamage; }
         }
 
         public override string Help
         {
-            get { return "Items with increased Spell Damage"; }
+            get { return Lang.increasedSpellDamage; }
         }
 
         public override FilterGroup Group

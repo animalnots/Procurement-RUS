@@ -8,7 +8,7 @@
         }
 
         public DamageLightning()
-            : base("Adds Lightning Damage", "Adds Lightning Damage", Lang.AddsLightningDamage)
+            : base(Lang.AddsLightningDamageStr, Lang.AddsLightningDamageStr, Lang.AddsLightningDamage)
         { }
     }
 }

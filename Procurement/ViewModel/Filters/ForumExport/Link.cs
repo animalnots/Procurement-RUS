@@ -18,8 +18,8 @@ namespace Procurement.ViewModel.Filters
             this.links = links;
         }
 
-        public string Keyword { get { return links.ToString() + " Linked"; } }
-        public string Help { get { return "Returns All " + links.ToString() + " Linked items, regardless of rarity"; } }
+        public string Keyword { get { return links.ToString() + " связ. гнёзд"; } }
+        public string Help { get { return "Возвращает вещи с " + links.ToString() + " связанными гнёздами"; } }
 
         public bool Applicable(Item item)
         {

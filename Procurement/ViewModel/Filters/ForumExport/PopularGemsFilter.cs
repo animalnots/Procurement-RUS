@@ -23,12 +23,12 @@ namespace Procurement.ViewModel.Filters
 
         public string Keyword
         {
-            get { return "Popular Gems"; }
+            get { return Lang.PopularGems; }
         }
 
         public string Help
         {
-            get { return "Those really popular gems"; }
+            get { return Lang.PopularGems; }
         }
 
         public bool Applicable(Item item)

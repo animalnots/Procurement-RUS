@@ -13,12 +13,12 @@
 
         public override string Keyword
         {
-            get { return "Life regen"; }
+            get { return Lang.LifeRegeneratedpersecond; }
         }
 
         public override string Help
         {
-            get { return "Items with Life Regenerated per second"; }
+            get { return Lang.LifeRegeneratedpersecond; }
         }
 
         public override FilterGroup Group

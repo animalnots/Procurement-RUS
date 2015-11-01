@@ -3,7 +3,7 @@
     public class ManaFilter : ExplicitModBase
     {
         public ManaFilter()
-            : base("to maximum Mana")
+            : base(Lang.toMaximumMana)
         { }
 
         public override bool CanFormCategory
@@ -13,12 +13,12 @@
 
         public override string Keyword
         {
-            get { return "Maximum Mana"; }
+            get { return Lang.toMaximumMana; }
         }
 
         public override string Help
         {
-            get { return "Items with +maximum mana"; }
+            get { return Lang.toMaximumMana; }
         }
 
         public override FilterGroup Group

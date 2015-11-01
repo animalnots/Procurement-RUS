@@ -3,7 +3,7 @@
     public class ManaRegenFilter : ExplicitModBase
     {
         public ManaRegenFilter()
-            : base(Lang.increasedManaRegenerationRate)
+            : base(Lang.ManaRegeneratedpersecond)
         { }
         public override bool CanFormCategory
         {
@@ -12,12 +12,12 @@
 
         public override string Keyword
         {
-            get { return "Mana regen"; }
+            get { return Lang.ManaRegeneratedpersecond; }
         }
 
         public override string Help
         {
-            get { return "Items with increased Mana Regeneration Rate"; }
+            get { return Lang.ManaRegeneratedpersecond; }
         }
 
         public override FilterGroup Group

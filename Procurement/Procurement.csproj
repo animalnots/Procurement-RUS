@@ -152,6 +152,7 @@
     <Compile Include="ViewModel\AdvancedSearchCategory.cs" />
     <Compile Include="ViewModel\Filters\ForumExport\AccurayFilter.cs" />
     <Compile Include="ViewModel\Filters\ForumExport\CraftedModFilter.cs" />
+    <Compile Include="ViewModel\Filters\ForumExport\CritMultiplierFilter.cs" />
     <Compile Include="ViewModel\Filters\ForumExport\CurrencyFilter.cs" />
     <Compile Include="ViewModel\Filters\ForumExport\GearSearchFilters.cs" />
     <Compile Include="ViewModel\Filters\ForumExport\GemLevelFilter.cs" />

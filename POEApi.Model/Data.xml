@@ -1221,7 +1221,23 @@
       <Item name="Багровый самоцвет"/>
     </GearBaseType>
     <GearBaseType name="DivinationCard">
-      <Item name="The Twins"/>
+      <Item name="Картограф"/>
+      <Item name="Безжалостное орудие"/>
+      <Item name="Сделка вслепую"/>
+      <Item name="Высокомерие"/>
+      <Item name="Последняя надежда"/>
+      <Item name="Изменчивая сила"/>
+      <Item name="Хирург"/>
+      <Item name="Мечта лучника"/>
+      <Item name="Искатель"/>
+      <Item name="Пронзатель"/>
+      <Item name="Трофей охотника"/>
+      <Item name="Просветлённый"/>
+      <Item name="Эстет"/>
+      <Item name="Чудотворец"/>
+      <Item name="Лич"/>
+      <Item name="Цена анархии"/>
+      <Item name="Близнецы"/>
       <Item name="Башня"/>
       <Item name="Проводник"/>
       <Item name="Учёный морей"/>

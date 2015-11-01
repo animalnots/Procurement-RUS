@@ -13,12 +13,12 @@ namespace Procurement.ViewModel.Filters.ForumExport
 
         public string Keyword
         {
-            get { return "6 Green Sockets"; }
+            get { return Lang.SixGreenSockets; }
         }
 
         public string Help
         {
-            get { return "Gear with 6 green sockets"; }
+            get { return Lang.SixGreenSockets; }
         }
 
         public FilterGroup Group

@@ -27,12 +27,12 @@ namespace Procurement.ViewModel.Filters
 
         public string Keyword
         {
-            get { return (this.level == 0) ? "Leveled Gems" : "Level " + level.ToString() + " Gems"; }
+            get { return (this.level == 0) ? "Камни с опытом" : "Камни " + level.ToString() + " уровня"; }
         }
 
         public string Help
         {
-            get { return (this.level == 0) ? "Leveled Gems" : "Level " + level.ToString() + " Gems"; }
+            get { return (this.level == 0) ? "Камни с опытом" : "Камни " + level.ToString() + " уровня"; }
         }
 
         public bool Applicable(POEApi.Model.Item item)

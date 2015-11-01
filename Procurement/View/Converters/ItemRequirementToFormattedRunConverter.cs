@@ -44,7 +44,7 @@ namespace Procurement.View
                 paragraph.Inlines.AddRange(runs);
             }
 
-            paragraph.Inlines.InsertBefore(paragraph.Inlines.FirstInline, new Run("Requires ") { Foreground = Brushes.Gray });
+            paragraph.Inlines.InsertBefore(paragraph.Inlines.FirstInline, new Run(Lang.Requires+" ") { Foreground = Brushes.Gray });
 
             return new FlowDocument(paragraph);
         }

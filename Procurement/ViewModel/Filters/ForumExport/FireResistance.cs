@@ -8,7 +8,7 @@
         }
 
         public FireResistance()
-            : base("Fire Resistance", "Fire Resistance", Lang.toFireResistance, Lang.toFireandLightningResistances, Lang.toFireandColdResistances)
+            : base(Lang.toFireResistance, Lang.toFireResistance, Lang.toFireResistance, Lang.toFireandLightningResistances, Lang.toFireandColdResistances)
         { }
     }
 }

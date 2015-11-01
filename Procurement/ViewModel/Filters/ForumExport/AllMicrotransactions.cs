@@ -12,12 +12,12 @@ namespace Procurement.ViewModel.Filters.ForumExport
 
         public string Keyword
         {
-            get { return "All microtransactions"; }
+            get { return "Все микротранзакции"; }
         }
 
         public string Help
         {
-            get { return "Returns all items with Microtransactions"; }
+            get { return "Фильтрует все вещи с микротранзакциями"; }
         }
 
         public bool Applicable(Item item)

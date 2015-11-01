@@ -8,7 +8,7 @@
         }
 
         public ItemRarityFilter()
-            : base("Item Rarity", "Item with the Item Rarity stat", Lang.IncreasedRarity)
+            : base(Lang.IncreasedRarity, Lang.IncreasedRarity, Lang.IncreasedRarity)
         { }
     }
 }

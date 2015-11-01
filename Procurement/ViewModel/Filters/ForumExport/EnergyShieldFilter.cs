@@ -3,7 +3,7 @@
     public class EnergyShieldFilter : ExplicitModBase
     {
         public EnergyShieldFilter()
-            : base("Energy Shield")
+            : base(Lang.EnergyShield)
         { }
 
         public override bool CanFormCategory
@@ -13,12 +13,12 @@
 
         public override string Keyword
         {
-            get { return "Energy Shield"; }
+            get { return Lang.EnergyShield; }
         }
 
         public override string Help
         {
-            get { return "Items with Energy Shield"; }
+            get { return Lang.EnergyShield; }
         }
 
         public override FilterGroup Group

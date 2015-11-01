@@ -8,7 +8,7 @@
         }
 
         public AttackSpeed()
-            : base("Increased Attack Speed", "Increased Attack Speed", Lang.IncreasedAttackSpeed)
+            : base(Lang.IncreasedAttackSpeed, Lang.IncreasedAttackSpeed, Lang.IncreasedAttackSpeed)
         { }
     }
 }

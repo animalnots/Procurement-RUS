@@ -8,7 +8,7 @@
         }
 
         public CastSpeed()
-            : base("Increased Cast Speed", "Increased Cast Speed", Lang.IncreasedCastSpeed)
+            : base(Lang.IncreasedCastSpeed, Lang.IncreasedCastSpeed, Lang.IncreasedCastSpeed)
         { }
     }
 }

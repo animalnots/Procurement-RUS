@@ -9,12 +9,12 @@
 
         public override string Keyword
         {
-            get { return "Curse Gems"; }
+            get { return Lang.curseGems; }
         }
 
         public override string Help
         {
-            get { return "Gems curse targets in an area"; }
+            get { return Lang.curseGems; }
         }
     }
 }

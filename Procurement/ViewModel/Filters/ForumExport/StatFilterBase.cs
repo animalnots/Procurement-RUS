@@ -15,6 +15,7 @@ namespace Procurement.ViewModel.Filters
             this.keyword = keyword;
             this.help = help;
             this.stats = stats.Select(stat => new Regex(stat, RegexOptions.Singleline | RegexOptions.IgnoreCase)).ToList();
+            
         }
         public bool CanFormCategory
         {

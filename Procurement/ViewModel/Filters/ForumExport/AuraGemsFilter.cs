@@ -8,12 +8,12 @@
 
         public override string Keyword
         {
-            get { return "Aura Gems"; }
+            get { return Lang.auraGems; }
         }
 
         public override string Help
         {
-            get { return "Gems that buff the player with an aura"; }
+            get { return Lang.auraGems; }
         }
     }
 }

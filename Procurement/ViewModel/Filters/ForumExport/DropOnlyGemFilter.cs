@@ -26,7 +26,15 @@ namespace Procurement.ViewModel.Filters
             dropOnly.Add("Reduced Duration");
             dropOnly.Add("Slower Projectiles");
             dropOnly.Add("Enhance");*/
-
+            /*
+             * Added Chaos Damage
+Detonate Mines
+Empower
+Enhance
+Enlighten
+Portal (gem)
+all Vaal Gems*/
+            dropOnly.Add(Lang.AddedChaosDamage);
             dropOnly.Add(Lang.Empower);
             dropOnly.Add(Lang.Enhance);
             dropOnly.Add(Lang.Enlighten);
@@ -41,12 +49,12 @@ namespace Procurement.ViewModel.Filters
 
         public string Keyword
         {
-            get { return "Drop Only Gems"; }
+            get { return Lang.DropOnlyGems; }
         }
 
         public string Help
         {
-            get { return "Gems only which can only be aquired through drops"; }
+            get { return Lang.DropOnlyGems; }
         }
 
         public bool Applicable(Item item)
@@ -55,7 +63,7 @@ namespace Procurement.ViewModel.Filters
             if (gem == null)
                 return false;
 
-            return dropOnly.Contains(gem.TypeLine);
+            return (dropOnly.Contains(gem.TypeLine) || gem.Corrupted); //VAAL/CORRUPTED GEMS ARE ALSO DROP ONLY!
         }
     }
 }

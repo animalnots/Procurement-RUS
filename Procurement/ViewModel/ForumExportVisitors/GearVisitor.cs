@@ -19,17 +19,17 @@ namespace Procurement.ViewModel.ForumExportVisitors
             tokens.Add("{NormalGear}", new NormalRarity());
 
             //Shitty temp hack
-            tokens.Remove("{NormalDivinationCard}");
-            tokens.Remove("{MagicDivinationCard}");
-            tokens.Remove("{RareDivinationCard}");
-            tokens.Remove("{UniqueDivinationCard}");
-            tokens.Add("{DivinationCard}", new GearTypeFilter(new GearType[] { GearType.DivinationCard }, string.Empty));
+           // tokens.Remove("{NormalDivinationCard}");
+          //  tokens.Remove("{MagicDivinationCard}");
+           // tokens.Remove("{RareDivinationCard}");
+          //  tokens.Remove("{UniqueDivinationCard}");
+          //  tokens.Add("{DivinationCard}", new GearTypeFilter(new GearType[] { GearType.DivinationCard }, string.Empty));
             //Not Shitty temp hack
-            tokens.Remove("{NormalMapFragments}");
-            tokens.Remove("{MagicMapFragments}");
-            tokens.Remove("{RareMapFragments}");
-            tokens.Remove("{UniqueMapFragments}");
-            tokens.Add("{MapFragments}", new GearTypeFilter(new GearType[] { GearType.MapFragments }, string.Empty));
+          //  tokens.Remove("{NormalMapFragments}");
+         //   tokens.Remove("{MagicMapFragments}");
+         //   tokens.Remove("{RareMapFragments}");
+         //   tokens.Remove("{UniqueMapFragments}");
+        //    tokens.Add("{MapFragments}", new GearTypeFilter(new GearType[] { GearType.MapFragments }, string.Empty));
 
             
         }

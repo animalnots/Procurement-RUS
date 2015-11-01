@@ -24,12 +24,12 @@ namespace Procurement.ViewModel.Filters
 
         public virtual string Keyword
         {
-            get { return "Category Gems"; }
+            get { return Lang.Gems; }
         }
 
         public virtual string Help
         {
-            get { return "Category Gems"; }
+            get { return Lang.Gems; }
         }
 
         public bool Applicable(POEApi.Model.Item item)

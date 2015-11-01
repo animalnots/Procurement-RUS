@@ -8,7 +8,7 @@
         }
 
         public LightningResistance()
-            : base("Lightning Resistance", "Lightning Resistance", Lang.toLightningResistance, Lang.toColdandLightningResistances, Lang.toFireandLightningResistances)
+            : base(Lang.toLightningResistance, Lang.toLightningResistance, Lang.toLightningResistance, Lang.toColdandLightningResistances, Lang.toFireandLightningResistances)
         { }
     }
 }

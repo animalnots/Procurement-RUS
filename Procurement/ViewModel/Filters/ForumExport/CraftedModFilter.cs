@@ -15,12 +15,12 @@ namespace Procurement.ViewModel.Filters.ForumExport
 
         public string Keyword
         {
-            get { return "Crafted Mods"; }
+            get { return Lang.CraftedMod; }
         }
 
         public string Help
         {
-            get { return "Items with crafted mods"; }
+            get { return Lang.CraftedMod; }
         }
 
         public FilterGroup Group

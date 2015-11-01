@@ -18,12 +18,12 @@ namespace Procurement.ViewModel.Filters
 
         public string Keyword
         {
-            get { return "Triple Resists"; }
+            get { return Lang.TripleResists; }
         }
 
         public string Help
         {
-            get { return "Returns items with Triple Resists"; }
+            get { return Lang.TripleResists; }
         }
 
         public bool Applicable(Item item)

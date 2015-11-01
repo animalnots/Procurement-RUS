@@ -9,7 +9,7 @@ namespace Procurement.ViewModel.Filters.ForumExport
         }
 
         public LifeLeech()
-            : base("Life leech", "Items with life leech", Lang.LeechedAsLife)
+            : base(Lang.LeechedAsLife, Lang.LeechedAsLife, Lang.LeechedAsLife)
         { }
     }
 }

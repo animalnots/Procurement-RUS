@@ -13,7 +13,7 @@ namespace Procurement.ViewModel.Filters.ForumExport
         }
 
         public AccurayFilter()
-            : base("Increased Accuracy", "Increased Accuracy", Lang.Accuracy)
+            : base(Lang.Accuracy, Lang.Accuracy, Lang.Accuracy)
         { }
     }
 }

@@ -2,6 +2,7 @@
 
 namespace Procurement.ViewModel.Filters.ForumExport
 {
+    //NOT USED IN SEARCH BOX
     public class MapLevelFilter : IFilter
     {
         private int level;

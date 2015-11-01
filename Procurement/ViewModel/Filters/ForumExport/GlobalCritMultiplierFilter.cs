@@ -8,7 +8,7 @@ namespace Procurement.ViewModel.Filters.ForumExport
     public class GlobalCritMultiplierFilter : ExplicitModBase
     {
         public GlobalCritMultiplierFilter()
-            : base("increased Global Critical Strike Multiplier")
+            : base(Lang.increasedGlobalCriticalMultiplier)
         { }
 
         public override bool CanFormCategory
@@ -18,12 +18,12 @@ namespace Procurement.ViewModel.Filters.ForumExport
 
         public override string Keyword
         {
-            get { return "Global Crit Multiplier"; }
+            get { return Lang.increasedGlobalCriticalMultiplier; }
         }
 
         public override string Help
         {
-            get { return "Items with increased Global Critical Strike Multiplier"; }
+            get { return Lang.increasedGlobalCriticalMultiplier; }
         }
 
         public override FilterGroup Group

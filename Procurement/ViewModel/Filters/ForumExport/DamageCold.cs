@@ -8,7 +8,7 @@
         }
 
         public DamageCold()
-            : base("Adds Cold Damage", "Adds Cold Damage", Lang.AddsColdDamage)
+            : base(Lang.AddsColdDamageStr, Lang.AddsColdDamageStr, Lang.AddsColdDamage)
         { }
     }
 }
