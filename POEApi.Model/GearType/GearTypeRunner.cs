@@ -164,6 +164,24 @@ namespace POEApi.Model
         }
     }
 
+    public class TalismanRunner : GearTypeRunnerBase
+    {
+        public TalismanRunner()
+            : base(new GearType[] { GearType.Virtual_Talismans }, new List<string>[] { Settings.GearBaseTypes[GearType.Virtual_Talismans] })
+        {
+            generalTypes.Add(Lang.TalismanStrValue);
+        }
+        //public override bool IsCompatibleType(Gear item)
+        //{
+            //System.Threading.Thread.CurrentThread.CurrentCulture.
+            // if (item.TypeLine.Contains(Lang.RingStrValue) && !incompatibleTypes.Any(t => item.TypeLine.Contains(t)))
+          //  if (culture.CompareInfo.IndexOf(item.TypeLine, Lang.TalismanStrValue) >= 0  && !incompatibleTypes.Any(t => item.TypeLine.ToLower().Contains(t.ToLower())))
+        //        return true;
+
+      //      return false;
+      //  }
+    }
+
     public class HelmetRunner : GearTypeRunnerBase
     {
         public HelmetRunner()

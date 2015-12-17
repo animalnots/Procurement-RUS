@@ -1,1 +1,1 @@
-Procurement 2.0.1,https://github.com/animalnots/Procurement-RUS/releases/tag/2.0.1
+Procurement 2.1.0,https://github.com/animalnots/Procurement-RUS/releases/tag/2.1.0

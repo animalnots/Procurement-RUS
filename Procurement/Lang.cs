@@ -374,6 +374,10 @@ namespace Procurement
         {
             get { return "Амулеты"; }
         }
+        public static string Talismans
+        {
+            get { return "Талисманы"; }
+        }
         public static string Axes
         {
             get { return "Топоры"; }

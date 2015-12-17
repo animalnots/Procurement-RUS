@@ -17,7 +17,7 @@ namespace Procurement.ViewModel.ForumExportVisitors
 
             tokens = tokensSource.ToDictionary(i => i.Key, i => i.Value);
             tokens.Add("{NormalGear}", new NormalRarity());
-
+           
             //Shitty temp hack
            // tokens.Remove("{NormalDivinationCard}");
           //  tokens.Remove("{MagicDivinationCard}");

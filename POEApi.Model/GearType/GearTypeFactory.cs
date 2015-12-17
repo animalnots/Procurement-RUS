@@ -9,6 +9,7 @@ namespace POEApi.Model
             { new JewelRunner() }, //Must be first
             { new HelmetRunner() },
             { new RingRunner() },
+            { new TalismanRunner() },
             { new AmuletRunner() },
             { new BeltRunner() },
             { new FlaskRunner() },

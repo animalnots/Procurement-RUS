@@ -12,6 +12,7 @@
       <Item name="Вестник пепла"/>
       <Item name="Взрывная стрела"/>
       <Item name="Вихрь"/>
+      <Item name="Вихрь клинков"/>
       <Item name="Вихрь стрел"/>
       <Item name="Вливание урона"/>
       <Item name="Внезапный удар"/>
@@ -19,6 +20,8 @@
       <Item name="Волна холода"/>
       <Item name="Восполняющий тотем"/>
       <Item name="Выброс пламени"/>
+      <Item name="Выстрел шрапнелью"/>
+      <Item name="Вытягивание сущности"/>
       <Item name="Горючесть"/>
       <Item name="Горящая стрела"/>
       <Item name="Горящая стрела ваал"/>
@@ -32,11 +35,14 @@
       <Item name="Двойной удар ваал"/>
       <Item name="Дисциплина"/>
       <Item name="Дисциплина ваал"/>
+      <Item name="Дождь взрывов"/>
       <Item name="Дымовая мина"/>
+      <Item name="Едкая стрела"/>
       <Item name="Жгучая злоба"/>
       <Item name="Живое оружие"/>
       <Item name="Живой огонь"/>
       <Item name="Живучесть"/>
+      <Item name="Инфекция"/>
       <Item name="Искра"/>
       <Item name="Искра ваал"/>
       <Item name="Испепеление"/>
@@ -65,13 +71,13 @@
       <Item name="Ловушка молний"/>
       <Item name="Ловушка молний ваал"/>
       <Item name="Ловушка переманивания"/>
-      <Item name="Ловушка руны льда"/>
       <Item name="Магмовый удар"/>
       <Item name="Магмовый шар"/>
       <Item name="Медвежий капкан"/>
       <Item name="Метка браконьера"/>
       <Item name="Метка вождя"/>
       <Item name="Метка убийцы"/>
+      <Item name="Мечепад"/>
       <Item name="Мина кольца огня"/>
       <Item name="Мина-воронка"/>
       <Item name="Надрез"/>
@@ -87,6 +93,7 @@
       <Item name="Огненный шторм"/>
       <Item name="Опустошение"/>
       <Item name="Опустошение ваал"/>
+      <Item name="Осадная баллиста"/>
       <Item name="Осквернение"/>
       <Item name="Отмщение"/>
       <Item name="Очередь"/>
@@ -156,6 +163,7 @@
       <Item name="Точный выстрел"/>
       <Item name="Тяжелый удар ваал"/>
       <Item name="Тяжёлый удар"/>
+      <Item name="Увядание"/>
       <Item name="Удар Щитом"/>
       <Item name="Удар в спину"/>
       <Item name="Удар власти"/>
@@ -176,7 +184,6 @@
       <Item name="Шаровая молния"/>
       <Item name="Шквал клинков"/>
       <Item name="Щит бури"/>
-      <Item name="Ядовитая стрела"/>
       <Item name="Ясность ума"/>
       <Item name="Ясность ума ваал"/>
     </GearBaseType>
@@ -188,10 +195,35 @@
       <Item name="Амулет с лазуритом"/>
       <Item name="Амулет с нефритом"/>
       <Item name="Амулет с ониксом"/>
+      <Item name="Амулет с рубином"/>
       <Item name="Амулет с цитрином"/>
       <Item name="Амулет с янтарем"/>
       <Item name="Золотой амулет"/>
+      <Item name="Сжимающий талисман"/>
       <Item name="Струйный амулет"/>
+      <Item name="Талисман Великого волка"/>
+      <Item name="Талисман бессмертной плоти"/>
+      <Item name="Талисман близнецов-обезьян"/>
+      <Item name="Талисман ведьмокогтя"/>
+      <Item name="Талисман глубинника"/>
+      <Item name="Талисман гнилой головы"/>
+      <Item name="Талисман длиннозуба"/>
+      <Item name="Талисман клыкастика"/>
+      <Item name="Талисман когтистого оборотня"/>
+      <Item name="Талисман колотритона"/>
+      <Item name="Талисман костешипа"/>
+      <Item name="Талисман обезьяньей лапки"/>
+      <Item name="Талисман оленерога-одиночки"/>
+      <Item name="Талисман пепельного чешуйника"/>
+      <Item name="Талисман первочерепа"/>
+      <Item name="Талисман пернатых близнецов"/>
+      <Item name="Талисман перогнильца"/>
+      <Item name="Талисман ребролома"/>
+      <Item name="Талисман смерторука"/>
+      <Item name="Талисман трёх крыс"/>
+      <Item name="Талисман трёх рук"/>
+      <Item name="Талисман хребтоплава"/>
+      <Item name="Талисман чёрной пасти"/>
     </GearBaseType>
     <GearBaseType name="Belts">
       <Item name="Клепаный ремень"/>
@@ -464,6 +496,7 @@
       <Item name="Вездесущая тьма"/>
       <Item name="Верность"/>
       <Item name="Ветер"/>
+      <Item name="Воевода"/>
       <Item name="Вожак стаи"/>
       <Item name="Воитель"/>
       <Item name="Враг"/>
@@ -474,15 +507,18 @@
       <Item name="Гнев"/>
       <Item name="Голод"/>
       <Item name="Гордыня"/>
+      <Item name="Господин в чёрном"/>
       <Item name="Дар кузнеца"/>
       <Item name="Дары царицы каменитов"/>
       <Item name="Двойник"/>
+      <Item name="Демоница"/>
       <Item name="Джентльмен"/>
       <Item name="Договор"/>
       <Item name="Доктор"/>
       <Item name="Единство"/>
       <Item name="Забытое богатство"/>
       <Item name="Загробное знание"/>
+      <Item name="Затерянные миры"/>
       <Item name="Зеркальный лабиринт"/>
       <Item name="Знак Виники"/>
       <Item name="Игрок"/>
@@ -511,16 +547,21 @@
       <Item name="Отшельник"/>
       <Item name="Песнопение"/>
       <Item name="Пир"/>
+      <Item name="Подношение"/>
+      <Item name="Подставь другую щёку"/>
       <Item name="Последний воин"/>
       <Item name="Последняя надежда"/>
       <Item name="Поэт"/>
+      <Item name="Предатель"/>
       <Item name="Предательство"/>
       <Item name="Призыватель"/>
       <Item name="Пришествие хаоса"/>
+      <Item name="Проблеск надежды"/>
       <Item name="Проводник"/>
       <Item name="Пронзатель"/>
       <Item name="Просветлённый"/>
       <Item name="Простор"/>
+      <Item name="Прощальный дар матери"/>
       <Item name="Путь к власти"/>
       <Item name="Пьяный патриций"/>
       <Item name="Решение охотника"/>
@@ -538,6 +579,7 @@
       <Item name="Союз"/>
       <Item name="Суд"/>
       <Item name="Сюрприз"/>
+      <Item name="Тело"/>
       <Item name="Три лика в темноте"/>
       <Item name="Трофей охотника"/>
       <Item name="Тёмный маг"/>
@@ -558,6 +600,7 @@
       <Item name="Чёрный ворон"/>
       <Item name="Шут"/>
       <Item name="Эстет"/>
+      <Item name="Эфемерность"/>
     </GearBaseType>
     <GearBaseType name="FishingRods">
       <Item name="Удочка"/>
@@ -834,8 +877,8 @@
       <Item name="Томагавк"/>
       <Item name="Топор каруи"/>
       <Item name="Топор мясника"/>
+      <Item name="Топор тени"/>
       <Item name="Топорик ваал"/>
-      <Item name="Топорик тени"/>
       <Item name="Травлёный топорик"/>
       <Item name="Украшенный топор"/>
       <Item name="Царский топор"/>
@@ -1052,6 +1095,7 @@
       <Item name="Благодатная сфера"/>
       <Item name="Божественная сфера"/>
       <Item name="Деталь доспеха"/>
+      <Item name="Зачарование"/>
       <Item name="Зеркало Каландры"/>
       <Item name="Обрывок свитка"/>
       <Item name="Осколок алхимии"/>
@@ -1108,6 +1152,7 @@
     </GearBaseType>
     <GearBaseType name="SupportSkillGems">
       <Item name="Аура проклятия"/>
+      <Item name="Быстрое разложение"/>
       <Item name="Возбуждение"/>
       <Item name="Возвращающиеся снаряды"/>
       <Item name="Вытягивание Жизни"/>
@@ -1125,8 +1170,10 @@
       <Item name="Здоровье за удар"/>
       <Item name="Колдующий тотем"/>
       <Item name="Количество предметов"/>
+      <Item name="Контролируемое разрушение"/>
       <Item name="Ловушка"/>
       <Item name="Магия крови"/>
+      <Item name="Манипуляция пустотой"/>
       <Item name="Меньший расход маны"/>
       <Item name="Меткость"/>
       <Item name="Мина"/>
@@ -1188,6 +1235,7 @@
       <Item name="Щедрость"/>
       <Item name="Энергетический заряд при критическом ударе"/>
       <Item name="Эхо магии"/>
+      <Item name="Яд"/>
     </GearBaseType>
     <GearBaseType name="ThrustingOneHandSwords">
       <Item name="Витая шпага"/>

@@ -25,7 +25,7 @@ namespace POEApi.Model
                 return;
             }
 
-            items = proxy.Items.Select(item => ItemFactory.Get(item)).ToList();
+            items = proxy.Items.Select(item => ItemFactory.Get(item)).Where(x => x.X < 11 && x.X >= 0 && x.Y < 11 && x.Y >= 0).ToList();
             this.NumberOfTabs = proxy.NumTabs;
             this.Tabs = ProxyMapper.GetTabs(proxy.Tabs);
 
@@ -61,7 +61,7 @@ namespace POEApi.Model
                     return;
                 }
 
-                Add(currentModel.GetStash(tabId, currentLeague, true));
+                Add(currentModel.GetStash(tabId, currentLeague, accountName, true));
                 refreshItemsByTabTab(tabId);
             }
             catch (Exception ex)

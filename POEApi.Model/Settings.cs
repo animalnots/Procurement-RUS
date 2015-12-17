@@ -112,6 +112,7 @@ namespace POEApi.Model
                                                             .ToDictionary(g => (GearType)Enum.Parse(typeof(GearType), g.Attribute("name").Value), g => g.Elements("Item")
                                                             .Select(e => e.Attribute("name").Value)
                                                             .ToList());
+            GearBaseTypes.Add(GearType.Virtual_Talismans, GearBaseTypes[GearType.Amulets].Where(g => g.StartsWith(Lang.TalismanStrValue, StringComparison.CurrentCultureIgnoreCase)).ToList());
         }
 
         private static double getChaosAmount(XElement orb)

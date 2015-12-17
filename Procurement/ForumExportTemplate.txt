@@ -4,6 +4,9 @@
 [spoiler="          Гадальные карты          "]
 {NormalDivinationCard}{MagicDivinationCard}{RareDivinationCard}{UniqueDivinationCard}
 [/spoiler]
+[spoiler="          Талисманы          "]
+{NormalVirtual_Talismans}{MagicVirtual_Talismans}{RareVirtual_Talismans}{UniqueVirtual_Talismans}
+[/spoiler]
 [spoiler="          Самоцветы          "]
 {NormalJewel}{MagicJewel}{RareJewel}{UniqueJewel}
 [/spoiler]

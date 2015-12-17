@@ -24,6 +24,10 @@ namespace POEApi.Model
         {
             get { return "Амулет"; }
         }
+        public static string TalismanStrValue
+        {
+            get { return "Талисман"; }
+        }
         public static string HelmetStrValue
         {
             get { return "Шлем"; }

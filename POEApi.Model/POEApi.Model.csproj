@@ -92,7 +92,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="base_item_types.xml" />
+    <Content Include="base_item_types.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Buyouts.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>

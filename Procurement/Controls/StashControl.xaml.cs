@@ -37,8 +37,9 @@ namespace Procurement.Controls
 
             FilterResults = Filter.Count() == 0 ? -1 : 0;
 
-            foreach (var item in Stash)
+            foreach (var item in Stash) {
                 updateResult(borderByLocation[Tuple.Create<int, int>(item.X, item.Y)], search(item));
+            }
 
             this.UpdateLayout();
         }
