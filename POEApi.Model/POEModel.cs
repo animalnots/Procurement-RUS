@@ -218,7 +218,7 @@ namespace POEApi.Model
                 if (item.Items == null)
                     return new List<Item>();
 
-                return item.Items.Select(i => ItemFactory.Get(i)).Where(x =>x.X < 11 && x.X >= 0 && x.Y < 11 && x.Y >= 0).ToList();
+                return item.Items.Select(i => ItemFactory.Get(i)).Where(x =>x.X <= 11 && x.X >= 0 && x.Y <= 11 && x.Y >= 0).ToList();
             }
             catch (SerializationException sex)
             {
