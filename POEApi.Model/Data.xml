@@ -12,6 +12,7 @@
       <Item name="Вестник пепла"/>
       <Item name="Взрывная стрела"/>
       <Item name="Вихрь"/>
+      <Item name="Вихрь ваал"/>
       <Item name="Вихрь клинков"/>
       <Item name="Вихрь стрел"/>
       <Item name="Вливание урона"/>
@@ -179,7 +180,6 @@
       <Item name="Холодная ненависть"/>
       <Item name="Цепь молний"/>
       <Item name="Цепь молний ваал"/>
-      <Item name="Циклон ваал"/>
       <Item name="Шальной удар"/>
       <Item name="Шаровая молния"/>
       <Item name="Шквал клинков"/>
@@ -212,6 +212,8 @@
       <Item name="Талисман когтистого оборотня"/>
       <Item name="Талисман колотритона"/>
       <Item name="Талисман костешипа"/>
+      <Item name="Талисман личинок"/>
+      <Item name="Талисман мандибулы"/>
       <Item name="Талисман обезьяньей лапки"/>
       <Item name="Талисман оленерога-одиночки"/>
       <Item name="Талисман пепельного чешуйника"/>
@@ -491,7 +493,9 @@
       <Item name="Башня"/>
       <Item name="Безжалостное орудие"/>
       <Item name="Безумие Дэрии"/>
+      <Item name="Бешенный Роа"/>
       <Item name="Близнецы"/>
+      <Item name="Богатство"/>
       <Item name="Богатство и власть"/>
       <Item name="Вездесущая тьма"/>
       <Item name="Верность"/>
@@ -515,6 +519,8 @@
       <Item name="Джентльмен"/>
       <Item name="Договор"/>
       <Item name="Доктор"/>
+      <Item name="Дракон"/>
+      <Item name="Душа"/>
       <Item name="Единство"/>
       <Item name="Забытое богатство"/>
       <Item name="Загробное знание"/>
@@ -533,6 +539,8 @@
       <Item name="Катализатор"/>
       <Item name="Клинок Венценосца"/>
       <Item name="Клятва камнерезчика"/>
+      <Item name="Крысы"/>
+      <Item name="Лев"/>
       <Item name="Лиса"/>
       <Item name="Лич"/>
       <Item name="Любовник"/>
@@ -543,9 +551,11 @@
       <Item name="Надежда"/>
       <Item name="Наёмник"/>
       <Item name="Небесный судья"/>
+      <Item name="Одарённый франт"/>
       <Item name="Оковы"/>
       <Item name="Отшельник"/>
       <Item name="Песнопение"/>
+      <Item name="Печать"/>
       <Item name="Пир"/>
       <Item name="Подношение"/>
       <Item name="Подставь другую щёку"/>
@@ -565,6 +575,7 @@
       <Item name="Путь к власти"/>
       <Item name="Пьяный патриций"/>
       <Item name="Решение охотника"/>
+      <Item name="Риск"/>
       <Item name="Рождение трёх"/>
       <Item name="Сделка вслепую"/>
       <Item name="Сердце вождя"/>
@@ -577,6 +588,7 @@
       <Item name="Смотритель"/>
       <Item name="Солнце"/>
       <Item name="Союз"/>
+      <Item name="Спокойствие"/>
       <Item name="Суд"/>
       <Item name="Сюрприз"/>
       <Item name="Тело"/>
@@ -1151,7 +1163,7 @@
       <Item name="Царский посох"/>
     </GearBaseType>
     <GearBaseType name="SupportSkillGems">
-      <Item name="Аура проклятия"/>
+      <Item name="Богохульство"/>
       <Item name="Быстрое разложение"/>
       <Item name="Возбуждение"/>
       <Item name="Возвращающиеся снаряды"/>
