@@ -9,11 +9,17 @@ namespace Procurement.ViewModel
     {
         private Brush brush;
         private RichTextBox statusBox { get; set; }
+        private int padding;
 
         public StatusController(RichTextBox statusBox)
+            : this(statusBox, 90)
+        { }
+
+        public StatusController(RichTextBox statusBox, int padding)
         {
             this.statusBox = statusBox;
             this.brush = statusBox.Foreground;
+            this.padding = padding;
         }
 
         public void Ok()
@@ -52,7 +58,7 @@ namespace Procurement.ViewModel
 
                 text = new Run();
                 text.Foreground = Brushes.Red;
-                text.Text = Lang.ErrorStrValue;
+                text.Text = "Error";
                 ((Paragraph)statusBox.Document.Blocks.LastBlock).Inlines.Add(text);
 
                 text = new Run();
@@ -65,7 +71,7 @@ namespace Procurement.ViewModel
                 ((Paragraph)statusBox.Document.Blocks.LastBlock).Inlines.Add(text);
 
                 statusBox.ScrollToEnd();
-                toggleControls();                
+                toggleControls();
             });
         }
 
@@ -93,7 +99,7 @@ namespace Procurement.ViewModel
 
         private string getPaddedString(string text)
         {
-            return text.PadRight(90, ' ');
+            return text.PadRight(padding, ' ');
         }
 
         private void CheckAccessAndInvoke(Action a)

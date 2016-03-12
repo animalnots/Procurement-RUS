@@ -48,7 +48,9 @@ namespace POEApi.Model
             { Lang.MirrorStrValue, OrbType.Mirror },
             { Lang.EternalStrValue, OrbType.Eternal},
             { Lang.ImprintStrValue, OrbType.Imprint },
-            { Lang.VaalOrbStrValue, OrbType.VaalOrb }
+            { Lang.VaalOrbStrValue, OrbType.VaalOrb },
+            { Lang.PerandusCoinStrValue, OrbType.PerandusCoin }
+
         };
         #endregion
 
@@ -76,9 +78,8 @@ namespace POEApi.Model
             catch (Exception ex)
             {
                 Logger.Log(ex);
-                var message = "ProxyMapper.GetOrbType Failed! ItemType = " + name;
-                Logger.Log(message);
-                throw new Exception(message);
+                Logger.Log("ProxyMapper.GetOrbType Failed! ItemType = " + name);
+                return OrbType.Unknown;
             }
         }
 

@@ -35,7 +35,7 @@ namespace Procurement.Utility
         {
             refreshTimer = new Timer();
             refreshTimer.Elapsed += (s, e) => { RefreshOnlineStatus(); };
-            refreshTimer.Interval = 1 * 60 * 1000;
+            refreshTimer.Interval = 240000; // 4 mins
         }
 
         public static PoeTradeOnlineHelper Instance
@@ -109,7 +109,7 @@ namespace Procurement.Utility
             };
             GetLastInputInfo(ref inputInfo);
             // Allow for TickCount wrap-around.
-            return TimeSpan.FromMilliseconds(unchecked(Environment.TickCount - inputInfo.dwTime));
+            return TimeSpan.FromMilliseconds(unchecked(Environment.TickCount - (int)inputInfo.dwTime));
         }
 
         internal void Start()

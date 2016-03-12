@@ -33,6 +33,8 @@
         Mirror,
         TransmutationShard,
         AlterationShard,
-        VaalOrb
+        VaalOrb,
+        PerandusCoin,
+        Unknown
     }
 }

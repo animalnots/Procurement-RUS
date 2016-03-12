@@ -25,7 +25,7 @@ namespace POEApi.Model
                 return;
             }
 
-            items = proxy.Items.Select(item => ItemFactory.Get(item)).Where(x => x.X <= 11 && x.X >= 0 && x.Y <= 11 && x.Y >= 0).ToList();
+            items = proxy.Items.Select(item => ItemFactory.Get(item)).ToList();
             this.NumberOfTabs = proxy.NumTabs;
             this.Tabs = ProxyMapper.GetTabs(proxy.Tabs);
 
@@ -46,6 +46,21 @@ namespace POEApi.Model
         {
             items.AddRange(characterItems);
             Tabs.Add(tab);
+        }
+
+        public void RefreshAll(POEModel currentModel, string currentLeague, string accountName)
+        {
+            foreach (var tab in Tabs)
+            {
+                try
+                {
+                    RefreshTab(currentModel, currentLeague, tab.i, accountName);
+                }
+                catch (Exception ex)
+                {
+                    Logger.Log("Error refreshing tab: " + ex.ToString());
+                }
+            }
         }
 
         public void RefreshTab(POEModel currentModel, string currentLeague, int tabId, string accountName)
@@ -132,7 +147,7 @@ namespace POEApi.Model
                 var tabs = Tabs.Select(t => ProxyMapper.STASH + (t.i + 1));
                 itemsByTab = tabs.ToDictionary(kvp => kvp, kvp => items.Where(i => i.InventoryId == kvp).ToList());
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 StringBuilder sb = new StringBuilder();
                 sb.AppendLine("Error building items by tab. Tab data:");

@@ -20,11 +20,11 @@
     <Orb type="JewelersOrb" OrbAmount="10" ChaosAmount="1" />
     <Orb type="Alteration" OrbAmount="20" ChaosAmount="1" />
     <Orb type="Chromatic" OrbAmount="20" ChaosAmount="1" />
-    <Orb type="VaalOrb" OrbAmount="1" ChaosAmount="1" />    "
+    <Orb type="VaalOrb" OrbAmount="1" ChaosAmount="1" /> 
   </Ratios>
   <PopularGems>
-    <Gem name="Произнесение заклинаний при получении урона" />
-    <Gem name="Произнесение заклинаний при критическом ударе" />
+    <Gem name="Сотворение чар при получении урона" />
+    <Gem name="Сотворение чар при критическом ударе" />
     <Gem name="Магия крови" />
     <Gem name="Количество предметов" />
     <Gem name="Здоровье за удар" />
@@ -75,15 +75,15 @@
   <ShopSettings>
     <Shop League="Стандарт" ThreadId="" ThreadTitle="" />
     <Shop League="Одна жизнь" ThreadId="" ThreadTitle="" />
-    <Shop League="Талисманы" ThreadId="" ThreadTitle="" />
-    <Shop League="Талисманы одна жизнь" ThreadId="" ThreadTitle="" />
+    <Shop League="Просперусы" ThreadId="" ThreadTitle="" />
+    <Shop League="Просперусы одна жизнь" ThreadId="" ThreadTitle="" />
   </ShopSettings>
   <Lists>
     <List name="MyLeagues">
       <Item value="Стандарт" />
       <Item value="Одна жизнь" />
-      <Item value="Талисманы" />
-      <Item value="Талисманы одна жизнь" />
+      <Item value="Просперусы" />
+      <Item value="Просперусы одна жизнь" />
     </List>
     <List name="MyTabs">
       <!--If you only want Procurement to download specific tabs list them here, eg :-->

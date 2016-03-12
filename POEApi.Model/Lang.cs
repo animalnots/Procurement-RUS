@@ -328,7 +328,10 @@ namespace POEApi.Model
         {
             get { return "Сфера ваал"; }
         }
-
+        public static string PerandusCoinStrValue
+        {
+            get { return "Монета Просперусов"; }
+        }
         public const string QUALITY = "Качество";
         public const string STACKSIZE = "Размер стопки";
         //ProxyMapper.cs end

@@ -26,7 +26,7 @@ namespace Procurement.Utility
                     client.DownloadStringCompleted += client_DownloadStringCompleted;
                 }
             }
-            catch (KeyNotFoundException kex)
+            catch (KeyNotFoundException)
             {
                 MessageBox.Show("Невозможно проверить обновления поскольку настройка CheckForUpdates не найдена в файле настроек.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
