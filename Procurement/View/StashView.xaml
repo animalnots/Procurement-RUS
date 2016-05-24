@@ -173,7 +173,7 @@
                         <poe:LeagueSelection Grid.Row="0" Width="320" Height="55" VerticalAlignment="Top" HorizontalAlignment="Left" />
                         <Grid Grid.Row="2">
                             <StackPanel Orientation="Horizontal" Background="Black" >
-                                <Label Content="Поиск :" Foreground="#FFAB9066"/>
+                                <Label Content="Поиск :" Foreground="#FFAB9066" Margin="0,-5,0,-13"/>
                                 <toolkit:AutoCompleteBox x:Name="autoComplete" MinimumPopulateDelay="100" MinimumPrefixLength="2" FilterMode="Contains" Background="Black" Width="270" Height="25" VerticalAlignment="Center" HorizontalAlignment="Left" Text="{Binding Filter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" BorderBrush="#FF76591B" Foreground="#FFAB9066" ItemsSource="{Binding AvailableItems}" />
                             </StackPanel>
                         </Grid>

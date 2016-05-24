@@ -212,6 +212,7 @@ namespace POEApi.Model
 
                 DataContractJsonSerializer serialiser = new DataContractJsonSerializer(typeof(JSONProxy.Inventory));
                 JSONProxy.Inventory item;
+                forceRefresh = transport.GetInventory(characterName, forceRefresh, accountName).Length == 5; // stream is 'false'
                 using (Stream stream = transport.GetInventory(characterName, forceRefresh, accountName))
                     item = (JSONProxy.Inventory)serialiser.ReadObject(stream);
 
