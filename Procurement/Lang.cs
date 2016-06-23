@@ -7,6 +7,17 @@ namespace Procurement
 {
     class Lang
     {
+        //Filters
+        public static string Enchanted
+        {
+            get { return "Зачарованно"; }
+        }
+
+        public static string EnchantedHelp
+        {
+            get { return "Предметы которые зачарованны мастерами"; }
+        }
+        
         //ForumExportViewModel.cs
         //ForumExportViewModel.cs end
         //StashViewModel.cs
@@ -413,6 +424,10 @@ namespace Procurement
         public static string DivinationCards
         {
             get { return "Гадальные карты"; }
+        }
+        public static string LabyrinthMapItem
+        {
+            get { return "Предметы лабиринта"; }
         }
         public static string Flasks
         {

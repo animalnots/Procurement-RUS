@@ -48,7 +48,8 @@ namespace POEApi.Model
         {GearType.HideoutDoodads, "HideoutDoodads"},
         {GearType.Microtransactions, "Microtransactions"},
         {GearType.Jewel, "Jewel"},
-        {GearType.DivinationCard, "DivinationCard"}
+        {GearType.DivinationCard, "DivinationCard"},
+        {GearType.LabyrinthMapItem, "LabyrinthMapItem"},
     };
 
 
@@ -99,7 +100,8 @@ namespace POEApi.Model
         HideoutDoodads,
         Microtransactions,
         Jewel,
-        DivinationCard
+        DivinationCard,
+        LabyrinthMapItem
         /*
         Ring,
         Amulet,

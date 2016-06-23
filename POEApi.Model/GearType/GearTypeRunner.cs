@@ -247,9 +247,9 @@ namespace POEApi.Model
     public class DivinationCardRunner : GearTypeRunnerBase
     {
         public DivinationCardRunner()
-            : base(new GearType[] { GearType.DivinationCard}, new List<string>[] {Settings.GearBaseTypes[GearType.DivinationCard]})
+            : base(new GearType[] { GearType.DivinationCard }, new List<string>[] { Settings.GearBaseTypes[GearType.DivinationCard] })
         {
-            
+
             //incompatibleTypes = new List<string>() { Lang.DospehGladiatoraStrValue }; 
         }
         /*
@@ -263,6 +263,14 @@ namespace POEApi.Model
 
             return false;
         }*/
+    }
+    public class LabyrinthMapItemRunner : GearTypeRunnerBase
+    {
+        public LabyrinthMapItemRunner()
+            : base(new GearType[] { GearType.LabyrinthMapItem }, new List<string>[] { Settings.GearBaseTypes[GearType.LabyrinthMapItem] })
+        {
+
+        }
     }
 
     public class JewelRunner : GearTypeRunnerBase

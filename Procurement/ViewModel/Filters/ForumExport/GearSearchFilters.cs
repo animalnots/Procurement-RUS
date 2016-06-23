@@ -153,7 +153,16 @@ namespace Procurement.ViewModel.Filters.ForumExport
     class DivinationCardFilter : GearTypeFilter
     {
         public DivinationCardFilter()
-            : base(new GearType[] { GearType.DivinationCard}, Lang.DivinationCards)
+            : base(new GearType[] { GearType.DivinationCard }, Lang.DivinationCards)
+        {
+
+        }
+    }
+
+    class LabyrinthMapItemFilter : GearTypeFilter
+    {
+        public LabyrinthMapItemFilter()
+            : base(new GearType[] { GearType.LabyrinthMapItem }, Lang.LabyrinthMapItem)
         {
 
         }

@@ -144,6 +144,9 @@
 [spoiler="          Удочки          "]
 {NormalFishingRods}{MagicFishingRods}{RareFishingRods}{UniqueFishingRods}
 [/spoiler]
+[spoiler="          Предметы лабиринта          "]
+{NormalLabyrinthMapItem}{MagicLabyrinthMapItem}{RareLabyrinthMapItem}{UniqueLabyrinthMapItem}
+[/spoiler]
 Спасибо за просмотр!
 
 [url=https://github.com/animalnots/Procurement-RUS/releases][img]http://i.imgur.com/9c8HdP3.png[/img][/url]

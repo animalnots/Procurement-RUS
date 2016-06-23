@@ -29,6 +29,7 @@ namespace POEApi.Model
             { new MapRunner() },
             { new MapFragmentsRunner() },
             { new DivinationCardRunner() },
+            { new LabyrinthMapItemRunner() },
             { new FishingRodRunner() },
             { new ChestRunner() } //Must always be last!
         };

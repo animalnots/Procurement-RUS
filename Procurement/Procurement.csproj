@@ -165,6 +165,7 @@
     <Compile Include="ViewModel\Filters\ForumExport\SixLink.cs" />
     <Compile Include="ViewModel\Filters\ForumExport\SixRedSockets.cs" />
     <Compile Include="ViewModel\Filters\ForumExport\SocketColourFilter.cs" />
+    <Compile Include="ViewModel\Filters\ForumExport\EnchantModFilter.cs" />
     <Compile Include="ViewModel\ForumExportVisitors\CurrencyVisitor.cs" />
     <Compile Include="ViewModel\SetTabBuyoutViewModel.cs" />
     <Compile Include="ViewModel\TradeSettingsViewModel.cs" />

@@ -119,6 +119,44 @@
                             BorderBrush="{StaticResource SeperatorBrush}"
                             BorderThickness="1"
                             Opacity="0.7"
+                            Visibility="{Binding HasRequirements,
+                                                 Converter={StaticResource bc},
+                                                 ConverterParameter=CollapseWhenFalse}" />
+
+                    <v:BindableRichTextBox Width="{Binding Path=ActualWidth,
+                                                           ElementName=ItemHeader,
+                                                           Mode=OneWay}"
+                                           Document="{Binding Converter={StaticResource rc}}"
+                                           Padding="10 0 10 5"
+                                           Visibility="{Binding HasRequirements,
+                                                                Converter={StaticResource bc},
+                                                                ConverterParameter=CollapseWhenFalse}" />
+
+                    <Border Margin="0 0 0 5"
+                            BorderBrush="{StaticResource SeperatorBrush}"
+                            BorderThickness="1"
+                            Visibility="{Binding SecondaryDescriptionText,
+                                                 Converter={StaticResource VisibilityConverter},
+                                                 ConverterParameter=CollapseWhenFalse}" />
+
+                    <TextBlock Width="{Binding Path=ActualWidth,
+                                               ElementName=ItemHeader,
+                                               Mode=OneWay}"
+                               HorizontalAlignment="Center"
+                               FontFamily="../Resources/#Fontin SmallCaps"
+                               Foreground="Turquoise"
+                               Padding="10 0 10 5"
+                               Text="{Binding SecondaryDescriptionText}"
+                               TextAlignment="Center"
+                               TextWrapping="Wrap"
+                               Visibility="{Binding SecondaryDescriptionText,
+                                                    Converter={StaticResource VisibilityConverter},
+                                                    ConverterParameter=CollapseWhenFalse}" />
+
+                    <Border Margin="0 0 0 5"
+                            BorderBrush="{StaticResource SeperatorBrush}"
+                            BorderThickness="1"
+                            Opacity="0.7"
                             Visibility="{Binding HasImplicitMods,
                                                  Converter={StaticResource bc},
                                                  ConverterParameter=CollapseWhenFalse}" />
@@ -145,6 +183,28 @@
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>
 
+                    <ItemsControl ItemsSource="{Binding CraftedMods}"
+                                  Padding="10 0 10 5"
+                                  Visibility="{Binding HasCraftedMods,
+                                                       Converter={StaticResource bc},
+                                                       ConverterParameter=CollapseWhenFalse}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Vertical" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <TextBlock FontFamily="../Resources/#Fontin SmallCaps"
+                                               Foreground="#b4b4ff"
+                                               Text="{Binding}"
+                                               TextAlignment="Center"
+                                               TextWrapping="Wrap" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                     <Border Margin="0 0 0 5"
                             BorderBrush="{StaticResource SeperatorBrush}"
                             BorderThickness="1"
@@ -228,29 +288,6 @@
                                                     Converter={StaticResource VisibilityConverter},
                                                     ConverterParameter=CollapseWhenFalse}" />
 
-                    <ItemsControl ItemsSource="{Binding CraftedMods}"
-                                  Padding="10 0 10 5"
-                                  Visibility="{Binding HasCraftedMods,
-                                                       Converter={StaticResource bc},
-                                                       ConverterParameter=CollapseWhenFalse}">
-                        <ItemsControl.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <StackPanel Orientation="Vertical" />
-                            </ItemsPanelTemplate>
-                        </ItemsControl.ItemsPanel>
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel>
-                                    <TextBlock FontFamily="../Resources/#Fontin SmallCaps"
-                                               Foreground="#b4b4ff"
-                                               Text="{Binding}"
-                                               TextAlignment="Center"
-                                               TextWrapping="Wrap" />
-                                </StackPanel>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>                    
-                    
                     <TextBlock Width="{Binding Path=ActualWidth,
                                                ElementName=ItemHeader,
                                                Mode=OneWay}"
